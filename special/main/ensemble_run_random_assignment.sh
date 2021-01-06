@@ -136,7 +136,7 @@ for ((i=1; i<=10; i++))
         # Size parameter
 		echo -e " ${IBlue}Please type the monomer size parameter range: 
                     min_sp step_delta max_sp Eg. 0.4 0.02 0.9${Color_Off}"
-		read sp
+		read sp_range
 
 		break
     elif ["$rand_assign" = "0" ]; then
@@ -201,38 +201,21 @@ echo r is $r >>log
 
 # Section 2. THIS SECTION IS TO CREATE MSTM.INP FILES. ALL INPUT FILES ARE NAMED ACCORDING TO CHOICE OF THE INPUT VARIABLES.
 
-: <<"END"
-# ------------------------------------------------------------------------------------------------------------------------------------------
-
-K=$((${#ls[@]} * ${#wv[@]}))
-
-B=$(seq 0 $K) # this is 1d array ( or string) which needs to be converted to multi-d array as in next line
-B=($B)
-
-    for rmon in ${ls[@]}
-      do
-	for wl in ${wv[@]}
-	 do
-	 xs=(${xs[@]} `echo "scale = 4; 2*3.1416*${rmon}/${wl}" | bc`)
-  	
-	done
-    done
-# ------------------------------------------------------------------------------------------------------------------------------------------
-END
-
 for run_agg in $(seq $NumberOfRuns); do
 
     # Setting random parameters for this run
     # for future use let's also store each parameter randomly selected in arrays
     IFS=$'\n' rand_n=($(sort -R <<<"${n[*]}"))
     unset IFS;
-    i=rand_n # number of monomers for this run
-    ns
+    i=${rand_n[0]} # number of monomers for this run, the first element only
+    ns+=($i)
     #refractive index
-    l=$(seq $n_r | sort -R | head -n 1)
-    m=$(seq $n_i | sort -R | head -n 1)
-    k=$(seq $sp | sort -R | head -n 1)
-  
+    l=$(seq $nr_range | sort -R | head -n 1)
+    nr+=($l)
+    m=$(seq $ni_range | sort -R | head -n 1)
+    ni+=($m)
+    k=$(seq $sp_range | sort -R | head -n 1)
+    xs+=($k)
     for j in ${aggreal[@]}; do
 
         #for the file names, in order to prevent any complication, next line will remove all the "." from the variables. Such as, l=0.01 will be converted to 001
@@ -415,54 +398,36 @@ for (( np=1;np<=${ncpu};np++));do
         b[i]=$frst
         frst=$(($frst + 1 )) # or let frst ++
     done
-echo -e "${IBlue}following agregate input files are being calculated ${b[@]}${Color_Off}"
-# echo z="("${b[@]}")" >>script${np}
+    echo -e "${IBlue}following agregate input files are being calculated ${b[@]}${Color_Off}"
+    # echo z="("${b[@]}")" >>script${np}
 
-# ------------------------------------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------------------------------------------------
 
-K=$((${#ls[@]} * ${#wv[@]}))
+    # ------------------------------------------------------------------------------------------------------------------------------------------
+    echo "for sn in ${ns[@]} ;do " >> script${np}
+    echo "	for sx in ${xs[@]/./};do " >> script${np}
+    echo "		for rn in ${nr[@]/./};do " >> script${np}
+    echo "	   		for im in ${ni[@]/./};do " >> script${np}
+    echo "	        	for sf in ${b[@]};do " >> script${np} #or "for dos in cat($ls);do ' ~/programs/mstmv3.0/run_mstm input/mstm/${sn}_${sx}_${rn}_${im}/$dos"
+    echo '		            if [ -s ./output/${sn}/x${sx}/$rn/$im/mt_${sf}_${sn}_${sx}_${rn}_${im}.dat ]; then 
+                                Size=$( wc -c < ./output/${sn}/x${sx}/$rn/$im/mt_${sf}_${sn}_${sx}_${rn}_${im}.dat )
+                                if [ "${Size}" -gt "3000" ]; then
+                                    continue
+                                else
+                                    ./run_mstm mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
+                                    echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
+                                fi
+                            else 
+                                ./run_mstm mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
+                                echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
+                            fi' >> script${np}
+    echo "      		done" >> script${np}
+    echo "			done" >> script${np}
+    echo "		done " >> script${np}
+    echo "	done " >> script${np}
+    echo "done " >> script${np}
 
-B=$(seq 0 $K) # this is 1d array ( or string) which needs to be converted to multi-d array as in next line
-B=($B)
-
-    for rmon in ${ls[@]}
-      do
-	for wl in ${wv[@]}
-	 do
-	 xs=(${xs[@]} `echo "scale = 4; 2*3.1416*${rmon}/${wl}" | bc`)
-  	
-	done
-     done
-
-# ------------------------------------------------------------------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------------------------------------------------------------------
-echo "for sn in ${ns[@]} ;do " >> script${np}
-echo "	for sx in ${xs[@]/./};do " >> script${np}
-echo "		for rn in ${nr[@]/./};do " >> script${np}
-echo "	   		for im in ${ni[@]/./};do " >> script${np}
-echo "	        	for sf in ${b[@]};do " >> script${np} #or "for dos in cat($ls);do ' ~/programs/mstmv3.0/run_mstm input/mstm/${sn}_${sx}_${rn}_${im}/$dos"
-echo '		            if [ -s ./output/${sn}/x${sx}/$rn/$im/mt_${sf}_${sn}_${sx}_${rn}_${im}.dat ]; then 
-							Size=$( wc -c < ./output/${sn}/x${sx}/$rn/$im/mt_${sf}_${sn}_${sx}_${rn}_${im}.dat )
-							if [ "${Size}" -gt "3000" ]; then
-								continue
-							else
-								./run_mstm mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
-								echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
-							fi
-						else 
-							./run_mstm mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
-							echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
-						fi' >> script${np}
-echo "      		done" >> script${np}
-echo "			done" >> script${np}
-echo "		done " >> script${np}
-echo "	done " >> script${np}
-echo "done " >> script${np}
-   
- 
-   
- done
+done
 
 #===========================================================================================================================================================
 #Section 4
@@ -476,161 +441,23 @@ if [ "$cpu_ids" != "" ]; then
 	for (( c=1; c<=${ncpu}; c++))
 	{
 		chmod +x script${c}
-			
 		p=$(( ${c}-1 ))
 		cpu=${cpu_ids[p]}
-
-			if [ $cpu -ne $(( ${cpu_ids[-1]} )) ]; then 
-				taskset -c ${cpu} ./script${c} &  # if not the last run then run on background
-			else
-				taskset -c ${cpu} ./script${c} # Last run in a script allways run on forground
-			fi
+        if [ $cpu -ne $(( ${cpu_ids[-1]} )) ]; then 
+            taskset -c ${cpu} ./script${c} &  # if not the last run then run on background
+        else
+            taskset -c ${cpu} ./script${c} # Last run in a script allways run on forground
+        fi
 	}
 else
 	echo 'Default Mode is Selected'
 	for (( c=1; c<=${ncpu}; c++))
 	{
 		if [ $c -ne ${ncpu} ]; then 
-				./script${c} &  # if not the last run then run on background
-			else
-				./script${c} # Last run in a script allways run on foreground
-			fi
+            ./script${c} &  # if not the last run then run on background
+        else
+            ./script${c} # Last run in a script allways run on foreground
+        fi
 	}
 
 fi
-#END
-
-
-# The next Section is blocked because it is still in construction
-: <<"END"
-# =========================================================================================================================================================
-
-#Section 5
-# This section creates Matlab scripts which will be used during postprocessing ( such as, taking avarage of all 25 realization )
-
-for sn in ${ns[@]} ;do " >> script${np}
-	for sx in ${xs[@]/./};do " >> script${np}
-		for rn in ${nr[@]/./};do " >> script${np}
-			for im in ${ni[@]/./};do " >> script${np}
-				for file in ./output/${sn}/x${sx}/$rn/$im/mt_ ;do
-					for rm in ${file}/x*; do
-					x=${rm/${file}\//}
-					x=${x/x/}
-
-#Now counting the number of mstm outputs. In a perfect world it should be 25, but some times it is less then this.
-c=$(ls -l ${rm}/mt* | wc -l) 
-echo -e "%% There are $c mstm output files in this directory">${rm}/m${x}.m
-e=0
-for m in ${rm}/mt*.dat; do
-ms=${m/\//}
-ms=${ms/\//}
-ms=${ms/.dat/}
-ms=m${ms}
-
-
-echo -e "%% Initialize variables.
-filename = '/home/ucnk/matlab/April11/mstmoutputs/${m}';
-startRow = 52;
-endRow = 232;
-
-%% Format string for each line of text:
-
-formatSpec = '%8f%13f%13f%13f%13f%13f%13f%13f%13f%13f%f%[^\n\r]';
-
-%% Open the text file.
-fileID = fopen(filename,'r');
-
-%% Read columns of data according to format string.
-textscan(fileID, '%[^\n\r]', startRow-1, 'WhiteSpace', '', 'ReturnOnError', false);
-dataArray = textscan(fileID, formatSpec, endRow-startRow+1, 'Delimiter', '', 'WhiteSpace', '', 'ReturnOnError', false);
-
-%% Close the text file.
-fclose(fileID);
-
-%% Allocate imported array to column variable names
-theta = dataArray{:, 1};
-${ms}_S_11 = dataArray{:, 2}; % Exm: 640336_S_1_11 = dataArray{:, 2}
-${ms}_S_12 = dataArray{:, 3}; % Exm: 640336_S_1_11 = dataArray{:, 3}
-${ms}_S_13 = dataArray{:, 4};
-${ms}_S_14 = dataArray{:, 5};
-${ms}_S_22 = dataArray{:, 6};
-${ms}_S_23 = dataArray{:, 7};
-${ms}_S_24 = dataArray{:, 8};
-${ms}_S_33 = dataArray{:, 9};
-${ms}_S_34 = dataArray{:, 10};
-${ms}_S_44 = dataArray{:, 11}; 
-
-%% Clear temporary variables
-clearvars filename startRow endRow formatSpec fileID dataArray ans;" >> ${rm}/m${x}.m
-
-s11[${e}]=${ms}_S_11 #this will create a nested array
-s12[${e}]=${ms}_S_12
-s13[${e}]=${ms}_S_13
-s14[${e}]=${ms}_S_14
-s22[${e}]=${ms}_S_22
-s23[${e}]=${ms}_S_23
-s24[${e}]=${ms}_S_24
-s33[${e}]=${ms}_S_33
-s34[${e}]=${ms}_S_34
-s44[${e}]=${ms}_S_44
-echo -e $e
-e=$((${e}+1))
-done # with the For $m
-
-lastterm=${ms}_S_11
-
- 
-
-
-
-  
-for i in $(seq 0 ${c})   ; do
-if (($i == 0));then
-s11tot=${s11[$i]} 
-s12tot=${s12[$i]}
-s13tot=${s13[$i]} 
-s14tot=${s14[$i]} 
-s22tot=${s22[$i]} 
-s23tot=${s23[$i]} 
-s24tot=${s24[$i]} 
-s33tot=${s33[$i]} 
-s34tot=${s34[$i]}
-s44tot=${s44[$i]} 
-else 
-s11tot=${s11tot}+${s11[$i]}
-s12tot=${s12tot}+${s12[$i]}
-s13tot=${s13tot}+${s13[$i]}
-s14tot=${s14tot}+${s14[$i]} 
-s22tot=${s22tot}+${s22[$i]} 
-s23tot=${s23tot}+${s23[$i]} 
-s24tot=${s24tot}+${s24[$i]}
-s33tot=${s33tot}+${s33[$i]} 
-s34tot=${s34tot}+${s34[$i]}
-s44tot=${s44tot}+${s44[$i]} 
-fi
-done
-
-echo -e "%AVARAGING ALL COMPONENTS
-S11avg= ( ${s11tot} )./ ${c} 
-s12avg= ( ${s12tot} )./ ${c} 
-S13avg= ( ${s13tot} )./ ${c} 
-S14avg= ( ${s14tot} )./ ${c} 
-S22avg= ( ${s22tot} )./ ${c} 
-S23avg= ( ${s23tot} )./ ${c} 
-S24avg= ( ${s24tot} )./ ${c} 
-S33avg= ( ${s33tot} )./ ${c} 
-S34avg= ( ${s34tot} )./ ${c} 
-S44avg= ( ${s44tot} )./ ${c}" >> ${rm}/m${x}.m
-
-
-#echo -e " S11avg = s11tot./$c " >> ${m}.
-
-#for sum in ${s11[${@}]} # which means sum in mt_1_(...)_S11_... mt_2_(...)_S11_...  ...
-#do
-#s="}
-
-done
-done
-END
-
-
