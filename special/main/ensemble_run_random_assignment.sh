@@ -114,7 +114,7 @@ echo "Type 1 for random assignment of parameters in a range or 0 for explicitly 
 for ((i=1; i<=10; i++))
 	do
 	read rand_assign
-	if ["$rand_assign" = "1" ]; then
+	if [ "$rand_assign" == "1" ]; then
         #number of monomers
 		echo -e "${IBlue}Please type the Number of monomers separated by space .Eg. 32 64 128${Color_Off}"
 		read n
@@ -139,7 +139,7 @@ for ((i=1; i<=10; i++))
 		read sp_range
 
 		break
-    elif ["$rand_assign" = "0" ]; then
+    elif [ "$rand_assign" == "0" ]; then
 		./ensemble_run.sh && exit
     else
         echo "Please type either '1' or '0'"
@@ -217,53 +217,44 @@ for run_agg in $(seq $NumberOfRuns); do
     k=$(seq $sp_range | sort -R | head -n 1)
     xs+=($k)
     for j in ${aggreal[@]}; do
-
+        mstm_input="mstm${j}_${i}_${kx}_${lr}_${mi}.inp"
         #for the file names, in order to prevent any complication, next line will remove all the "." from the variables. Such as, l=0.01 will be converted to 001
         kx=${k/./}; lr=${l/./}; mi=${m/./}
         # Noting the date and time of the run started
-        sed '8i\'$date mstm.inp > mstm${j}_${i}_${kx}_${lr}_${mi}.inp
-
+        sed '8i\'$date mstm.inp > $mstm_input
         #number_spheres
-        sed '13i\'$i mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp #number of sphere
+        sed '13i\'$i $mstm_input > newfile 
+        mv newfile $mstm_input #number of sphere
 
         #aggregate shape files
         #a='home/titan/Titan/New/input/n'$i'/a'$j'.out' # has to be modified
-        a='pluto_agg/N'$i'/'$j'.out'
-        sed '15i\'$a mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp
+        a='position/n'$i'/a'$j'.out'
+        sed '15i\'$a $mstm_input > newfile
+        mv newfile $mstm_input
 
         #output_file
         b='output/'$i'/x'$kx'/'$lr'/'$mi'/mt_'$j'_'$i'_'$kx'_'$lr'_'$mi'.dat' # data files stored in harddisk in an organized way
         #All the output files stored in a following way: ?/512/x0.01/nr1.7/ni1.3/mt_25_512_001_17_13.dat.Note that all dots '.' are removed, 
         #Thus interperation of the name should be made carefully.
-        sed '17i\'$b mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp 
-        #Next line creates the directories to put the output files, just declared above.
-        #[ -d File ] is true if File exist and a directory, [! -d File ] is true if File DOES NOT exist and a directory
-
-        [ ! -d output ] && mkdir -p output; [ ! -d output/$i ] && mkdir -p output/$i
-        [ ! -d output/$i/x${kx} ] && mkdir -p output/$i/x${kx} &&
-        [ ! -d output/$i/x${kx}/${lr} ] && mkdir -p output/$i/x${kx}/nr${lr} 
-        [ ! -d output/$i/x${kx}/${lr}/${mi} ] && mkdir -p output/$i/x${kx}/${lr}/${mi} &&
-        echo -e " ${IBlue}Directories for the T-Matrix output files are created succesfully${Color_Off}" | tee -a outbash.log
+        sed '17i\'$b $mstm_input > newfile 
+        mv newfile $mstm_input 
 
         #length scale factor
-        sed '25i\'$k mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp
+        sed '25i\'$k $mstm_input > newfile 
+        mv newfile $mstm_input
 
         #real_ref_index_scale_factor
-        sed '27i\'$l mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp
+        sed '27i\'$l $mstm_input > newfile 
+        mv newfile $mstm_input
 
         #imag_ref_index_scale_factor
-        sed '29i\'$m mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp
+        sed '29i\'$m $mstm_input > newfile 
+        mv newfile $mstm_input
 
         #Near filed position 
         nfp='dnearfieldfiles/nf_'$j'_'$i'_'$kx'_'$lr'_'$mi'.dat'
-        sed '103i\'$nfp mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp
+        sed '103i\'$nfp $mstm_input > newfile 
+        mv newfile $mstm_input
 
         # Tmatrixfiles, iF THE TMATRIX FILE EXISTS, CREATED BY A PREVIOUSLY COMPLETED OR DISRUPTED RUN, THEN THIS FILE WILL BE USED. BELOW CODE ALSO CHECKS IF THE TMATRIX CALCULATION IS 		   #COMPLETED OR DISTRUPTED. IF THE CALCULATION IS DISTRUPTED THEN THE SCRIPT WILL CARRY ON THE CALCULATION FROM THE MAXIMUM EXECUTED T-MATRIX ORDER. IF THE CT-MATRIX FILE IS 		   #COMPLETE THEN IT #WILL USE THIS FILE TO WRITE THE SCATTERING MATRIX. OTHERWISE NEW T-MATRIX FILE WILL BE WRITTEN BY STARTING OVER THE T-MATRIX CALCUALTION. PS. FOR NOW IT DOES 		   #NOT WOR AS IT IS PROMISED #ABOVE. IT ONLY CHECKS IF THE FILE IS CREATED PREVIOUSLY OR NOT. NOW IT CANNOT CHECK IF IT COMPLETED OR NOT. BUT I WILL FIX THIS SOON.
 
@@ -271,8 +262,8 @@ for run_agg in $(seq $NumberOfRuns); do
         tmtf=${j}${i}${kx}${lr}${mi}
         #NEXT LINE SHOULD BE MODIFIED FOR GENERAL USE Note that I do not need the next few lines for now.
 
-        #[ -d tmatrixfiles/tmf_'$j'_'$i'_'$kx'_'$lr' ] && sed '102i\2' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile || sed '102i\1' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        #mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp	
+        #[ -d tmatrixfiles/tmf_'$j'_'$i'_'$kx'_'$lr' ] && sed '102i\2' $mstm_input > newfile || sed '102i\1' $mstm_input > newfile 
+        #mv newfile $mstm_input	
 
 
         #below by [ -s File ] is true if file exist and its size greater than zero.	
@@ -280,26 +271,27 @@ for run_agg in $(seq $NumberOfRuns); do
 
 
 
-        [ -s ./tmatrixfiles/${tmtf} -a -s $b ] && { filesize=$( wc -c < $b )
-                                                echo -e " ${filesize}${Color_Off}"
-        [ "${filesize}" -lt "3000" ] && { echo -e "${On_IRed} T-Matrix run for \e[7m[ ${j}_${i}_${kx}_${lr}_${mi} ]\e[27m was interrupted ${Color_Off}" | tee -a outbash.log
-        echo -e "${On_IRed} MSTM will Resume the interrupted Run${Color_Off}" | tee -a outbash.log
-        sed '109i\2' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp 
+        [ -s ../tmatrixfiles/${tmtf} -a -s $b ] && { 
+            filesize=$( wc -c < $b )
+            echo -e " ${filesize}${Color_Off}"
+            [ "${filesize}" -lt "3000" ] && { echo -e "${On_IRed} T-Matrix run for \e[7m[ ${j}_${i}_${kx}_${lr}_${mi} ]\e[27m was interrupted ${Color_Off}" | tee -a outbash.log
+            echo -e "${On_IRed} MSTM will Resume the interrupted Run${Color_Off}" | tee -a outbash.log
+            sed '109i\2' $mstm_input > newfile
+            mv newfile $mstm_input 
         } || { echo -e "${green} Looks like T-MATRIX run is complete for \e[7m[ ${j}_${i}_${kx}_${lr}_${mi} ]\e[27m. This run will be skipped ${Color_Off}" | tee -a outbash.log
-        sed '109i\0' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp
+        sed '109i\0' $mstm_input > newfile 
+        mv newfile $mstm_input
             }
         }
 
         [ -s ./tmatrixfiles/${tmtf} -a ! -s $b ] && { echo -e "${IBlue} T-Matrix run for \e[7m[ ${j}_${i}_${kx}_${lr}_${mi} ]\e[27m was interrupted ${Color_Off}" | tee -a outbash.log
             echo -e "${IBlue} MSTM will Resume the interrupted Run${Color_Off}" | tee -a outbash.log
-            sed '109i\2' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile
-            mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp ; }
+            sed '109i\2' $mstm_input > newfile
+            mv newfile $mstm_input ; }
 
         [ ! -s ./tmatrixfiles/${tmtf} ] && { echo -e "${IBlue} T-Matrix run will start from begining for [ ${j}_${i}_${kx}_${lr}_${mi} ]${Color_Off}" | tee -a outbash.log
-        sed '109i\1' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp ; }
+        sed '109i\1' $mstm_input > newfile
+        mv newfile $mstm_input ; }
 
         # Below commented block does exactly the same thing as the above block
 
@@ -314,40 +306,49 @@ for run_agg in $(seq $NumberOfRuns); do
         #	 		if [ "$filesize" -lt "3000" ]; then  
         #				echo -e " T-Matrix run for [ ${j}_${i}_${kx}_${lr}_${mi} ] was interrupted"
         #				echo -e " MSTM will Resume the interrupted Run"
-        #	 			sed '109i\2' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile
-        #	 			mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp 
+        #	 			sed '109i\2' $mstm_input > newfile
+        #	 			mv newfile $mstm_input 
         #	#Now, if there is tmatrix file and there is output file but output file looks like large enough to be regarded as completed then no need to calculate t-matrix
         #				
         #			else 
         #				echo -e " Looks like T-MATRIX run is complete for [ ${j}_${i}_${kx}_${lr}_${mi} ]. This run will be skipped "
-        #				sed '109i\0' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        #	 			mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp
+        #				sed '109i\0' $mstm_input > newfile 
+        #	 			mv newfile $mstm_input
         #			fi 
         #	#Note that this still starts unnecassarily scattering matrix ,which allready exists, calculation from tmatrix file. This will be resolved  in 
         #	#section #3, but this line still written in case completely skipping this run will fail somehow in section 3.	   
 
         #	#if not, then still no need to start over tmatrix calculation, since tmatrix file exist but scattering matrix file had not been created	 		
         #		else		
-        #			sed '109i\2' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile
-        #	  		mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp 
+        #			sed '109i\2' $mstm_input > newfile
+        #	  		mv newfile $mstm_input 
         #		fi
         #	else	
         # 	# If there is no T-matrix file at all then start over.
-        #		sed '109i\1' mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile
-        #	  	mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp
+        #		sed '109i\1' $mstm_input > newfile
+        #	  	mv newfile $mstm_input
         #	fi 
 
 
 
 
-        sed '111i\'$tmf mstm${j}_${i}_${kx}_${lr}_${mi}.inp > newfile 
-        mv newfile mstm${j}_${i}_${kx}_${lr}_${mi}.inp
+        sed '111i\'$tmf $mstm_input > newfile 
+        mv newfile $mstm_input
+
+        #Next line creates the directories to put the output files, just declared above.
+        #[ -d File ] is true if File exist and a directory, [! -d File ] is true if File DOES NOT exist and a directory
+        
+        [ ! -d output ] && mkdir -p output; [ ! -d output/$i ] && mkdir -p output/$i
+        [ ! -d output/$i/x${kx} ] && mkdir -p output/$i/x${kx} &&
+        [ ! -d output/$i/x${kx}/${lr} ] && mkdir -p output/$i/x${kx}/nr${lr} 
+        [ ! -d output/$i/x${kx}/${lr}/${mi} ] && mkdir -p output/$i/x${kx}/${lr}/${mi} &&
+        echo -e " ${IBlue}Directories for the T-Matrix output files are created succesfully${Color_Off}" | tee -a outbash.log
 
         #Moving All the input files into input/${i}'_'${kx}'_'${lr}'_'${mi}
         file=${i}'_'${kx}'_'${lr}'_'${mi}
 
         [ ! -d position/$file ] && mkdir -p position/$file
-        # mv mstm${j}_${i}_${kx}_${lr}_${mi}.inp ./input/$file/mstm${j}_${i}_${kx}_${lr}_${mi}_${lr}_${mi}.inp
+        # mv $mstm_input ./input/$file/mstm${j}_${i}_${kx}_${lr}_${mi}_${lr}_${mi}.inp
         # [[ -f input/mstm/${file}/ms ]] && rm ms; [[ -f input/mstm/${file}/m ]] && rm m; [[ -f input/mstm/${file}/mst ]] && rm mst
         # find . input/mstm/${file}/ -size 0 -delete
 
@@ -367,7 +368,7 @@ done
 #mv n* position/
 echo -e "${IBlue}Now The External Scripts Are Being Written.${Color_Off}" | tee -a outbash.log
 for (( np=1;np<=${ncpu};np++));do
-    xs=('') #this will reset the previous array
+    #xs=('') #this will reset the previous array
 
     echo "# This script runs a set of child processes on a single cpu core. 
         #The main script is ensemble_run_random?_assignment.sh which writes and controls all the 
@@ -387,7 +388,7 @@ for (( np=1;np<=${ncpu};np++));do
 
     if [ $np -ne ${ncpu} ] ; then
         rng=$((${q}-1))
-    elif [$np -eq ${ncpu} ] ; then
+    elif [ $np -eq ${ncpu} ] ; then
         rng=$((${r}+${q}-1))
     fi
 
@@ -409,17 +410,25 @@ for (( np=1;np<=${ncpu};np++));do
     echo "		for rn in ${nr[@]/./};do " >> script${np}
     echo "	   		for im in ${ni[@]/./};do " >> script${np}
     echo "	        	for sf in ${b[@]};do " >> script${np} #or "for dos in cat($ls);do ' ~/programs/mstmv3.0/run_mstm input/mstm/${sn}_${sx}_${rn}_${im}/$dos"
-    echo '		            if [ -s ./output/${sn}/x${sx}/$rn/$im/mt_${sf}_${sn}_${sx}_${rn}_${im}.dat ]; then 
-                                Size=$( wc -c < ./output/${sn}/x${sx}/$rn/$im/mt_${sf}_${sn}_${sx}_${rn}_${im}.dat )
+                            
+        echo '		            mstm_inp=mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
+                                echo mstm_inp: ----- $mstm_inp
+                                mstm_out=mt_${sf}_${sn}_${sx}_${rn}_${im}.dat
+                                if [ -s ./output/${sn}/x${sx}/$rn/$im/$mstm_out ]; then 
+                                Size=$( wc -c < ./output/${sn}/x${sx}/$rn/$im/$mstm_out )
                                 if [ "${Size}" -gt "3000" ]; then
                                     continue
                                 else
-                                    ./run_mstm mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
+                                    ./run_mstm $mstm_inp
                                     echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
+                                    rm $mstm_inp
                                 fi
                             else 
-                                ./run_mstm mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
+                                ./run_mstm $mstm_inp
                                 echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
+                                rm $mstm_inp
+                                echo " the input file is removed"
+                                echo "**********################ RUN IS COMPLETE ###################**********"
                             fi' >> script${np}
     echo "      		done" >> script${np}
     echo "			done" >> script${np}
@@ -453,11 +462,15 @@ else
 	echo 'Default Mode is Selected'
 	for (( c=1; c<=${ncpu}; c++))
 	{
-		if [ $c -ne ${ncpu} ]; then 
-            ./script${c} &  # if not the last run then run on background
+		if [ $c -ne ${ncpu} ]; then
+            echo "echo new run initiated on background"
+            # setting priority to low so that all cpus can be used and at the same time 
+            # the computer can be still run for daily tasks. Higher the nice value lower the priority
+            nice -n 10 ./script${c} &  # if not the last run then run on background # nice -n 10 
         else
-            ./script${c} # Last run in a script allways run on foreground
+            nice -n 19 ./script${c} # Last run in a script allways run on foreground #
         fi
 	}
 
 fi
+
