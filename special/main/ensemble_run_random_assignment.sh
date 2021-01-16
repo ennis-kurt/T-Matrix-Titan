@@ -412,7 +412,8 @@ for (( np=1;np<=${ncpu};np++));do
     echo "	   		for im in ${ni[@]/./};do " >> script${np}
     echo "	        	for sf in ${b[@]};do " >> script${np} #or "for dos in cat($ls);do ' ~/programs/mstmv3.0/run_mstm input/mstm/${sn}_${sx}_${rn}_${im}/$dos"
                             
-        echo '		            mstm_inp=mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
+        echo '		            tmtf=${sf}${sn}${sx}${rn}${im}
+                                mstm_inp=mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
                                 echo mstm_inp: ----- $mstm_inp
                                 mstm_out=mt_${sf}_${sn}_${sx}_${rn}_${im}.dat
                                 if [ -s ./output/${sn}/x${sx}/$rn/$im/$mstm_out ]; then 
@@ -423,6 +424,7 @@ for (( np=1;np<=${ncpu};np++));do
                                     nice -n 19 ./run_mstm $mstm_inp
                                     echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
                                     rm $mstm_inp
+                                    rm tmatrixfiles/${tmtf}
                                 fi
                             else 
                                 nice -n 19 ./run_mstm $mstm_inp
@@ -430,6 +432,7 @@ for (( np=1;np<=${ncpu};np++));do
                                 rm $mstm_inp
                                 echo " the input file is removed"
                                 echo "**********################ RUN IS COMPLETE ###################**********"
+                                rm tmatrixfiles/${tmtf}
                             fi' >> script${np}
     echo "      		done" >> script${np}
     echo "			done" >> script${np}
