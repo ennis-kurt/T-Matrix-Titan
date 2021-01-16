@@ -217,9 +217,10 @@ for run_agg in $(seq $NumberOfRuns); do
     k=$(seq $sp_range | sort -R | head -n 1)
     xs+=($k)
     for j in ${aggreal[@]}; do
-        mstm_input="mstm${j}_${i}_${kx}_${lr}_${mi}.inp"
+        
         #for the file names, in order to prevent any complication, next line will remove all the "." from the variables. Such as, l=0.01 will be converted to 001
         kx=${k/./}; lr=${l/./}; mi=${m/./}
+        mstm_input="mstm${j}_${i}_${kx}_${lr}_${mi}.inp"
         # Noting the date and time of the run started
         sed '8i\'$date mstm.inp > $mstm_input
         #number_spheres
@@ -419,12 +420,12 @@ for (( np=1;np<=${ncpu};np++));do
                                 if [ "${Size}" -gt "3000" ]; then
                                     continue
                                 else
-                                    ./run_mstm $mstm_inp
+                                    nice -n 19 ./run_mstm $mstm_inp
                                     echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
                                     rm $mstm_inp
                                 fi
                             else 
-                                ./run_mstm $mstm_inp
+                                nice -n 19 ./run_mstm $mstm_inp
                                 echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
                                 rm $mstm_inp
                                 echo " the input file is removed"
@@ -455,7 +456,7 @@ if [ "$cpu_ids" != "" ]; then
         if [ $cpu -ne $(( ${cpu_ids[-1]} )) ]; then 
             taskset -c ${cpu} ./script${c} &  # if not the last run then run on background
         else
-            taskset -c ${cpu} ./script${c} # Last run in a script allways run on forground
+            taskset -c ${cpu} ./script${c} # Last run in a script allways run on foreground
         fi
 	}
 else
@@ -466,11 +467,10 @@ else
             echo "echo new run initiated on background"
             # setting priority to low so that all cpus can be used and at the same time 
             # the computer can be still run for daily tasks. Higher the nice value lower the priority
-            nice -n 10 ./script${c} &  # if not the last run then run on background # nice -n 10 
+            ./script${c} &  # if not the last run then run on background # nice -n 10 
         else
-            nice -n 19 ./script${c} # Last run in a script allways run on foreground #
+            ./script${c} # Last run in a script allways run on foreground #
         fi
 	}
 
 fi
-
