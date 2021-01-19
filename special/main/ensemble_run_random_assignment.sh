@@ -205,16 +205,19 @@ for run_agg in $(seq $NumberOfRuns); do
 
     # Setting random parameters for this run
     # for future use let's also store each parameter randomly selected in arrays
-    IFS=$'\n' rand_n=($(sort -R <<<"${n[*]}"))
+    IFS=$'\n' rand_n=($(sort -R <<<"${n[*]}")) # to sort this way IFS should be set to line break
     unset IFS;
     i=${rand_n[0]} # number of monomers for this run, the first element only
     ns+=($i)
     #refractive index
     l=$(seq $nr_range | sort -R | head -n 1)
+    l=$(python -c "print('{:.2f}'.format($l))")
     nr+=($l)
     m=$(seq $ni_range | sort -R | head -n 1)
+    m=$(python -c "print('{:.4f}'.format($m))")
     ni+=($m)
     k=$(seq $sp_range | sort -R | head -n 1)
+    k=$(python -c "print('{:.4f}'.format($k))")
     xs+=($k)
     for j in ${aggreal[@]}; do
         
@@ -417,22 +420,22 @@ for (( np=1;np<=${ncpu};np++));do
                                 echo mstm_inp: ----- $mstm_inp
                                 mstm_out=mt_${sf}_${sn}_${sx}_${rn}_${im}.dat
                                 if [ -s ./output/${sn}/x${sx}/$rn/$im/$mstm_out ]; then 
-                                Size=$( wc -c < ./output/${sn}/x${sx}/$rn/$im/$mstm_out )
+                                    Size=$( wc -c < ./output/${sn}/x${sx}/$rn/$im/$mstm_out )
                                 if [ "${Size}" -gt "3000" ]; then
                                     continue
                                 else
                                     nice -n 19 ./run_mstm $mstm_inp
                                     echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
-                                    rm $mstm_inp
+                                    
                                     rm tmatrixfiles/${tmtf}
                                 fi
                             else 
                                 nice -n 19 ./run_mstm $mstm_inp
                                 echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
-                                rm $mstm_inp
+                                
                                 echo " the input file is removed"
                                 echo "**********################ RUN IS COMPLETE ###################**********"
-                                rm tmatrixfiles/${tmtf}
+                                
                             fi' >> script${np}
     echo "      		done" >> script${np}
     echo "			done" >> script${np}

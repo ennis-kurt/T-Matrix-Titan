@@ -111,6 +111,7 @@ aggreal=({1..25}) # This defines an Array From 1 to 25
 # ====================================================================================================================================================================================
 #Section 1. Input variables are read here. No need to modify this section since a request message for each variable will be prompted to terminal, then variable will be given by the user during the execution
 
+
 #number of monomers
 echo -e "${IBlue}Please type the Number of monomers separated by space .Eg. 32 64 128${Color_Off}"
 read n
@@ -120,17 +121,24 @@ echo -e "${IBlue}number of monomers ${ns[@]}${Color_Off}" | tee outbash.log
 #Refractive Index (look at Skorov et al. for optimum values)
 echo -e " ${IBlue}Please type: \"yes\" to use empirical refractive index values \"no\" to manually input fixed range of refractive indices${Color_Off} "
 for ((i=1; i<=10; i++))
- do 
+do
 read refr
 refr=($refr)
 if [ "$refr" = "no" ]; then
 echo -e "${IBlue}Please Type the real and imaginary refractive index of each realization subsequently. Eg. 1.5 1.7 2.0${Color_Off}"
 echo -e "${IBlue}Real refractive index${Color_Off}"
-read ri
-nr=($ri) 
+read nr
+nr=($nr)
+for i in "${!nr[@]}"; do 
+	nr[i]=$(python -c "print('{:.2f}'.format(${nr[i]}))")
+done
+echo "size param range: ${nr[@]}"
 echo -e "${IBlue}imaginary refractive index${Color_Off}"
-read ir
-ni=($ir) #imaginary
+read ni
+ni=($ni) #imaginary
+for i in "${!ni[@]}"; do 
+	ni[i]=$(python -c "print('{:.4f}'.format(${ni[i]}))")
+done
 echo -e "${IBlue} Refractive Indices: Real: ( ${nr[@]} ) Imginary: ( ${ni[@]} )${Color_Off}" | tee -a outbash.log
 break
 elif [ "$refr" = "yes" ]; then
@@ -141,24 +149,28 @@ echo -e "${IBlue}Please type a legitimate input${Color_Off}"
 fi
 done
 
-echo -e " ${IBlue}Please type the monomer radius as micrometer ${Color_Off}"
-read ls
-ls=($ls)
-echo -e " ${IBlue}Please type the Wavelength range as micrometer${Color_Off}"
-read wv
-wv=($wv)
+echo -e " ${IBlue}Please type the monomer size parameter ${Color_Off}"
+read xs
+xs=($xs)
+for i in "${!xs[@]}"; do 
+	xs[i]=$(python -c "print('{:.4f}'.format(${xs[i]}))")
+done
+echo "size param range: ${xs[@]}"
 
-echo -e " ${IBlue}Number of monomers : ${ns[@]}${Color_Off}
-monomer radius : ${ls[@]}
-wavelengths : ${wv[@]} "
+# echo -e " ${IBlue}Please type the Wavelength range as micrometer${Color_Off}"
+# read wv
+# wv=($wv)
 
+# echo -e " ${IBlue}Number of monomers : ${ns[@]}${Color_Off}
+# monomer radius : ${ls[@]}
+# wavelengths : ${wv[@]} "
 
 ############ Number of Cpu & how to schedule ##############
 echo -e ${IBlue}How many processors would you like to use for this calculation.${Color_Off}
 read ncpu
 echo -e " ${IBlue} # First $ncpu processors will be used. ${Color_Off}" | tee -a outbash.log
 
-echo -e ${IBlue} You can specify the cpu ids separated by space to run the processes${Color_Off}
+echo -e "${IBlue} You can specify the cpu ids separated by space to run the processes${Color_Off}"
 echo -e ${IBlue}For example. with 4 cpus used you should specify 4 cpu ids. 0 1 3 7 ${Color_Off}
 echo -e ${IBlue}Press ${On_IRed}Enter${Color_Off} ${IBlue}for default setup which let the OS schedule automotically${Color_Off}
 for ((i=1; i<=20; i++))
@@ -220,33 +232,33 @@ B=($B)
 	 xs=(${xs[@]} `echo "scale = 4; 2*3.1416*${rmon}/${wl}" | bc`)
   	
 	done
-     done
+    done
 # ------------------------------------------------------------------------------------------------------------------------------------------
 END
 
 
 for i in ${ns[@]} 
  do
- for wl in ${wv[@]}
-  do 
-  #
-  
-  if [ "$refr" = "yes" ]; then
- # ------------------------------------------------------------------------------------------------------------------------------------------
-        wl1=0.4909
-	wl2=0.9348
+# for wl in ${wv[@]}
+# do 
+# 	#
+
+# 	if [ "$refr" = "yes" ]; then
+# 	 # ------------------------------------------------------------------------------------------------------------------------------------------
+#     	wl1=0.4909
+# 		wl2=0.9348
 	 
-      if [[ $wl == $wl1 ]] ;then
-      nr=(1.3 1.71 2.0)  ; ni=(0.0226 0.09) # note that i still need to run with the following comb. (1.3 2.0) * ( 0.0452 )
-      elif [[ $wl == $wl2 ]]; then
-       nr=(1.3 1.66 2.0) ; ni=(0.00438  0.001) # note that i still need another run with the following comb. (1.3 2.0) * ( 0.00219 )
-      else 
-      echo -e "${IBlue} please modify the Section 2. in the script if dynamic creation of refractive indices is needed${Color_Off}"
-      fi
-# ------------------------------------------------------------------------------------------------------------------------------------------
-  else 
-  echo -e "${IBlue} Input values of Refractive Indices are being used: nr: ( ${nr[@]} ) ni: ( ${ni[@]} ) ${Color_Off}"
-  fi
+# 		if [[ $wl == $wl1 ]] ;then
+# 			nr=(1.3 1.71 2.0)  ; ni=(0.0226 0.09) # note that i still need to run with the following comb. (1.3 2.0) * ( 0.0452 )
+# 		elif [[ $wl == $wl2 ]]; then
+#        		nr=(1.3 1.66 2.0) ; ni=(0.00438  0.001) # note that i still need another run with the following comb. (1.3 2.0) * ( 0.00219 )
+#       	else 
+#       		echo -e "${IBlue} please modify the Section 2. in the script if dynamic creation of refractive indices is needed${Color_Off}"
+#       	fi
+# # ------------------------------------------------------------------------------------------------------------------------------------------
+#   	else 
+#   		echo -e "${IBlue} Input values of Refractive Indices are being used: nr: ( ${nr[@]} ) ni: ( ${ni[@]} ) ${Color_Off}"
+#   	fi
   
   for l in ${nr[@]} 
    do
@@ -254,18 +266,19 @@ for i in ${ns[@]}
     do
     for j in ${aggreal[@]}
      do
-	for rmon in ${ls[@]} 
+	for k in ${xs[@]} 
 	do
 	
-	  # k is the monomer size parameter.
-	  k=$(
-			
-		)
-	  echo monomer size paramater = $k
+	#   # k is the monomer size parameter.
+	#   k=$(echo "scale = 4; 2*3.1416*${rmon}/${wl}" | bc)
+	#   echo monomer size paramater = $k
 	
 
-	  #for the file names, in order to prevent any complication, next line will remove all the "." from the variables. Such as, l=0.01 will be converted to 001
+	  #for the file names rescaling these parameters and remove the "." from the variables.
+	  # Such as, l=0.01 will be converted to 001
+	  
 	  kx=${k/./}; lr=${l/./}; mi=${m/./}
+
 	  # Noting the date and time of the run started
 		sed '8i\'$date mstm.inp > mstm${j}_${i}_${kx}_${lr}_${mi}.inp
 
@@ -402,7 +415,7 @@ for i in ${ns[@]}
         echo -e ${IBlue}Input Files are Created succesfully! ${Color_Off}| tee -a outbash.log
 	
      done
-    done	
+    # done	
    done
   done
  done
@@ -417,7 +430,7 @@ done
  #mv n* position/
   echo -e ${IBlue}Now The External Scripts Are Being Written.${Color_Off} | tee -a outbash.log
  for (( np=1;np<=${ncpu};np++));do
-   xs=('') #this will reset the previous array
+#    xs=('') #this will reset the previous array
    
    echo "# This script runs a set of child processes on a single cpu core. 
 	 #The main script is ensemble_run.sh which writes and controls all the 
@@ -454,19 +467,19 @@ done
 
 # ------------------------------------------------------------------------------------------------------------------------------------------
 
-K=$((${#ls[@]} * ${#wv[@]}))
+# K=$((${#ls[@]} * ${#wv[@]}))
 
-B=$(seq 0 $K) # this is 1d array ( or string) which needs to be converted to multi-d array as in next line
-B=($B)
+# B=$(seq 0 $K) # this is 1d array ( or string) which needs to be converted to multi-d array as in next line
+# B=($B)
 
-    for rmon in ${ls[@]}
-      do
-	for wl in ${wv[@]}
-	 do
-	 xs=(${xs[@]} `echo "scale = 4; 2*3.1416*${rmon}/${wl}" | bc`)
+    # for rmon in ${ls[@]}
+    #   do
+	# for wl in ${wv[@]}
+	#  do
+	#  xs=(${xs[@]} `echo "scale = 4; 2*3.1416*${rmon}/${wl}" | bc`)
   	
-	done
-     done
+	# done
+    #  done
 
 # ------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -476,17 +489,21 @@ echo "	for sx in ${xs[@]/./};do " >> script${np}
 echo "		for rn in ${nr[@]/./};do " >> script${np}
 echo "	   		for im in ${ni[@]/./};do " >> script${np}
 echo "	        	for sf in ${b[@]};do " >> script${np} #or "for dos in cat($ls);do ' ~/programs/mstmv3.0/run_mstm input/mstm/${sn}_${sx}_${rn}_${im}/$dos"
-echo '		            if [ -s ./output/${sn}/x${sx}/$rn/$im/mt_${sf}_${sn}_${sx}_${rn}_${im}.dat ]; then 
+echo '		            	tmtf=${sf}${sn}${sx}${rn}${im}
+							if [ -s ./output/${sn}/x${sx}/$rn/$im/mt_${sf}_${sn}_${sx}_${rn}_${im}.dat ]; then 
 							Size=$( wc -c < ./output/${sn}/x${sx}/$rn/$im/mt_${sf}_${sn}_${sx}_${rn}_${im}.dat )
 							if [ "${Size}" -gt "3000" ]; then
 								continue
+							
 							else
 								./run_mstm mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
 								echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
+								rm tmatrixfiles/${tmtf}
 							fi
 						else 
 							./run_mstm mstm${sf}_${sn}_${sx}_${rn}_${im}.inp
 							echo "The run ${sf}_${sn}_${sx}_${rn}_${im} is completed on $(date)"
+							rm tmatrixfiles/${tmtf}
 						fi' >> script${np}
 echo "      		done" >> script${np}
 echo "			done" >> script${np}
@@ -510,25 +527,27 @@ if [ "$cpu_ids" != "" ]; then
 	for (( c=1; c<=${ncpu}; c++))
 	{
 		chmod +x script${c}
-			
 		p=$(( ${c}-1 ))
 		cpu=${cpu_ids[p]}
-
-			if [ $cpu -ne $(( ${cpu_ids[-1]} )) ]; then 
-				taskset -c ${cpu} ./script${c} &  # if not the last run then run on background
-			else
-				taskset -c ${cpu} ./script${c} # Last run in a script allways run on forground
-			fi
+            
+        if [ $cpu -ne $(( ${cpu_ids[-1]} )) ]; then 
+			taskset -c ${cpu} ./script${c} &  # if not the last run then run on background
+        else
+            taskset -c ${cpu} ./script${c} # Last run in a script allways run on foreground
+        fi
 	}
 else
 	echo 'Default Mode is Selected'
 	for (( c=1; c<=${ncpu}; c++))
 	{
-		if [ $c -ne ${ncpu} ]; then 
-				./script${c} &  # if not the last run then run on background
-			else
-				./script${c} # Last run in a script allways run on foreground
-			fi
+		if [ $c -ne ${ncpu} ]; then
+            echo "echo new run initiated on background"
+            # setting priority to low so that all cpus can be used and at the same time 
+            # the computer can be still run for daily tasks. Higher the nice value lower the priority
+            ./script${c} &  # if not the last run then run on background # nice -n 10 
+        else
+            ./script${c} # Last run in a script allways run on foreground #
+        fi
 	}
 
 fi
