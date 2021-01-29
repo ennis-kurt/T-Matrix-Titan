@@ -1,0 +1,47 @@
+ input file is 
+mstm20_256_078_176_0046.inp   
+ input file comments follow:
+***********************************************************
+  This is the default mstm input file for v.3.0.
+  The run is for a 7-sphere cluster of identical spheres.   The positions
+  are embedded in the input file.
+
+  The run makes use of the new_run and multiple_run options.
+
+  14 April 2013
+***********************************************************
+ number of processors:
+   1
+ input parameters for run number 
+    1
+ number of spheres, volume size parameter:
+  256  0.49527E+01
+ position file:
+position/n256/a20.out                                       
+ output file:
+output/256/x078/176/0046/mt_20_256_078_176_0046.dat         
+ length, ref. indx. scale factors:
+   0.780   1.760   0.046
+ chiral factors:
+  0.00000E+00  0.00000E+00
+ scattering matrix directions based on incident frame
+ automatic scattering angle calculation
+ thetamin, thetamax:
+      0.0    180.0
+ number scattering angles:
+      181
+ epsmie, epssoln, max number iterations:
+  0.1000E-05  0.1000E-07 5000
+ medium refractive index:
+  1.0000  0.0000
+ target euler rotation angles:
+    0.0000    0.0000    0.0000
+ far field kr, iterations/correction:
+ -0.1000E+01   20
+ plane wave incidence
+ random orientation calculations
+ t matrix calculated, stored in file 
+tmatrixfiles/202560781760046                                
+ t matrix convergence epsilon:
+  0.1000E-06
+ all spheres excited (total T matrix) 
