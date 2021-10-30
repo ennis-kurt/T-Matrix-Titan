@@ -97,7 +97,7 @@ for N in */; do
                             ni=$(python -c "print('{:.4f}'.format($ni))")
 
                             # next line will remove the "." from the variables.
-                            x_m=x${xm/./}; n_r=${nr/./}; n_i=${ni/./}
+                            x_m=${xm/./}; n_r=${nr/./}; n_i=${ni/./}
 
                             # print the new formats
                             echo "new formats: xm: $x_m  nr: $n_r  ni: $n_i"
@@ -117,16 +117,32 @@ for N in */; do
                                 '
                                 # The second element is the run_id
                                 run_id=${name_arr[1]}
-                                xm_old=${name_arr[2]}
-                                nr_old=${name_arr[3]}
-                                ni_old=${name_arr[4]}
+                                xm_old=${name_arr[3]}
+                                nr_old=${name_arr[4]}
+                                ni_old=${name_arr[5]}
                                 ni_old=${ni_old/.dat/}
+                            #     echo "
+                            
+                            #     Sanity Check
+                            #     file name: $file
+                            #     run_id = $run_id
+                            #     ni_old: $ni_old  n_i: $n_i
+                            #     nr_old: $nr_old  n_r: $n_r
+                            #     xm_old: $xm_old  x_m: $x_m
+                                
+                            #     dir_ni: $dir_ni  new_dir: ${dir_nr}$n_i
+                            #     dir_nr: $dir_nr  new_dir: ${dir_xm}$n_r
+                            #     dir_xm: $dir_xm  new_dir: ${N}/x${x_m}
+                            
+                            # "    
+                                
                                 # if output name is already correct then skip
                                 # [ "$xm_old" == "$x_m" ] && [ "$nr_old" == "$n_r" ] && [ "$ni_old" == "$n_i" ] && continue
                                 [ "$file" == "$dir_ni"mt_"${run_id}"_"${N}"_"${x_m}"_"${n_r}"_"${n_i}".dat ] &&\
                                 echo "file is already named properly: ${file}" && continue
                                 # Now rename the file
                                 # echo moving "$file" to "$dir_ni"mt_"${run_id}"_"${N}"_"${x_m}"_"${n_r}"_"${n_i}".dat 
+                                echo "Renaming the file to mt_"${run_id}"_"${N}"_"${x_m}"_"${n_r}"_"${n_i}".dat "
                                 mv -n "$file" "$dir_ni"mt_"${run_id}"_"${N}"_"${x_m}"_"${n_r}"_"${n_i}".dat 
                             done
                         
@@ -137,31 +153,35 @@ for N in */; do
                             IFS='
                                 '
                             xm_old=${name_arr[1]}
+                            xm_old=${xm_old/x/}
+
                             nr_old=${name_arr[2]}
                             ni_old=${name_arr[3]}
 
-                            # echo "
+                            echo "
                             
-                            # Sanity Check
-                            #     ni_old: $ni_old  n_i: $n_i
-                            #     nr_old: $nr_old  n_r: $n_r
-                            #     xm_old: $xm_old  x_m: $x_m
+                            Sanity Check
+                                ni_old: $ni_old  n_i: $n_i
+                                nr_old: $nr_old  n_r: $n_r
+                                xm_old: $xm_old  x_m: $x_m
                                 
-                            #     dir_ni: $dir_ni  new_dir: ${dir_nr}$n_i
-                            #     dir_nr: $dir_nr  new_dir: ${dir_xm}$n_r
-                            #     dir_xm: $dir_xm  new_dir: ${N}/${x_m}
+                                dir_ni: $dir_ni  new_dir: ${dir_nr}$n_i
+                                dir_nr: $dir_nr  new_dir: ${dir_xm}$n_r
+                                dir_xm: $dir_xm  new_dir: ${N}/x${x_m}
                             
-                            # "    
-                            # [ "$ni_old" != "$n_i" ] && mv "$dir_ni" "${dir_nr}$n_i"
-
+                            " >> log_sanity_check.txt
+                            [ "$ni_old" != "$n_i" ] && mv "$dir_ni" "${dir_nr}$n_i"
                             # echo " All Done"
                         fi
                     done
-
+                    echo "Renaming directory at nr level" 
                     [ "$nr_old" != "$n_r" ] && mv -v "$dir_nr" "${dir_xm}$n_r"
                 fi
             done
-            [ "$xm_old" != "$x_m" ] && mv -v "$dir_xm" "${N}/${x_m}"
+            echo "moving directory at xm level"
+            echo "$xm_old =? $x_m " 
+            echo " $dir_xm =?  ${N}/x${x_m}"
+            [ "$xm_old" != "$x_m" ] && mv -v "$dir_xm" "${N}/x${x_m}"
         fi
     done
 done

@@ -1,0 +1,3756 @@
+
+                            
+                            Sanity Check
+                                ni_old: 00010  n_i: 00010
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/130/00010/  new_dir: 1024/x03360/130/00010
+                                dir_nr: 1024/x03360/130/  new_dir: 1024/x03360/130
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00040  n_i: 00040
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/130/00040/  new_dir: 1024/x03360/130/00040
+                                dir_nr: 1024/x03360/130/  new_dir: 1024/x03360/130
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/130/00230/  new_dir: 1024/x03360/130/00230
+                                dir_nr: 1024/x03360/130/  new_dir: 1024/x03360/130
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/130/00450/  new_dir: 1024/x03360/130/00450
+                                dir_nr: 1024/x03360/130/  new_dir: 1024/x03360/130
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/130/00900/  new_dir: 1024/x03360/130/00900
+                                dir_nr: 1024/x03360/130/  new_dir: 1024/x03360/130
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00010  n_i: 00010
+                                nr_old: 166  n_r: 166
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/166/00010/  new_dir: 1024/x03360/166/00010
+                                dir_nr: 1024/x03360/166/  new_dir: 1024/x03360/166
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00020  n_i: 00020
+                                nr_old: 166  n_r: 166
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/166/00020/  new_dir: 1024/x03360/166/00020
+                                dir_nr: 1024/x03360/166/  new_dir: 1024/x03360/166
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00020  n_i: 00020
+                                nr_old: 171  n_r: 166
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/171/00020/  new_dir: 1024/x03360/171/00020
+                                dir_nr: 1024/x03360/171/  new_dir: 1024/x03360/166
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 171  n_r: 171
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/171/00230/  new_dir: 1024/x03360/171/00230
+                                dir_nr: 1024/x03360/171/  new_dir: 1024/x03360/171
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 171  n_r: 171
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/171/00900/  new_dir: 1024/x03360/171/00900
+                                dir_nr: 1024/x03360/171/  new_dir: 1024/x03360/171
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00040  n_i: 00040
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/200/00040/  new_dir: 1024/x03360/200/00040
+                                dir_nr: 1024/x03360/200/  new_dir: 1024/x03360/200
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/200/00230/  new_dir: 1024/x03360/200/00230
+                                dir_nr: 1024/x03360/200/  new_dir: 1024/x03360/200
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/200/00450/  new_dir: 1024/x03360/200/00450
+                                dir_nr: 1024/x03360/200/  new_dir: 1024/x03360/200
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 1024/x03360/200/00900/  new_dir: 1024/x03360/200/00900
+                                dir_nr: 1024/x03360/200/  new_dir: 1024/x03360/200
+                                dir_xm: 1024/x03360/  new_dir: 1024/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00460  n_i: 00460
+                                nr_old: 194  n_r: 194
+                                xm_old: 04200  x_m: 04200
+                                
+                                dir_ni: 1024/x04200/194/00460/  new_dir: 1024/x04200/194/00460
+                                dir_nr: 1024/x04200/194/  new_dir: 1024/x04200/194
+                                dir_xm: 1024/x04200/  new_dir: 1024/x04200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 1024/x04300/130/00230/  new_dir: 1024/x04300/130/00230
+                                dir_nr: 1024/x04300/130/  new_dir: 1024/x04300/130
+                                dir_xm: 1024/x04300/  new_dir: 1024/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 1024/x04300/130/00900/  new_dir: 1024/x04300/130/00900
+                                dir_nr: 1024/x04300/130/  new_dir: 1024/x04300/130
+                                dir_xm: 1024/x04300/  new_dir: 1024/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 1024/x04300/200/00230/  new_dir: 1024/x04300/200/00230
+                                dir_nr: 1024/x04300/200/  new_dir: 1024/x04300/200
+                                dir_xm: 1024/x04300/  new_dir: 1024/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 200  n_r: 200
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 1024/x04300/200/00900/  new_dir: 1024/x04300/200/00900
+                                dir_nr: 1024/x04300/200/  new_dir: 1024/x04300/200
+                                dir_xm: 1024/x04300/  new_dir: 1024/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00070  n_i: 00070
+                                nr_old: 172  n_r: 172
+                                xm_old: 04800  x_m: 04800
+                                
+                                dir_ni: 1024/x04800/172/00070/  new_dir: 1024/x04800/172/00070
+                                dir_nr: 1024/x04800/172/  new_dir: 1024/x04800/172
+                                dir_xm: 1024/x04800/  new_dir: 1024/x04800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 1024/x05300/130/00230/  new_dir: 1024/x05300/130/00230
+                                dir_nr: 1024/x05300/130/  new_dir: 1024/x05300/130
+                                dir_xm: 1024/x05300/  new_dir: 1024/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 1024/x05300/130/00900/  new_dir: 1024/x05300/130/00900
+                                dir_nr: 1024/x05300/130/  new_dir: 1024/x05300/130
+                                dir_xm: 1024/x05300/  new_dir: 1024/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 1024/x05300/200/00230/  new_dir: 1024/x05300/200/00230
+                                dir_nr: 1024/x05300/200/  new_dir: 1024/x05300/200
+                                dir_xm: 1024/x05300/  new_dir: 1024/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 200  n_r: 200
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 1024/x05300/200/00900/  new_dir: 1024/x05300/200/00900
+                                dir_nr: 1024/x05300/200/  new_dir: 1024/x05300/200
+                                dir_xm: 1024/x05300/  new_dir: 1024/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00200  n_i: 00200
+                                nr_old: 186  n_r: 186
+                                xm_old: 06000  x_m: 06000
+                                
+                                dir_ni: 1024/x06000/186/00200/  new_dir: 1024/x06000/186/00200
+                                dir_nr: 1024/x06000/186/  new_dir: 1024/x06000/186
+                                dir_xm: 1024/x06000/  new_dir: 1024/x06000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00310  n_i: 00310
+                                nr_old: 180  n_r: 180
+                                xm_old: 06200  x_m: 06200
+                                
+                                dir_ni: 1024/x06200/180/00310/  new_dir: 1024/x06200/180/00310
+                                dir_nr: 1024/x06200/180/  new_dir: 1024/x06200/180
+                                dir_xm: 1024/x06200/  new_dir: 1024/x06200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 1024/x06400/130/00230/  new_dir: 1024/x06400/130/00230
+                                dir_nr: 1024/x06400/130/  new_dir: 1024/x06400/130
+                                dir_xm: 1024/x06400/  new_dir: 1024/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 1024/x06400/130/00450/  new_dir: 1024/x06400/130/00450
+                                dir_nr: 1024/x06400/130/  new_dir: 1024/x06400/130
+                                dir_xm: 1024/x06400/  new_dir: 1024/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 1024/x06400/130/00900/  new_dir: 1024/x06400/130/00900
+                                dir_nr: 1024/x06400/130/  new_dir: 1024/x06400/130
+                                dir_xm: 1024/x06400/  new_dir: 1024/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 171  n_r: 171
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 1024/x06400/171/00230/  new_dir: 1024/x06400/171/00230
+                                dir_nr: 1024/x06400/171/  new_dir: 1024/x06400/171
+                                dir_xm: 1024/x06400/  new_dir: 1024/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 1024/x06400/171/00450/  new_dir: 1024/x06400/171/00450
+                                dir_nr: 1024/x06400/171/  new_dir: 1024/x06400/171
+                                dir_xm: 1024/x06400/  new_dir: 1024/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 171  n_r: 171
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 1024/x06400/171/00900/  new_dir: 1024/x06400/171/00900
+                                dir_nr: 1024/x06400/171/  new_dir: 1024/x06400/171
+                                dir_xm: 1024/x06400/  new_dir: 1024/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00230  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 1024/x06400/200/00230/  new_dir: 1024/x06400/200/00230
+                                dir_nr: 1024/x06400/200/  new_dir: 1024/x06400/200
+                                dir_xm: 1024/x06400/  new_dir: 1024/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 1024/x06400/200/00450/  new_dir: 1024/x06400/200/00450
+                                dir_nr: 1024/x06400/200/  new_dir: 1024/x06400/200
+                                dir_xm: 1024/x06400/  new_dir: 1024/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 1024/x06400/200/00900/  new_dir: 1024/x06400/200/00900
+                                dir_nr: 1024/x06400/200/  new_dir: 1024/x06400/200
+                                dir_xm: 1024/x06400/  new_dir: 1024/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00040  n_i: 00040
+                                nr_old: 172  n_r: 172
+                                xm_old: 06600  x_m: 06600
+                                
+                                dir_ni: 1024/x06600/172/00040/  new_dir: 1024/x06600/172/00040
+                                dir_nr: 1024/x06600/172/  new_dir: 1024/x06600/172
+                                dir_xm: 1024/x06600/  new_dir: 1024/x06600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00880  n_i: 00880
+                                nr_old: 162  n_r: 162
+                                xm_old: 06800  x_m: 06800
+                                
+                                dir_ni: 1024/x06800/162/00880/  new_dir: 1024/x06800/162/00880
+                                dir_nr: 1024/x06800/162/  new_dir: 1024/x06800/162
+                                dir_xm: 1024/x06800/  new_dir: 1024/x06800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00280  n_i: 00280
+                                nr_old: 168  n_r: 168
+                                xm_old: 07600  x_m: 07600
+                                
+                                dir_ni: 1024/x07600/168/00280/  new_dir: 1024/x07600/168/00280
+                                dir_nr: 1024/x07600/168/  new_dir: 1024/x07600/168
+                                dir_xm: 1024/x07600/  new_dir: 1024/x07600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00100  n_i: 00100
+                                nr_old: 186  n_r: 186
+                                xm_old: 08800  x_m: 08800
+                                
+                                dir_ni: 1024/x08800/186/00100/  new_dir: 1024/x08800/186/00100
+                                dir_nr: 1024/x08800/186/  new_dir: 1024/x08800/186
+                                dir_xm: 1024/x08800/  new_dir: 1024/x08800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 04030  n_i: 04030
+                                nr_old: 150  n_r: 150
+                                xm_old: 04000  x_m: 04000
+                                
+                                dir_ni: 128/x04000/150/04030/  new_dir: 128/x04000/150/04030
+                                dir_nr: 128/x04000/150/  new_dir: 128/x04000/150
+                                dir_xm: 128/x04000/  new_dir: 128/x04000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00750  n_i: 00750
+                                nr_old: 164  n_r: 164
+                                xm_old: 04000  x_m: 04000
+                                
+                                dir_ni: 128/x04000/164/00750/  new_dir: 128/x04000/164/00750
+                                dir_nr: 128/x04000/164/  new_dir: 128/x04000/164
+                                dir_xm: 128/x04000/  new_dir: 128/x04000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00650  n_i: 00650
+                                nr_old: 186  n_r: 186
+                                xm_old: 04000  x_m: 04000
+                                
+                                dir_ni: 128/x04000/186/00650/  new_dir: 128/x04000/186/00650
+                                dir_nr: 128/x04000/186/  new_dir: 128/x04000/186
+                                dir_xm: 128/x04000/  new_dir: 128/x04000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 198  n_r: 198
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 128/x04300/198/00900/  new_dir: 128/x04300/198/00900
+                                dir_nr: 128/x04300/198/  new_dir: 128/x04300/198
+                                dir_xm: 128/x04300/  new_dir: 128/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 146  n_r: 146
+                                xm_old: 04400  x_m: 04400
+                                
+                                dir_ni: 128/x04400/146/00900/  new_dir: 128/x04400/146/00900
+                                dir_nr: 128/x04400/146/  new_dir: 128/x04400/146
+                                dir_xm: 128/x04400/  new_dir: 128/x04400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00860  n_i: 00860
+                                nr_old: 166  n_r: 166
+                                xm_old: 04400  x_m: 04400
+                                
+                                dir_ni: 128/x04400/166/00860/  new_dir: 128/x04400/166/00860
+                                dir_nr: 128/x04400/166/  new_dir: 128/x04400/166
+                                dir_xm: 128/x04400/  new_dir: 128/x04400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00550  n_i: 00550
+                                nr_old: 160  n_r: 160
+                                xm_old: 04700  x_m: 04700
+                                
+                                dir_ni: 128/x04700/160/00550/  new_dir: 128/x04700/160/00550
+                                dir_nr: 128/x04700/160/  new_dir: 128/x04700/160
+                                dir_xm: 128/x04700/  new_dir: 128/x04700
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00550  n_i: 00550
+                                nr_old: 186  n_r: 186
+                                xm_old: 04800  x_m: 04800
+                                
+                                dir_ni: 128/x04800/186/00550/  new_dir: 128/x04800/186/00550
+                                dir_nr: 128/x04800/186/  new_dir: 128/x04800/186
+                                dir_xm: 128/x04800/  new_dir: 128/x04800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00140  n_i: 00140
+                                nr_old: 158  n_r: 158
+                                xm_old: 05000  x_m: 05000
+                                
+                                dir_ni: 128/x05000/158/00140/  new_dir: 128/x05000/158/00140
+                                dir_nr: 128/x05000/158/  new_dir: 128/x05000/158
+                                dir_xm: 128/x05000/  new_dir: 128/x05000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 164  n_r: 164
+                                xm_old: 05000  x_m: 05000
+                                
+                                dir_ni: 128/x05000/164/00450/  new_dir: 128/x05000/164/00450
+                                dir_nr: 128/x05000/164/  new_dir: 128/x05000/164
+                                dir_xm: 128/x05000/  new_dir: 128/x05000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00280  n_i: 00280
+                                nr_old: 158  n_r: 158
+                                xm_old: 05200  x_m: 05200
+                                
+                                dir_ni: 128/x05200/158/00280/  new_dir: 128/x05200/158/00280
+                                dir_nr: 128/x05200/158/  new_dir: 128/x05200/158
+                                dir_xm: 128/x05200/  new_dir: 128/x05200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00470  n_i: 00470
+                                nr_old: 154  n_r: 154
+                                xm_old: 05400  x_m: 05400
+                                
+                                dir_ni: 128/x05400/154/00470/  new_dir: 128/x05400/154/00470
+                                dir_nr: 128/x05400/154/  new_dir: 128/x05400/154
+                                dir_xm: 128/x05400/  new_dir: 128/x05400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00550  n_i: 00550
+                                nr_old: 154  n_r: 154
+                                xm_old: 05400  x_m: 05400
+                                
+                                dir_ni: 128/x05400/154/00550/  new_dir: 128/x05400/154/00550
+                                dir_nr: 128/x05400/154/  new_dir: 128/x05400/154
+                                dir_xm: 128/x05400/  new_dir: 128/x05400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00110  n_i: 00110
+                                nr_old: 156  n_r: 156
+                                xm_old: 05400  x_m: 05400
+                                
+                                dir_ni: 128/x05400/156/00110/  new_dir: 128/x05400/156/00110
+                                dir_nr: 128/x05400/156/  new_dir: 128/x05400/156
+                                dir_xm: 128/x05400/  new_dir: 128/x05400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00780  n_i: 00780
+                                nr_old: 174  n_r: 174
+                                xm_old: 05600  x_m: 05600
+                                
+                                dir_ni: 128/x05600/174/00780/  new_dir: 128/x05600/174/00780
+                                dir_nr: 128/x05600/174/  new_dir: 128/x05600/174
+                                dir_xm: 128/x05600/  new_dir: 128/x05600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00110  n_i: 00110
+                                nr_old: 164  n_r: 164
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 128/x05800/164/00110/  new_dir: 128/x05800/164/00110
+                                dir_nr: 128/x05800/164/  new_dir: 128/x05800/164
+                                dir_xm: 128/x05800/  new_dir: 128/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00200  n_i: 00200
+                                nr_old: 168  n_r: 168
+                                xm_old: 06000  x_m: 06000
+                                
+                                dir_ni: 128/x06000/168/00200/  new_dir: 128/x06000/168/00200
+                                dir_nr: 128/x06000/168/  new_dir: 128/x06000/168
+                                dir_xm: 128/x06000/  new_dir: 128/x06000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00500  n_i: 00500
+                                nr_old: 184  n_r: 184
+                                xm_old: 06000  x_m: 06000
+                                
+                                dir_ni: 128/x06000/184/00500/  new_dir: 128/x06000/184/00500
+                                dir_nr: 128/x06000/184/  new_dir: 128/x06000/184
+                                dir_xm: 128/x06000/  new_dir: 128/x06000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00350  n_i: 00350
+                                nr_old: 154  n_r: 154
+                                xm_old: 06200  x_m: 06200
+                                
+                                dir_ni: 128/x06200/154/00350/  new_dir: 128/x06200/154/00350
+                                dir_nr: 128/x06200/154/  new_dir: 128/x06200/154
+                                dir_xm: 128/x06200/  new_dir: 128/x06200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00010  n_i: 00010
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/130/00010/  new_dir: 128/x06400/130/00010
+                                dir_nr: 128/x06400/130/  new_dir: 128/x06400/130
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/130/00226/  new_dir: 128/x06400/130/00230
+                                dir_nr: 128/x06400/130/  new_dir: 128/x06400/130
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/130/00900/  new_dir: 128/x06400/130/00900
+                                dir_nr: 128/x06400/130/  new_dir: 128/x06400/130
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00010  n_i: 00010
+                                nr_old: 168  n_r: 168
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/168/00010/  new_dir: 128/x06400/168/00010
+                                dir_nr: 128/x06400/168/  new_dir: 128/x06400/168
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 168  n_r: 168
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/168/00044/  new_dir: 128/x06400/168/00040
+                                dir_nr: 128/x06400/168/  new_dir: 128/x06400/168
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/171/00450/  new_dir: 128/x06400/171/00450
+                                dir_nr: 128/x06400/171/  new_dir: 128/x06400/171
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00010  n_i: 00010
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/200/00010/  new_dir: 128/x06400/200/00010
+                                dir_nr: 128/x06400/200/  new_dir: 128/x06400/200
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/200/00044/  new_dir: 128/x06400/200/00040
+                                dir_nr: 128/x06400/200/  new_dir: 128/x06400/200
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/200/00226/  new_dir: 128/x06400/200/00230
+                                dir_nr: 128/x06400/200/  new_dir: 128/x06400/200
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 128/x06400/200/00900/  new_dir: 128/x06400/200/00900
+                                dir_nr: 128/x06400/200/  new_dir: 128/x06400/200
+                                dir_xm: 128/x06400/  new_dir: 128/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00200  n_i: 00200
+                                nr_old: 160  n_r: 160
+                                xm_old: 06500  x_m: 06500
+                                
+                                dir_ni: 128/x06500/160/00200/  new_dir: 128/x06500/160/00200
+                                dir_nr: 128/x06500/160/  new_dir: 128/x06500/160
+                                dir_xm: 128/x06500/  new_dir: 128/x06500
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00150  n_i: 00150
+                                nr_old: 170  n_r: 170
+                                xm_old: 06800  x_m: 06800
+                                
+                                dir_ni: 128/x06800/170/00150/  new_dir: 128/x06800/170/00150
+                                dir_nr: 128/x06800/170/  new_dir: 128/x06800/170
+                                dir_xm: 128/x06800/  new_dir: 128/x06800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00550  n_i: 00550
+                                nr_old: 164  n_r: 164
+                                xm_old: 07000  x_m: 07000
+                                
+                                dir_ni: 128/x07000/164/00550/  new_dir: 128/x07000/164/00550
+                                dir_nr: 128/x07000/164/  new_dir: 128/x07000/164
+                                dir_xm: 128/x07000/  new_dir: 128/x07000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 128/x07300/130/00226/  new_dir: 128/x07300/130/00230
+                                dir_nr: 128/x07300/130/  new_dir: 128/x07300/130
+                                dir_xm: 128/x07300/  new_dir: 128/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 128/x07300/145/00226/  new_dir: 128/x07300/145/00230
+                                dir_nr: 128/x07300/145/  new_dir: 128/x07300/145
+                                dir_xm: 128/x07300/  new_dir: 128/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 128/x07300/200/00226/  new_dir: 128/x07300/200/00230
+                                dir_nr: 128/x07300/200/  new_dir: 128/x07300/200
+                                dir_xm: 128/x07300/  new_dir: 128/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00140  n_i: 00140
+                                nr_old: 182  n_r: 182
+                                xm_old: 07400  x_m: 07400
+                                
+                                dir_ni: 128/x07400/182/00140/  new_dir: 128/x07400/182/00140
+                                dir_nr: 128/x07400/182/  new_dir: 128/x07400/182
+                                dir_xm: 128/x07400/  new_dir: 128/x07400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 158  n_r: 158
+                                xm_old: 08000  x_m: 08000
+                                
+                                dir_ni: 128/x08000/158/00900/  new_dir: 128/x08000/158/00900
+                                dir_nr: 128/x08000/158/  new_dir: 128/x08000/158
+                                dir_xm: 128/x08000/  new_dir: 128/x08000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 11380  n_i: 11380
+                                nr_old: 191  n_r: 191
+                                xm_old: 08200  x_m: 08200
+                                
+                                dir_ni: 128/x08200/191/11380/  new_dir: 128/x08200/191/11380
+                                dir_nr: 128/x08200/191/  new_dir: 128/x08200/191
+                                dir_xm: 128/x08200/  new_dir: 128/x08200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 18220  n_i: 18220
+                                nr_old: 197  n_r: 197
+                                xm_old: 08200  x_m: 08200
+                                
+                                dir_ni: 128/x08200/197/18220/  new_dir: 128/x08200/197/18220
+                                dir_nr: 128/x08200/197/  new_dir: 128/x08200/197
+                                dir_xm: 128/x08200/  new_dir: 128/x08200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 0067  n_i: 00670
+                                nr_old: 190  n_r: 190
+                                xm_old: 08400  x_m: 08400
+                                
+                                dir_ni: 128/x08400/190/0067/  new_dir: 128/x08400/190/00670
+                                dir_nr: 128/x08400/190/  new_dir: 128/x08400/190
+                                dir_xm: 128/x08400/  new_dir: 128/x08400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 0076  n_i: 00760
+                                nr_old: 168  n_r: 168
+                                xm_old: 08800  x_m: 08800
+                                
+                                dir_ni: 128/x08800/168/0076/  new_dir: 128/x08800/168/00760
+                                dir_nr: 128/x08800/168/  new_dir: 128/x08800/168
+                                dir_xm: 128/x08800/  new_dir: 128/x08800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/130/00044/  new_dir: 256/x03360/130/00040
+                                dir_nr: 256/x03360/130/  new_dir: 256/x03360/130
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/130/00226/  new_dir: 256/x03360/130/00230
+                                dir_nr: 256/x03360/130/  new_dir: 256/x03360/130
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/130/00450/  new_dir: 256/x03360/130/00450
+                                dir_nr: 256/x03360/130/  new_dir: 256/x03360/130
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/130/00900/  new_dir: 256/x03360/130/00900
+                                dir_nr: 256/x03360/130/  new_dir: 256/x03360/130
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 03000  n_i: 03000
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/130/03000/  new_dir: 256/x03360/130/03000
+                                dir_nr: 256/x03360/130/  new_dir: 256/x03360/130
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 145  n_r: 145
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/145/00044/  new_dir: 256/x03360/145/00040
+                                dir_nr: 256/x03360/145/  new_dir: 256/x03360/145
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/145/00226/  new_dir: 256/x03360/145/00230
+                                dir_nr: 256/x03360/145/  new_dir: 256/x03360/145
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 145  n_r: 145
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/145/00450/  new_dir: 256/x03360/145/00450
+                                dir_nr: 256/x03360/145/  new_dir: 256/x03360/145
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 145  n_r: 145
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/145/00900/  new_dir: 256/x03360/145/00900
+                                dir_nr: 256/x03360/145/  new_dir: 256/x03360/145
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 03000  n_i: 03000
+                                nr_old: 145  n_r: 145
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/145/03000/  new_dir: 256/x03360/145/03000
+                                dir_nr: 256/x03360/145/  new_dir: 256/x03360/145
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00020  n_i: 00020
+                                nr_old: 166  n_r: 166
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/166/00020/  new_dir: 256/x03360/166/00020
+                                dir_nr: 256/x03360/166/  new_dir: 256/x03360/166
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 168  n_r: 168
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/168/00044/  new_dir: 256/x03360/168/00040
+                                dir_nr: 256/x03360/168/  new_dir: 256/x03360/168
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/168/00226/  new_dir: 256/x03360/168/00230
+                                dir_nr: 256/x03360/168/  new_dir: 256/x03360/168
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 168  n_r: 168
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/168/00450/  new_dir: 256/x03360/168/00450
+                                dir_nr: 256/x03360/168/  new_dir: 256/x03360/168
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 168  n_r: 168
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/168/00900/  new_dir: 256/x03360/168/00900
+                                dir_nr: 256/x03360/168/  new_dir: 256/x03360/168
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 03000  n_i: 03000
+                                nr_old: 168  n_r: 168
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/168/03000/  new_dir: 256/x03360/168/03000
+                                dir_nr: 256/x03360/168/  new_dir: 256/x03360/168
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 180  n_r: 180
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/180/00044/  new_dir: 256/x03360/180/00040
+                                dir_nr: 256/x03360/180/  new_dir: 256/x03360/180
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/180/00226/  new_dir: 256/x03360/180/00230
+                                dir_nr: 256/x03360/180/  new_dir: 256/x03360/180
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 180  n_r: 180
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/180/00450/  new_dir: 256/x03360/180/00450
+                                dir_nr: 256/x03360/180/  new_dir: 256/x03360/180
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 180  n_r: 180
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/180/00900/  new_dir: 256/x03360/180/00900
+                                dir_nr: 256/x03360/180/  new_dir: 256/x03360/180
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 03000  n_i: 03000
+                                nr_old: 180  n_r: 180
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/180/03000/  new_dir: 256/x03360/180/03000
+                                dir_nr: 256/x03360/180/  new_dir: 256/x03360/180
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/200/00044/  new_dir: 256/x03360/200/00040
+                                dir_nr: 256/x03360/200/  new_dir: 256/x03360/200
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/200/00226/  new_dir: 256/x03360/200/00230
+                                dir_nr: 256/x03360/200/  new_dir: 256/x03360/200
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/200/00450/  new_dir: 256/x03360/200/00450
+                                dir_nr: 256/x03360/200/  new_dir: 256/x03360/200
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/200/00900/  new_dir: 256/x03360/200/00900
+                                dir_nr: 256/x03360/200/  new_dir: 256/x03360/200
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 03000  n_i: 03000
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 256/x03360/200/03000/  new_dir: 256/x03360/200/03000
+                                dir_nr: 256/x03360/200/  new_dir: 256/x03360/200
+                                dir_xm: 256/x03360/  new_dir: 256/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00600  n_i: 00600
+                                nr_old: 148  n_r: 148
+                                xm_old: 04000  x_m: 04000
+                                
+                                dir_ni: 256/x04000/148/00600/  new_dir: 256/x04000/148/00600
+                                dir_nr: 256/x04000/148/  new_dir: 256/x04000/148
+                                dir_xm: 256/x04000/  new_dir: 256/x04000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00800  n_i: 00800
+                                nr_old: 132  n_r: 132
+                                xm_old: 04200  x_m: 04200
+                                
+                                dir_ni: 256/x04200/132/00800/  new_dir: 256/x04200/132/00800
+                                dir_nr: 256/x04200/132/  new_dir: 256/x04200/132
+                                dir_xm: 256/x04200/  new_dir: 256/x04200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00850  n_i: 00850
+                                nr_old: 160  n_r: 160
+                                xm_old: 04200  x_m: 04200
+                                
+                                dir_ni: 256/x04200/160/00850/  new_dir: 256/x04200/160/00850
+                                dir_nr: 256/x04200/160/  new_dir: 256/x04200/160
+                                dir_xm: 256/x04200/  new_dir: 256/x04200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00500  n_i: 00500
+                                nr_old: 186  n_r: 186
+                                xm_old: 04200  x_m: 04200
+                                
+                                dir_ni: 256/x04200/186/00500/  new_dir: 256/x04200/186/00500
+                                dir_nr: 256/x04200/186/  new_dir: 256/x04200/186
+                                dir_xm: 256/x04200/  new_dir: 256/x04200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 256/x04300/130/00226/  new_dir: 256/x04300/130/00230
+                                dir_nr: 256/x04300/130/  new_dir: 256/x04300/130
+                                dir_xm: 256/x04300/  new_dir: 256/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 256/x04300/145/00226/  new_dir: 256/x04300/145/00230
+                                dir_nr: 256/x04300/145/  new_dir: 256/x04300/145
+                                dir_xm: 256/x04300/  new_dir: 256/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 256/x04300/168/00226/  new_dir: 256/x04300/168/00230
+                                dir_nr: 256/x04300/168/  new_dir: 256/x04300/168
+                                dir_xm: 256/x04300/  new_dir: 256/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 256/x04300/180/00226/  new_dir: 256/x04300/180/00230
+                                dir_nr: 256/x04300/180/  new_dir: 256/x04300/180
+                                dir_xm: 256/x04300/  new_dir: 256/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 256/x04300/200/00226/  new_dir: 256/x04300/200/00230
+                                dir_nr: 256/x04300/200/  new_dir: 256/x04300/200
+                                dir_xm: 256/x04300/  new_dir: 256/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00020  n_i: 00020
+                                nr_old: 166  n_r: 166
+                                xm_old: 04370  x_m: 04370
+                                
+                                dir_ni: 256/x04370/166/00020/  new_dir: 256/x04370/166/00020
+                                dir_nr: 256/x04370/166/  new_dir: 256/x04370/166
+                                dir_xm: 256/x04370/  new_dir: 256/x04370
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00110  n_i: 00110
+                                nr_old: 157  n_r: 157
+                                xm_old: 04400  x_m: 04400
+                                
+                                dir_ni: 256/x04400/157/00110/  new_dir: 256/x04400/157/00110
+                                dir_nr: 256/x04400/157/  new_dir: 256/x04400/157
+                                dir_xm: 256/x04400/  new_dir: 256/x04400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 04480  x_m: 04480
+                                
+                                dir_ni: 256/x04480/171/00450/  new_dir: 256/x04480/171/00450
+                                dir_nr: 256/x04480/171/  new_dir: 256/x04480/171
+                                dir_xm: 256/x04480/  new_dir: 256/x04480
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00150  n_i: 00150
+                                nr_old: 179  n_r: 179
+                                xm_old: 04600  x_m: 04600
+                                
+                                dir_ni: 256/x04600/179/00150/  new_dir: 256/x04600/179/00150
+                                dir_nr: 256/x04600/179/  new_dir: 256/x04600/179
+                                dir_xm: 256/x04600/  new_dir: 256/x04600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00340  n_i: 00340
+                                nr_old: 166  n_r: 166
+                                xm_old: 04800  x_m: 04800
+                                
+                                dir_ni: 256/x04800/166/00340/  new_dir: 256/x04800/166/00340
+                                dir_nr: 256/x04800/166/  new_dir: 256/x04800/166
+                                dir_xm: 256/x04800/  new_dir: 256/x04800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00600  n_i: 00600
+                                nr_old: 158  n_r: 158
+                                xm_old: 05000  x_m: 05000
+                                
+                                dir_ni: 256/x05000/158/00600/  new_dir: 256/x05000/158/00600
+                                dir_nr: 256/x05000/158/  new_dir: 256/x05000/158
+                                dir_xm: 256/x05000/  new_dir: 256/x05000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 172  n_r: 172
+                                xm_old: 05000  x_m: 05000
+                                
+                                dir_ni: 256/x05000/172/00300/  new_dir: 256/x05000/172/00300
+                                dir_nr: 256/x05000/172/  new_dir: 256/x05000/172
+                                dir_xm: 256/x05000/  new_dir: 256/x05000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00350  n_i: 00350
+                                nr_old: 190  n_r: 190
+                                xm_old: 05000  x_m: 05000
+                                
+                                dir_ni: 256/x05000/190/00350/  new_dir: 256/x05000/190/00350
+                                dir_nr: 256/x05000/190/  new_dir: 256/x05000/190
+                                dir_xm: 256/x05000/  new_dir: 256/x05000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00100  n_i: 00100
+                                nr_old: 200  n_r: 200
+                                xm_old: 05000  x_m: 05000
+                                
+                                dir_ni: 256/x05000/200/00100/  new_dir: 256/x05000/200/00100
+                                dir_nr: 256/x05000/200/  new_dir: 256/x05000/200
+                                dir_xm: 256/x05000/  new_dir: 256/x05000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00400  n_i: 00400
+                                nr_old: 179  n_r: 179
+                                xm_old: 05020  x_m: 05020
+                                
+                                dir_ni: 256/x05020/179/00400/  new_dir: 256/x05020/179/00400
+                                dir_nr: 256/x05020/179/  new_dir: 256/x05020/179
+                                dir_xm: 256/x05020/  new_dir: 256/x05020
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 05040  x_m: 05040
+                                
+                                dir_ni: 256/x05040/171/00450/  new_dir: 256/x05040/171/00450
+                                dir_nr: 256/x05040/171/  new_dir: 256/x05040/171
+                                dir_xm: 256/x05040/  new_dir: 256/x05040
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 172  n_r: 172
+                                xm_old: 05200  x_m: 05200
+                                
+                                dir_ni: 256/x05200/172/00300/  new_dir: 256/x05200/172/00300
+                                dir_nr: 256/x05200/172/  new_dir: 256/x05200/172
+                                dir_xm: 256/x05200/  new_dir: 256/x05200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00350  n_i: 00350
+                                nr_old: 176  n_r: 176
+                                xm_old: 05200  x_m: 05200
+                                
+                                dir_ni: 256/x05200/176/00350/  new_dir: 256/x05200/176/00350
+                                dir_nr: 256/x05200/176/  new_dir: 256/x05200/176
+                                dir_xm: 256/x05200/  new_dir: 256/x05200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 256/x05300/130/00226/  new_dir: 256/x05300/130/00230
+                                dir_nr: 256/x05300/130/  new_dir: 256/x05300/130
+                                dir_xm: 256/x05300/  new_dir: 256/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 256/x05300/145/00226/  new_dir: 256/x05300/145/00230
+                                dir_nr: 256/x05300/145/  new_dir: 256/x05300/145
+                                dir_xm: 256/x05300/  new_dir: 256/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 256/x05300/168/00226/  new_dir: 256/x05300/168/00230
+                                dir_nr: 256/x05300/168/  new_dir: 256/x05300/168
+                                dir_xm: 256/x05300/  new_dir: 256/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 256/x05300/180/00226/  new_dir: 256/x05300/180/00230
+                                dir_nr: 256/x05300/180/  new_dir: 256/x05300/180
+                                dir_xm: 256/x05300/  new_dir: 256/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 256/x05300/200/00226/  new_dir: 256/x05300/200/00230
+                                dir_nr: 256/x05300/200/  new_dir: 256/x05300/200
+                                dir_xm: 256/x05300/  new_dir: 256/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00740  n_i: 00740
+                                nr_old: 158  n_r: 158
+                                xm_old: 05400  x_m: 05400
+                                
+                                dir_ni: 256/x05400/158/00740/  new_dir: 256/x05400/158/00740
+                                dir_nr: 256/x05400/158/  new_dir: 256/x05400/158
+                                dir_xm: 256/x05400/  new_dir: 256/x05400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00550  n_i: 00550
+                                nr_old: 166  n_r: 166
+                                xm_old: 05400  x_m: 05400
+                                
+                                dir_ni: 256/x05400/166/00550/  new_dir: 256/x05400/166/00550
+                                dir_nr: 256/x05400/166/  new_dir: 256/x05400/166
+                                dir_xm: 256/x05400/  new_dir: 256/x05400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00750  n_i: 00750
+                                nr_old: 194  n_r: 194
+                                xm_old: 05400  x_m: 05400
+                                
+                                dir_ni: 256/x05400/194/00750/  new_dir: 256/x05400/194/00750
+                                dir_nr: 256/x05400/194/  new_dir: 256/x05400/194
+                                dir_xm: 256/x05400/  new_dir: 256/x05400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 162  n_r: 162
+                                xm_old: 05600  x_m: 05600
+                                
+                                dir_ni: 256/x05600/162/00300/  new_dir: 256/x05600/162/00300
+                                dir_nr: 256/x05600/162/  new_dir: 256/x05600/162
+                                dir_xm: 256/x05600/  new_dir: 256/x05600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00850  n_i: 00850
+                                nr_old: 169  n_r: 169
+                                xm_old: 05600  x_m: 05600
+                                
+                                dir_ni: 256/x05600/169/00850/  new_dir: 256/x05600/169/00850
+                                dir_nr: 256/x05600/169/  new_dir: 256/x05600/169
+                                dir_xm: 256/x05600/  new_dir: 256/x05600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00750  n_i: 00750
+                                nr_old: 196  n_r: 196
+                                xm_old: 05600  x_m: 05600
+                                
+                                dir_ni: 256/x05600/196/00750/  new_dir: 256/x05600/196/00750
+                                dir_nr: 256/x05600/196/  new_dir: 256/x05600/196
+                                dir_xm: 256/x05600/  new_dir: 256/x05600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00250  n_i: 00250
+                                nr_old: 188  n_r: 188
+                                xm_old: 05700  x_m: 05700
+                                
+                                dir_ni: 256/x05700/188/00250/  new_dir: 256/x05700/188/00250
+                                dir_nr: 256/x05700/188/  new_dir: 256/x05700/188
+                                dir_xm: 256/x05700/  new_dir: 256/x05700
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00780  n_i: 00780
+                                nr_old: 146  n_r: 146
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 256/x05800/146/00780/  new_dir: 256/x05800/146/00780
+                                dir_nr: 256/x05800/146/  new_dir: 256/x05800/146
+                                dir_xm: 256/x05800/  new_dir: 256/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00250  n_i: 00250
+                                nr_old: 156  n_r: 156
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 256/x05800/156/00250/  new_dir: 256/x05800/156/00250
+                                dir_nr: 256/x05800/156/  new_dir: 256/x05800/156
+                                dir_xm: 256/x05800/  new_dir: 256/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00700  n_i: 00700
+                                nr_old: 168  n_r: 168
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 256/x05800/168/00700/  new_dir: 256/x05800/168/00700
+                                dir_nr: 256/x05800/168/  new_dir: 256/x05800/168
+                                dir_xm: 256/x05800/  new_dir: 256/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00860  n_i: 00860
+                                nr_old: 188  n_r: 188
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 256/x05800/188/00860/  new_dir: 256/x05800/188/00860
+                                dir_nr: 256/x05800/188/  new_dir: 256/x05800/188
+                                dir_xm: 256/x05800/  new_dir: 256/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00350  n_i: 00350
+                                nr_old: 194  n_r: 194
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 256/x05800/194/00350/  new_dir: 256/x05800/194/00350
+                                dir_nr: 256/x05800/194/  new_dir: 256/x05800/194
+                                dir_xm: 256/x05800/  new_dir: 256/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00750  n_i: 00750
+                                nr_old: 198  n_r: 198
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 256/x05800/198/00750/  new_dir: 256/x05800/198/00750
+                                dir_nr: 256/x05800/198/  new_dir: 256/x05800/198
+                                dir_xm: 256/x05800/  new_dir: 256/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 199  n_r: 199
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 256/x05800/199/00450/  new_dir: 256/x05800/199/00450
+                                dir_nr: 256/x05800/199/  new_dir: 256/x05800/199
+                                dir_xm: 256/x05800/  new_dir: 256/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00320  n_i: 00320
+                                nr_old: 153  n_r: 153
+                                xm_old: 05850  x_m: 05850
+                                
+                                dir_ni: 256/x05850/153/00320/  new_dir: 256/x05850/153/00320
+                                dir_nr: 256/x05850/153/  new_dir: 256/x05850/153
+                                dir_xm: 256/x05850/  new_dir: 256/x05850
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00220  n_i: 00220
+                                nr_old: 164  n_r: 164
+                                xm_old: 05850  x_m: 05850
+                                
+                                dir_ni: 256/x05850/164/00220/  new_dir: 256/x05850/164/00220
+                                dir_nr: 256/x05850/164/  new_dir: 256/x05850/164
+                                dir_xm: 256/x05850/  new_dir: 256/x05850
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 170  n_r: 170
+                                xm_old: 05900  x_m: 05900
+                                
+                                dir_ni: 256/x05900/170/00300/  new_dir: 256/x05900/170/00300
+                                dir_nr: 256/x05900/170/  new_dir: 256/x05900/170
+                                dir_xm: 256/x05900/  new_dir: 256/x05900
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 182  n_r: 182
+                                xm_old: 05900  x_m: 05900
+                                
+                                dir_ni: 256/x05900/182/00300/  new_dir: 256/x05900/182/00300
+                                dir_nr: 256/x05900/182/  new_dir: 256/x05900/182
+                                dir_xm: 256/x05900/  new_dir: 256/x05900
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00260  n_i: 00260
+                                nr_old: 160  n_r: 160
+                                xm_old: 06000  x_m: 06000
+                                
+                                dir_ni: 256/x06000/160/00260/  new_dir: 256/x06000/160/00260
+                                dir_nr: 256/x06000/160/  new_dir: 256/x06000/160
+                                dir_xm: 256/x06000/  new_dir: 256/x06000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00550  n_i: 00550
+                                nr_old: 192  n_r: 192
+                                xm_old: 06000  x_m: 06000
+                                
+                                dir_ni: 256/x06000/192/00550/  new_dir: 256/x06000/192/00550
+                                dir_nr: 256/x06000/192/  new_dir: 256/x06000/192
+                                dir_xm: 256/x06000/  new_dir: 256/x06000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00600  n_i: 00600
+                                nr_old: 193  n_r: 193
+                                xm_old: 06000  x_m: 06000
+                                
+                                dir_ni: 256/x06000/193/00600/  new_dir: 256/x06000/193/00600
+                                dir_nr: 256/x06000/193/  new_dir: 256/x06000/193
+                                dir_xm: 256/x06000/  new_dir: 256/x06000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 192  n_r: 192
+                                xm_old: 06100  x_m: 06100
+                                
+                                dir_ni: 256/x06100/192/00300/  new_dir: 256/x06100/192/00300
+                                dir_nr: 256/x06100/192/  new_dir: 256/x06100/192
+                                dir_xm: 256/x06100/  new_dir: 256/x06100
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 196  n_r: 196
+                                xm_old: 06100  x_m: 06100
+                                
+                                dir_ni: 256/x06100/196/00300/  new_dir: 256/x06100/196/00300
+                                dir_nr: 256/x06100/196/  new_dir: 256/x06100/196
+                                dir_xm: 256/x06100/  new_dir: 256/x06100
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00680  n_i: 00680
+                                nr_old: 196  n_r: 196
+                                xm_old: 06100  x_m: 06100
+                                
+                                dir_ni: 256/x06100/196/00680/  new_dir: 256/x06100/196/00680
+                                dir_nr: 256/x06100/196/  new_dir: 256/x06100/196
+                                dir_xm: 256/x06100/  new_dir: 256/x06100
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00100  n_i: 00100
+                                nr_old: 184  n_r: 184
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 256/x06400/184/00100/  new_dir: 256/x06400/184/00100
+                                dir_nr: 256/x06400/184/  new_dir: 256/x06400/184
+                                dir_xm: 256/x06400/  new_dir: 256/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00800  n_i: 00800
+                                nr_old: 190  n_r: 190
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 256/x06400/190/00800/  new_dir: 256/x06400/190/00800
+                                dir_nr: 256/x06400/190/  new_dir: 256/x06400/190
+                                dir_xm: 256/x06400/  new_dir: 256/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 190  n_r: 190
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 256/x06400/190/00900/  new_dir: 256/x06400/190/00900
+                                dir_nr: 256/x06400/190/  new_dir: 256/x06400/190
+                                dir_xm: 256/x06400/  new_dir: 256/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00780  n_i: 00780
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 256/x06400/200/00780/  new_dir: 256/x06400/200/00780
+                                dir_nr: 256/x06400/200/  new_dir: 256/x06400/200
+                                dir_xm: 256/x06400/  new_dir: 256/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00750  n_i: 00750
+                                nr_old: 174  n_r: 174
+                                xm_old: 06500  x_m: 06500
+                                
+                                dir_ni: 256/x06500/174/00750/  new_dir: 256/x06500/174/00750
+                                dir_nr: 256/x06500/174/  new_dir: 256/x06500/174
+                                dir_xm: 256/x06500/  new_dir: 256/x06500
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 190  n_r: 190
+                                xm_old: 06500  x_m: 06500
+                                
+                                dir_ni: 256/x06500/190/00300/  new_dir: 256/x06500/190/00300
+                                dir_nr: 256/x06500/190/  new_dir: 256/x06500/190
+                                dir_xm: 256/x06500/  new_dir: 256/x06500
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00550  n_i: 00550
+                                nr_old: 195  n_r: 195
+                                xm_old: 06500  x_m: 06500
+                                
+                                dir_ni: 256/x06500/195/00550/  new_dir: 256/x06500/195/00550
+                                dir_nr: 256/x06500/195/  new_dir: 256/x06500/195
+                                dir_xm: 256/x06500/  new_dir: 256/x06500
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00500  n_i: 00500
+                                nr_old: 178  n_r: 178
+                                xm_old: 06600  x_m: 06600
+                                
+                                dir_ni: 256/x06600/178/00500/  new_dir: 256/x06600/178/00500
+                                dir_nr: 256/x06600/178/  new_dir: 256/x06600/178
+                                dir_xm: 256/x06600/  new_dir: 256/x06600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00500  n_i: 00500
+                                nr_old: 170  n_r: 170
+                                xm_old: 06700  x_m: 06700
+                                
+                                dir_ni: 256/x06700/170/00500/  new_dir: 256/x06700/170/00500
+                                dir_nr: 256/x06700/170/  new_dir: 256/x06700/170
+                                dir_xm: 256/x06700/  new_dir: 256/x06700
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00400  n_i: 00400
+                                nr_old: 186  n_r: 186
+                                xm_old: 06800  x_m: 06800
+                                
+                                dir_ni: 256/x06800/186/00400/  new_dir: 256/x06800/186/00400
+                                dir_nr: 256/x06800/186/  new_dir: 256/x06800/186
+                                dir_xm: 256/x06800/  new_dir: 256/x06800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00200  n_i: 00200
+                                nr_old: 199  n_r: 199
+                                xm_old: 06800  x_m: 06800
+                                
+                                dir_ni: 256/x06800/199/00200/  new_dir: 256/x06800/199/00200
+                                dir_nr: 256/x06800/199/  new_dir: 256/x06800/199
+                                dir_xm: 256/x06800/  new_dir: 256/x06800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00510  n_i: 00510
+                                nr_old: 199  n_r: 199
+                                xm_old: 06800  x_m: 06800
+                                
+                                dir_ni: 256/x06800/199/00510/  new_dir: 256/x06800/199/00510
+                                dir_nr: 256/x06800/199/  new_dir: 256/x06800/199
+                                dir_xm: 256/x06800/  new_dir: 256/x06800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00800  n_i: 00800
+                                nr_old: 200  n_r: 200
+                                xm_old: 06800  x_m: 06800
+                                
+                                dir_ni: 256/x06800/200/00800/  new_dir: 256/x06800/200/00800
+                                dir_nr: 256/x06800/200/  new_dir: 256/x06800/200
+                                dir_xm: 256/x06800/  new_dir: 256/x06800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00350  n_i: 00350
+                                nr_old: 164  n_r: 164
+                                xm_old: 07000  x_m: 07000
+                                
+                                dir_ni: 256/x07000/164/00350/  new_dir: 256/x07000/164/00350
+                                dir_nr: 256/x07000/164/  new_dir: 256/x07000/164
+                                dir_xm: 256/x07000/  new_dir: 256/x07000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00710  n_i: 00710
+                                nr_old: 168  n_r: 168
+                                xm_old: 07000  x_m: 07000
+                                
+                                dir_ni: 256/x07000/168/00710/  new_dir: 256/x07000/168/00710
+                                dir_nr: 256/x07000/168/  new_dir: 256/x07000/168
+                                dir_xm: 256/x07000/  new_dir: 256/x07000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 174  n_r: 174
+                                xm_old: 07000  x_m: 07000
+                                
+                                dir_ni: 256/x07000/174/00900/  new_dir: 256/x07000/174/00900
+                                dir_nr: 256/x07000/174/  new_dir: 256/x07000/174
+                                dir_xm: 256/x07000/  new_dir: 256/x07000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 186  n_r: 186
+                                xm_old: 07000  x_m: 07000
+                                
+                                dir_ni: 256/x07000/186/00900/  new_dir: 256/x07000/186/00900
+                                dir_nr: 256/x07000/186/  new_dir: 256/x07000/186
+                                dir_xm: 256/x07000/  new_dir: 256/x07000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00870  n_i: 00870
+                                nr_old: 177  n_r: 177
+                                xm_old: 07150  x_m: 07150
+                                
+                                dir_ni: 256/x07150/177/00870/  new_dir: 256/x07150/177/00870
+                                dir_nr: 256/x07150/177/  new_dir: 256/x07150/177
+                                dir_xm: 256/x07150/  new_dir: 256/x07150
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 0076  n_i: 00760
+                                nr_old: 170  n_r: 170
+                                xm_old: 07200  x_m: 07200
+                                
+                                dir_ni: 256/x07200/170/0076/  new_dir: 256/x07200/170/00760
+                                dir_nr: 256/x07200/170/  new_dir: 256/x07200/170
+                                dir_xm: 256/x07200/  new_dir: 256/x07200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00420  n_i: 00420
+                                nr_old: 193  n_r: 193
+                                xm_old: 07250  x_m: 07250
+                                
+                                dir_ni: 256/x07250/193/00420/  new_dir: 256/x07250/193/00420
+                                dir_nr: 256/x07250/193/  new_dir: 256/x07250/193
+                                dir_xm: 256/x07250/  new_dir: 256/x07250
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 256/x07300/130/00226/  new_dir: 256/x07300/130/00230
+                                dir_nr: 256/x07300/130/  new_dir: 256/x07300/130
+                                dir_xm: 256/x07300/  new_dir: 256/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 256/x07300/145/00226/  new_dir: 256/x07300/145/00230
+                                dir_nr: 256/x07300/145/  new_dir: 256/x07300/145
+                                dir_xm: 256/x07300/  new_dir: 256/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 256/x07300/168/00226/  new_dir: 256/x07300/168/00230
+                                dir_nr: 256/x07300/168/  new_dir: 256/x07300/168
+                                dir_xm: 256/x07300/  new_dir: 256/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 256/x07300/180/00226/  new_dir: 256/x07300/180/00230
+                                dir_nr: 256/x07300/180/  new_dir: 256/x07300/180
+                                dir_xm: 256/x07300/  new_dir: 256/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00580  n_i: 00580
+                                nr_old: 184  n_r: 184
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 256/x07300/184/00580/  new_dir: 256/x07300/184/00580
+                                dir_nr: 256/x07300/184/  new_dir: 256/x07300/184
+                                dir_xm: 256/x07300/  new_dir: 256/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 256/x07300/200/00226/  new_dir: 256/x07300/200/00230
+                                dir_nr: 256/x07300/200/  new_dir: 256/x07300/200
+                                dir_xm: 256/x07300/  new_dir: 256/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00500  n_i: 00500
+                                nr_old: 172  n_r: 172
+                                xm_old: 07400  x_m: 07400
+                                
+                                dir_ni: 256/x07400/172/00500/  new_dir: 256/x07400/172/00500
+                                dir_nr: 256/x07400/172/  new_dir: 256/x07400/172
+                                dir_xm: 256/x07400/  new_dir: 256/x07400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00200  n_i: 00200
+                                nr_old: 186  n_r: 186
+                                xm_old: 07400  x_m: 07400
+                                
+                                dir_ni: 256/x07400/186/00200/  new_dir: 256/x07400/186/00200
+                                dir_nr: 256/x07400/186/  new_dir: 256/x07400/186
+                                dir_xm: 256/x07400/  new_dir: 256/x07400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00220  n_i: 00220
+                                nr_old: 186  n_r: 186
+                                xm_old: 07400  x_m: 07400
+                                
+                                dir_ni: 256/x07400/186/00220/  new_dir: 256/x07400/186/00220
+                                dir_nr: 256/x07400/186/  new_dir: 256/x07400/186
+                                dir_xm: 256/x07400/  new_dir: 256/x07400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 190  n_r: 190
+                                xm_old: 07400  x_m: 07400
+                                
+                                dir_ni: 256/x07400/190/00300/  new_dir: 256/x07400/190/00300
+                                dir_nr: 256/x07400/190/  new_dir: 256/x07400/190
+                                dir_xm: 256/x07400/  new_dir: 256/x07400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00820  n_i: 00820
+                                nr_old: 166  n_r: 166
+                                xm_old: 07600  x_m: 07600
+                                
+                                dir_ni: 256/x07600/166/00820/  new_dir: 256/x07600/166/00820
+                                dir_nr: 256/x07600/166/  new_dir: 256/x07600/166
+                                dir_xm: 256/x07600/  new_dir: 256/x07600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00500  n_i: 00500
+                                nr_old: 184  n_r: 184
+                                xm_old: 07800  x_m: 07800
+                                
+                                dir_ni: 256/x07800/184/00500/  new_dir: 256/x07800/184/00500
+                                dir_nr: 256/x07800/184/  new_dir: 256/x07800/184
+                                dir_xm: 256/x07800/  new_dir: 256/x07800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00600  n_i: 00600
+                                nr_old: 154  n_r: 154
+                                xm_old: 07900  x_m: 07900
+                                
+                                dir_ni: 256/x07900/154/00600/  new_dir: 256/x07900/154/00600
+                                dir_nr: 256/x07900/154/  new_dir: 256/x07900/154
+                                dir_xm: 256/x07900/  new_dir: 256/x07900
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 177  n_r: 177
+                                xm_old: 07900  x_m: 07900
+                                
+                                dir_ni: 256/x07900/177/00450/  new_dir: 256/x07900/177/00450
+                                dir_nr: 256/x07900/177/  new_dir: 256/x07900/177
+                                dir_xm: 256/x07900/  new_dir: 256/x07900
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 187  n_r: 187
+                                xm_old: 07900  x_m: 07900
+                                
+                                dir_ni: 256/x07900/187/00900/  new_dir: 256/x07900/187/00900
+                                dir_nr: 256/x07900/187/  new_dir: 256/x07900/187
+                                dir_xm: 256/x07900/  new_dir: 256/x07900
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00770  n_i: 00770
+                                nr_old: 159  n_r: 159
+                                xm_old: 08100  x_m: 08100
+                                
+                                dir_ni: 256/x08100/159/00770/  new_dir: 256/x08100/159/00770
+                                dir_nr: 256/x08100/159/  new_dir: 256/x08100/159
+                                dir_xm: 256/x08100/  new_dir: 256/x08100
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00700  n_i: 00700
+                                nr_old: 193  n_r: 193
+                                xm_old: 08100  x_m: 08100
+                                
+                                dir_ni: 256/x08100/193/00700/  new_dir: 256/x08100/193/00700
+                                dir_nr: 256/x08100/193/  new_dir: 256/x08100/193
+                                dir_xm: 256/x08100/  new_dir: 256/x08100
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00800  n_i: 00800
+                                nr_old: 144  n_r: 144
+                                xm_old: 08110  x_m: 08110
+                                
+                                dir_ni: 256/x08110/144/00800/  new_dir: 256/x08110/144/00800
+                                dir_nr: 256/x08110/144/  new_dir: 256/x08110/144
+                                dir_xm: 256/x08110/  new_dir: 256/x08110
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 154  n_r: 154
+                                xm_old: 08200  x_m: 08200
+                                
+                                dir_ni: 256/x08200/154/00300/  new_dir: 256/x08200/154/00300
+                                dir_nr: 256/x08200/154/  new_dir: 256/x08200/154
+                                dir_xm: 256/x08200/  new_dir: 256/x08200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00550  n_i: 00550
+                                nr_old: 154  n_r: 154
+                                xm_old: 08200  x_m: 08200
+                                
+                                dir_ni: 256/x08200/154/00550/  new_dir: 256/x08200/154/00550
+                                dir_nr: 256/x08200/154/  new_dir: 256/x08200/154
+                                dir_xm: 256/x08200/  new_dir: 256/x08200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 256/x08320/130/00226/  new_dir: 256/x08320/130/00230
+                                dir_nr: 256/x08320/130/  new_dir: 256/x08320/130
+                                dir_xm: 256/x08320/  new_dir: 256/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 256/x08320/145/00226/  new_dir: 256/x08320/145/00230
+                                dir_nr: 256/x08320/145/  new_dir: 256/x08320/145
+                                dir_xm: 256/x08320/  new_dir: 256/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 256/x08320/168/00226/  new_dir: 256/x08320/168/00230
+                                dir_nr: 256/x08320/168/  new_dir: 256/x08320/168
+                                dir_xm: 256/x08320/  new_dir: 256/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 256/x08320/171/00450/  new_dir: 256/x08320/171/00450
+                                dir_nr: 256/x08320/171/  new_dir: 256/x08320/171
+                                dir_xm: 256/x08320/  new_dir: 256/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 256/x08320/180/00226/  new_dir: 256/x08320/180/00230
+                                dir_nr: 256/x08320/180/  new_dir: 256/x08320/180
+                                dir_xm: 256/x08320/  new_dir: 256/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 256/x08320/200/00226/  new_dir: 256/x08320/200/00230
+                                dir_nr: 256/x08320/200/  new_dir: 256/x08320/200
+                                dir_xm: 256/x08320/  new_dir: 256/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00200  n_i: 00200
+                                nr_old: 155  n_r: 155
+                                xm_old: 08400  x_m: 08400
+                                
+                                dir_ni: 256/x08400/155/00200/  new_dir: 256/x08400/155/00200
+                                dir_nr: 256/x08400/155/  new_dir: 256/x08400/155
+                                dir_xm: 256/x08400/  new_dir: 256/x08400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00500  n_i: 00500
+                                nr_old: 167  n_r: 167
+                                xm_old: 08400  x_m: 08400
+                                
+                                dir_ni: 256/x08400/167/00500/  new_dir: 256/x08400/167/00500
+                                dir_nr: 256/x08400/167/  new_dir: 256/x08400/167
+                                dir_xm: 256/x08400/  new_dir: 256/x08400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00700  n_i: 00700
+                                nr_old: 148  n_r: 148
+                                xm_old: 08600  x_m: 08600
+                                
+                                dir_ni: 256/x08600/148/00700/  new_dir: 256/x08600/148/00700
+                                dir_nr: 256/x08600/148/  new_dir: 256/x08600/148
+                                dir_xm: 256/x08600/  new_dir: 256/x08600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00700  n_i: 00700
+                                nr_old: 152  n_r: 152
+                                xm_old: 08600  x_m: 08600
+                                
+                                dir_ni: 256/x08600/152/00700/  new_dir: 256/x08600/152/00700
+                                dir_nr: 256/x08600/152/  new_dir: 256/x08600/152
+                                dir_xm: 256/x08600/  new_dir: 256/x08600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00100  n_i: 00100
+                                nr_old: 170  n_r: 170
+                                xm_old: 08800  x_m: 08800
+                                
+                                dir_ni: 256/x08800/170/00100/  new_dir: 256/x08800/170/00100
+                                dir_nr: 256/x08800/170/  new_dir: 256/x08800/170
+                                dir_xm: 256/x08800/  new_dir: 256/x08800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00750  n_i: 00750
+                                nr_old: 170  n_r: 170
+                                xm_old: 08800  x_m: 08800
+                                
+                                dir_ni: 256/x08800/170/00750/  new_dir: 256/x08800/170/00750
+                                dir_nr: 256/x08800/170/  new_dir: 256/x08800/170
+                                dir_xm: 256/x08800/  new_dir: 256/x08800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 130  n_r: 130
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/130/00044/  new_dir: 256/x09600/130/00040
+                                dir_nr: 256/x09600/130/  new_dir: 256/x09600/130
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00060  n_i: 00060
+                                nr_old: 130  n_r: 130
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/130/00060/  new_dir: 256/x09600/130/00060
+                                dir_nr: 256/x09600/130/  new_dir: 256/x09600/130
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/130/00226/  new_dir: 256/x09600/130/00230
+                                dir_nr: 256/x09600/130/  new_dir: 256/x09600/130
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 130  n_r: 130
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/130/00450/  new_dir: 256/x09600/130/00450
+                                dir_nr: 256/x09600/130/  new_dir: 256/x09600/130
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/130/00900/  new_dir: 256/x09600/130/00900
+                                dir_nr: 256/x09600/130/  new_dir: 256/x09600/130
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 03000  n_i: 03000
+                                nr_old: 130  n_r: 130
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/130/03000/  new_dir: 256/x09600/130/03000
+                                dir_nr: 256/x09600/130/  new_dir: 256/x09600/130
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 168  n_r: 168
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/168/00044/  new_dir: 256/x09600/168/00040
+                                dir_nr: 256/x09600/168/  new_dir: 256/x09600/168
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/168/00226/  new_dir: 256/x09600/168/00230
+                                dir_nr: 256/x09600/168/  new_dir: 256/x09600/168
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 168  n_r: 168
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/168/00450/  new_dir: 256/x09600/168/00450
+                                dir_nr: 256/x09600/168/  new_dir: 256/x09600/168
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 168  n_r: 168
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/168/00900/  new_dir: 256/x09600/168/00900
+                                dir_nr: 256/x09600/168/  new_dir: 256/x09600/168
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 03000  n_i: 03000
+                                nr_old: 168  n_r: 168
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/168/03000/  new_dir: 256/x09600/168/03000
+                                dir_nr: 256/x09600/168/  new_dir: 256/x09600/168
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00060  n_i: 00060
+                                nr_old: 171  n_r: 171
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/171/00060/  new_dir: 256/x09600/171/00060
+                                dir_nr: 256/x09600/171/  new_dir: 256/x09600/171
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 171  n_r: 171
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/171/00226/  new_dir: 256/x09600/171/00230
+                                dir_nr: 256/x09600/171/  new_dir: 256/x09600/171
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/171/00450/  new_dir: 256/x09600/171/00450
+                                dir_nr: 256/x09600/171/  new_dir: 256/x09600/171
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 171  n_r: 171
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/171/00900/  new_dir: 256/x09600/171/00900
+                                dir_nr: 256/x09600/171/  new_dir: 256/x09600/171
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 200  n_r: 200
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/200/00044/  new_dir: 256/x09600/200/00040
+                                dir_nr: 256/x09600/200/  new_dir: 256/x09600/200
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00060  n_i: 00060
+                                nr_old: 200  n_r: 200
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/200/00060/  new_dir: 256/x09600/200/00060
+                                dir_nr: 256/x09600/200/  new_dir: 256/x09600/200
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/200/00226/  new_dir: 256/x09600/200/00230
+                                dir_nr: 256/x09600/200/  new_dir: 256/x09600/200
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 200  n_r: 200
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/200/00450/  new_dir: 256/x09600/200/00450
+                                dir_nr: 256/x09600/200/  new_dir: 256/x09600/200
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 200  n_r: 200
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/200/00900/  new_dir: 256/x09600/200/00900
+                                dir_nr: 256/x09600/200/  new_dir: 256/x09600/200
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 03000  n_i: 03000
+                                nr_old: 200  n_r: 200
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 256/x09600/200/03000/  new_dir: 256/x09600/200/03000
+                                dir_nr: 256/x09600/200/  new_dir: 256/x09600/200
+                                dir_xm: 256/x09600/  new_dir: 256/x09600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 512/x03360/130/00044/  new_dir: 512/x03360/130/00040
+                                dir_nr: 512/x03360/130/  new_dir: 512/x03360/130
+                                dir_xm: 512/x03360/  new_dir: 512/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 512/x03360/130/00226/  new_dir: 512/x03360/130/00230
+                                dir_nr: 512/x03360/130/  new_dir: 512/x03360/130
+                                dir_xm: 512/x03360/  new_dir: 512/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 512/x03360/130/00900/  new_dir: 512/x03360/130/00900
+                                dir_nr: 512/x03360/130/  new_dir: 512/x03360/130
+                                dir_xm: 512/x03360/  new_dir: 512/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00020  n_i: 00020
+                                nr_old: 166  n_r: 166
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 512/x03360/166/00020/  new_dir: 512/x03360/166/00020
+                                dir_nr: 512/x03360/166/  new_dir: 512/x03360/166
+                                dir_xm: 512/x03360/  new_dir: 512/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00044  n_i: 00040
+                                nr_old: 168  n_r: 168
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 512/x03360/168/00044/  new_dir: 512/x03360/168/00040
+                                dir_nr: 512/x03360/168/  new_dir: 512/x03360/168
+                                dir_xm: 512/x03360/  new_dir: 512/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 512/x03360/200/00226/  new_dir: 512/x03360/200/00230
+                                dir_nr: 512/x03360/200/  new_dir: 512/x03360/200
+                                dir_xm: 512/x03360/  new_dir: 512/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 200  n_r: 200
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 512/x03360/200/00900/  new_dir: 512/x03360/200/00900
+                                dir_nr: 512/x03360/200/  new_dir: 512/x03360/200
+                                dir_xm: 512/x03360/  new_dir: 512/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00150  n_i: 00150
+                                nr_old: 184  n_r: 184
+                                xm_old: 04000  x_m: 04000
+                                
+                                dir_ni: 512/x04000/184/00150/  new_dir: 512/x04000/184/00150
+                                dir_nr: 512/x04000/184/  new_dir: 512/x04000/184
+                                dir_xm: 512/x04000/  new_dir: 512/x04000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 512/x04300/145/00226/  new_dir: 512/x04300/145/00230
+                                dir_nr: 512/x04300/145/  new_dir: 512/x04300/145
+                                dir_xm: 512/x04300/  new_dir: 512/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 512/x04300/168/00226/  new_dir: 512/x04300/168/00230
+                                dir_nr: 512/x04300/168/  new_dir: 512/x04300/168
+                                dir_xm: 512/x04300/  new_dir: 512/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 512/x04300/180/00226/  new_dir: 512/x04300/180/00230
+                                dir_nr: 512/x04300/180/  new_dir: 512/x04300/180
+                                dir_xm: 512/x04300/  new_dir: 512/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 512/x04300/200/00226/  new_dir: 512/x04300/200/00230
+                                dir_nr: 512/x04300/200/  new_dir: 512/x04300/200
+                                dir_xm: 512/x04300/  new_dir: 512/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00200  n_i: 00200
+                                nr_old: 198  n_r: 198
+                                xm_old: 04400  x_m: 04400
+                                
+                                dir_ni: 512/x04400/198/00200/  new_dir: 512/x04400/198/00200
+                                dir_nr: 512/x04400/198/  new_dir: 512/x04400/198
+                                dir_xm: 512/x04400/  new_dir: 512/x04400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 160  n_r: 160
+                                xm_old: 04600  x_m: 04600
+                                
+                                dir_ni: 512/x04600/160/00900/  new_dir: 512/x04600/160/00900
+                                dir_nr: 512/x04600/160/  new_dir: 512/x04600/160
+                                dir_xm: 512/x04600/  new_dir: 512/x04600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00700  n_i: 00700
+                                nr_old: 178  n_r: 178
+                                xm_old: 04600  x_m: 04600
+                                
+                                dir_ni: 512/x04600/178/00700/  new_dir: 512/x04600/178/00700
+                                dir_nr: 512/x04600/178/  new_dir: 512/x04600/178
+                                dir_xm: 512/x04600/  new_dir: 512/x04600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00700  n_i: 00700
+                                nr_old: 190  n_r: 190
+                                xm_old: 04600  x_m: 04600
+                                
+                                dir_ni: 512/x04600/190/00700/  new_dir: 512/x04600/190/00700
+                                dir_nr: 512/x04600/190/  new_dir: 512/x04600/190
+                                dir_xm: 512/x04600/  new_dir: 512/x04600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 04790  x_m: 04790
+                                
+                                dir_ni: 512/x04790/145/00226/  new_dir: 512/x04790/145/00230
+                                dir_nr: 512/x04790/145/  new_dir: 512/x04790/145
+                                dir_xm: 512/x04790/  new_dir: 512/x04790
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 04790  x_m: 04790
+                                
+                                dir_ni: 512/x04790/168/00226/  new_dir: 512/x04790/168/00230
+                                dir_nr: 512/x04790/168/  new_dir: 512/x04790/168
+                                dir_xm: 512/x04790/  new_dir: 512/x04790
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 04790  x_m: 04790
+                                
+                                dir_ni: 512/x04790/180/00226/  new_dir: 512/x04790/180/00230
+                                dir_nr: 512/x04790/180/  new_dir: 512/x04790/180
+                                dir_xm: 512/x04790/  new_dir: 512/x04790
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 04790  x_m: 04790
+                                
+                                dir_ni: 512/x04790/200/00226/  new_dir: 512/x04790/200/00230
+                                dir_nr: 512/x04790/200/  new_dir: 512/x04790/200
+                                dir_xm: 512/x04790/  new_dir: 512/x04790
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00150  n_i: 00150
+                                nr_old: 150  n_r: 150
+                                xm_old: 04800  x_m: 04800
+                                
+                                dir_ni: 512/x04800/150/00150/  new_dir: 512/x04800/150/00150
+                                dir_nr: 512/x04800/150/  new_dir: 512/x04800/150
+                                dir_xm: 512/x04800/  new_dir: 512/x04800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00020  n_i: 00020
+                                nr_old: 166  n_r: 166
+                                xm_old: 05040  x_m: 05040
+                                
+                                dir_ni: 512/x05040/166/00020/  new_dir: 512/x05040/166/00020
+                                dir_nr: 512/x05040/166/  new_dir: 512/x05040/166
+                                dir_xm: 512/x05040/  new_dir: 512/x05040
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 02770  n_i: 02770
+                                nr_old: 190  n_r: 190
+                                xm_old: 05230  x_m: 05230
+                                
+                                dir_ni: 512/x05230/190/02770/  new_dir: 512/x05230/190/02770
+                                dir_nr: 512/x05230/190/  new_dir: 512/x05230/190
+                                dir_xm: 512/x05230/  new_dir: 512/x05230
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00700  n_i: 00700
+                                nr_old: 180  n_r: 180
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 512/x05300/180/00700/  new_dir: 512/x05300/180/00700
+                                dir_nr: 512/x05300/180/  new_dir: 512/x05300/180
+                                dir_xm: 512/x05300/  new_dir: 512/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 164  n_r: 164
+                                xm_old: 05400  x_m: 05400
+                                
+                                dir_ni: 512/x05400/164/00300/  new_dir: 512/x05400/164/00300
+                                dir_nr: 512/x05400/164/  new_dir: 512/x05400/164
+                                dir_xm: 512/x05400/  new_dir: 512/x05400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 174  n_r: 174
+                                xm_old: 05400  x_m: 05400
+                                
+                                dir_ni: 512/x05400/174/00450/  new_dir: 512/x05400/174/00450
+                                dir_nr: 512/x05400/174/  new_dir: 512/x05400/174
+                                dir_xm: 512/x05400/  new_dir: 512/x05400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00620  n_i: 00620
+                                nr_old: 190  n_r: 190
+                                xm_old: 05600  x_m: 05600
+                                
+                                dir_ni: 512/x05600/190/00620/  new_dir: 512/x05600/190/00620
+                                dir_nr: 512/x05600/190/  new_dir: 512/x05600/190
+                                dir_xm: 512/x05600/  new_dir: 512/x05600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00860  n_i: 00860
+                                nr_old: 192  n_r: 192
+                                xm_old: 05600  x_m: 05600
+                                
+                                dir_ni: 512/x05600/192/00860/  new_dir: 512/x05600/192/00860
+                                dir_nr: 512/x05600/192/  new_dir: 512/x05600/192
+                                dir_xm: 512/x05600/  new_dir: 512/x05600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 512/x05800/145/00226/  new_dir: 512/x05800/145/00230
+                                dir_nr: 512/x05800/145/  new_dir: 512/x05800/145
+                                dir_xm: 512/x05800/  new_dir: 512/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 512/x05800/168/00226/  new_dir: 512/x05800/168/00230
+                                dir_nr: 512/x05800/168/  new_dir: 512/x05800/168
+                                dir_xm: 512/x05800/  new_dir: 512/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 512/x05800/180/00226/  new_dir: 512/x05800/180/00230
+                                dir_nr: 512/x05800/180/  new_dir: 512/x05800/180
+                                dir_xm: 512/x05800/  new_dir: 512/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 512/x05800/200/00226/  new_dir: 512/x05800/200/00230
+                                dir_nr: 512/x05800/200/  new_dir: 512/x05800/200
+                                dir_xm: 512/x05800/  new_dir: 512/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00500  n_i: 00500
+                                nr_old: 192  n_r: 192
+                                xm_old: 06000  x_m: 06000
+                                
+                                dir_ni: 512/x06000/192/00500/  new_dir: 512/x06000/192/00500
+                                dir_nr: 512/x06000/192/  new_dir: 512/x06000/192
+                                dir_xm: 512/x06000/  new_dir: 512/x06000
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00850  n_i: 00850
+                                nr_old: 152  n_r: 152
+                                xm_old: 06200  x_m: 06200
+                                
+                                dir_ni: 512/x06200/152/00850/  new_dir: 512/x06200/152/00850
+                                dir_nr: 512/x06200/152/  new_dir: 512/x06200/152
+                                dir_xm: 512/x06200/  new_dir: 512/x06200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 182  n_r: 182
+                                xm_old: 06200  x_m: 06200
+                                
+                                dir_ni: 512/x06200/182/00450/  new_dir: 512/x06200/182/00450
+                                dir_nr: 512/x06200/182/  new_dir: 512/x06200/182
+                                dir_xm: 512/x06200/  new_dir: 512/x06200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00300  n_i: 00300
+                                nr_old: 190  n_r: 190
+                                xm_old: 06200  x_m: 06200
+                                
+                                dir_ni: 512/x06200/190/00300/  new_dir: 512/x06200/190/00300
+                                dir_nr: 512/x06200/190/  new_dir: 512/x06200/190
+                                dir_xm: 512/x06200/  new_dir: 512/x06200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00500  n_i: 00500
+                                nr_old: 192  n_r: 192
+                                xm_old: 06200  x_m: 06200
+                                
+                                dir_ni: 512/x06200/192/00500/  new_dir: 512/x06200/192/00500
+                                dir_nr: 512/x06200/192/  new_dir: 512/x06200/192
+                                dir_xm: 512/x06200/  new_dir: 512/x06200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 512/x06400/130/00226/  new_dir: 512/x06400/130/00230
+                                dir_nr: 512/x06400/130/  new_dir: 512/x06400/130
+                                dir_xm: 512/x06400/  new_dir: 512/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 512/x06400/130/00450/  new_dir: 512/x06400/130/00450
+                                dir_nr: 512/x06400/130/  new_dir: 512/x06400/130
+                                dir_xm: 512/x06400/  new_dir: 512/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 512/x06400/130/00900/  new_dir: 512/x06400/130/00900
+                                dir_nr: 512/x06400/130/  new_dir: 512/x06400/130
+                                dir_xm: 512/x06400/  new_dir: 512/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 171  n_r: 171
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 512/x06400/171/00226/  new_dir: 512/x06400/171/00230
+                                dir_nr: 512/x06400/171/  new_dir: 512/x06400/171
+                                dir_xm: 512/x06400/  new_dir: 512/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 512/x06400/171/00450/  new_dir: 512/x06400/171/00450
+                                dir_nr: 512/x06400/171/  new_dir: 512/x06400/171
+                                dir_xm: 512/x06400/  new_dir: 512/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 171  n_r: 171
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 512/x06400/171/00900/  new_dir: 512/x06400/171/00900
+                                dir_nr: 512/x06400/171/  new_dir: 512/x06400/171
+                                dir_xm: 512/x06400/  new_dir: 512/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 512/x06400/200/00226/  new_dir: 512/x06400/200/00230
+                                dir_nr: 512/x06400/200/  new_dir: 512/x06400/200
+                                dir_xm: 512/x06400/  new_dir: 512/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 512/x06400/200/00450/  new_dir: 512/x06400/200/00450
+                                dir_nr: 512/x06400/200/  new_dir: 512/x06400/200
+                                dir_xm: 512/x06400/  new_dir: 512/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 200  n_r: 200
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 512/x06400/200/00900/  new_dir: 512/x06400/200/00900
+                                dir_nr: 512/x06400/200/  new_dir: 512/x06400/200
+                                dir_xm: 512/x06400/  new_dir: 512/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00150  n_i: 00150
+                                nr_old: 156  n_r: 156
+                                xm_old: 06600  x_m: 06600
+                                
+                                dir_ni: 512/x06600/156/00150/  new_dir: 512/x06600/156/00150
+                                dir_nr: 512/x06600/156/  new_dir: 512/x06600/156
+                                dir_xm: 512/x06600/  new_dir: 512/x06600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00750  n_i: 00750
+                                nr_old: 176  n_r: 176
+                                xm_old: 06800  x_m: 06800
+                                
+                                dir_ni: 512/x06800/176/00750/  new_dir: 512/x06800/176/00750
+                                dir_nr: 512/x06800/176/  new_dir: 512/x06800/176
+                                dir_xm: 512/x06800/  new_dir: 512/x06800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 0085  n_i: 00850
+                                nr_old: 162  n_r: 162
+                                xm_old: 06980  x_m: 06980
+                                
+                                dir_ni: 512/x06980/162/0085/  new_dir: 512/x06980/162/00850
+                                dir_nr: 512/x06980/162/  new_dir: 512/x06980/162
+                                dir_xm: 512/x06980/  new_dir: 512/x06980
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 145  n_r: 145
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 512/x07300/145/00226/  new_dir: 512/x07300/145/00230
+                                dir_nr: 512/x07300/145/  new_dir: 512/x07300/145
+                                dir_xm: 512/x07300/  new_dir: 512/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 512/x07300/168/00226/  new_dir: 512/x07300/168/00230
+                                dir_nr: 512/x07300/168/  new_dir: 512/x07300/168
+                                dir_xm: 512/x07300/  new_dir: 512/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 512/x07300/180/00226/  new_dir: 512/x07300/180/00230
+                                dir_nr: 512/x07300/180/  new_dir: 512/x07300/180
+                                dir_xm: 512/x07300/  new_dir: 512/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 512/x07300/200/00226/  new_dir: 512/x07300/200/00230
+                                dir_nr: 512/x07300/200/  new_dir: 512/x07300/200
+                                dir_xm: 512/x07300/  new_dir: 512/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 0030  n_i: 00300
+                                nr_old: 164  n_r: 164
+                                xm_old: 07400  x_m: 07400
+                                
+                                dir_ni: 512/x07400/164/0030/  new_dir: 512/x07400/164/00300
+                                dir_nr: 512/x07400/164/  new_dir: 512/x07400/164
+                                dir_xm: 512/x07400/  new_dir: 512/x07400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 0040  n_i: 00400
+                                nr_old: 194  n_r: 194
+                                xm_old: 07800  x_m: 07800
+                                
+                                dir_ni: 512/x07800/194/0040/  new_dir: 512/x07800/194/00400
+                                dir_nr: 512/x07800/194/  new_dir: 512/x07800/194
+                                dir_xm: 512/x07800/  new_dir: 512/x07800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00200  n_i: 00200
+                                nr_old: 185  n_r: 185
+                                xm_old: 08100  x_m: 08100
+                                
+                                dir_ni: 512/x08100/185/00200/  new_dir: 512/x08100/185/00200
+                                dir_nr: 512/x08100/185/  new_dir: 512/x08100/185
+                                dir_xm: 512/x08100/  new_dir: 512/x08100
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00460  n_i: 00460
+                                nr_old: 154  n_r: 154
+                                xm_old: 08200  x_m: 08200
+                                
+                                dir_ni: 512/x08200/154/00460/  new_dir: 512/x08200/154/00460
+                                dir_nr: 512/x08200/154/  new_dir: 512/x08200/154
+                                dir_xm: 512/x08200/  new_dir: 512/x08200
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00800  n_i: 00800
+                                nr_old: 190  n_r: 190
+                                xm_old: 08300  x_m: 08300
+                                
+                                dir_ni: 512/x08300/190/00800/  new_dir: 512/x08300/190/00800
+                                dir_nr: 512/x08300/190/  new_dir: 512/x08300/190
+                                dir_xm: 512/x08300/  new_dir: 512/x08300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 512/x08320/130/00226/  new_dir: 512/x08320/130/00230
+                                dir_nr: 512/x08320/130/  new_dir: 512/x08320/130
+                                dir_xm: 512/x08320/  new_dir: 512/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00900  n_i: 00900
+                                nr_old: 130  n_r: 130
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 512/x08320/130/00900/  new_dir: 512/x08320/130/00900
+                                dir_nr: 512/x08320/130/  new_dir: 512/x08320/130
+                                dir_xm: 512/x08320/  new_dir: 512/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 512/x08320/168/00226/  new_dir: 512/x08320/168/00230
+                                dir_nr: 512/x08320/168/  new_dir: 512/x08320/168
+                                dir_xm: 512/x08320/  new_dir: 512/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 180  n_r: 180
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 512/x08320/180/00226/  new_dir: 512/x08320/180/00230
+                                dir_nr: 512/x08320/180/  new_dir: 512/x08320/180
+                                dir_xm: 512/x08320/  new_dir: 512/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 200  n_r: 200
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 512/x08320/200/00226/  new_dir: 512/x08320/200/00230
+                                dir_nr: 512/x08320/200/  new_dir: 512/x08320/200
+                                dir_xm: 512/x08320/  new_dir: 512/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00350  n_i: 00350
+                                nr_old: 168  n_r: 168
+                                xm_old: 08400  x_m: 08400
+                                
+                                dir_ni: 512/x08400/168/00350/  new_dir: 512/x08400/168/00350
+                                dir_nr: 512/x08400/168/  new_dir: 512/x08400/168
+                                dir_xm: 512/x08400/  new_dir: 512/x08400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 0055  n_i: 00550
+                                nr_old: 150  n_r: 150
+                                xm_old: 08600  x_m: 08600
+                                
+                                dir_ni: 512/x08600/150/0055/  new_dir: 512/x08600/150/00550
+                                dir_nr: 512/x08600/150/  new_dir: 512/x08600/150
+                                dir_xm: 512/x08600/  new_dir: 512/x08600
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 01680  x_m: 01680
+                                
+                                dir_ni: 64/x01680/168/00226/  new_dir: 64/x01680/168/00230
+                                dir_nr: 64/x01680/168/  new_dir: 64/x01680/168
+                                dir_xm: 64/x01680/  new_dir: 64/x01680
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00020  n_i: 00020
+                                nr_old: 166  n_r: 166
+                                xm_old: 02350  x_m: 02350
+                                
+                                dir_ni: 64/x02350/166/00020/  new_dir: 64/x02350/166/00020
+                                dir_nr: 64/x02350/166/  new_dir: 64/x02350/166
+                                dir_xm: 64/x02350/  new_dir: 64/x02350
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00020  n_i: 00020
+                                nr_old: 166  n_r: 166
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 64/x03360/166/00020/  new_dir: 64/x03360/166/00020
+                                dir_nr: 64/x03360/166/  new_dir: 64/x03360/166
+                                dir_xm: 64/x03360/  new_dir: 64/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 03360  x_m: 03360
+                                
+                                dir_ni: 64/x03360/168/00226/  new_dir: 64/x03360/168/00230
+                                dir_nr: 64/x03360/168/  new_dir: 64/x03360/168
+                                dir_xm: 64/x03360/  new_dir: 64/x03360
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 04300  x_m: 04300
+                                
+                                dir_ni: 64/x04300/168/00226/  new_dir: 64/x04300/168/00230
+                                dir_nr: 64/x04300/168/  new_dir: 64/x04300/168
+                                dir_xm: 64/x04300/  new_dir: 64/x04300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00020  n_i: 00020
+                                nr_old: 166  n_r: 166
+                                xm_old: 04370  x_m: 04370
+                                
+                                dir_ni: 64/x04370/166/00020/  new_dir: 64/x04370/166/00020
+                                dir_nr: 64/x04370/166/  new_dir: 64/x04370/166
+                                dir_xm: 64/x04370/  new_dir: 64/x04370
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 04480  x_m: 04480
+                                
+                                dir_ni: 64/x04480/171/00450/  new_dir: 64/x04480/171/00450
+                                dir_nr: 64/x04480/171/  new_dir: 64/x04480/171
+                                dir_xm: 64/x04480/  new_dir: 64/x04480
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 04800  x_m: 04800
+                                
+                                dir_ni: 64/x04800/168/00226/  new_dir: 64/x04800/168/00230
+                                dir_nr: 64/x04800/168/  new_dir: 64/x04800/168
+                                dir_xm: 64/x04800/  new_dir: 64/x04800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 0017  n_i: 00170
+                                nr_old: 169  n_r: 169
+                                xm_old: 05230  x_m: 05230
+                                
+                                dir_ni: 64/x05230/169/0017/  new_dir: 64/x05230/169/00170
+                                dir_nr: 64/x05230/169/  new_dir: 64/x05230/169
+                                dir_xm: 64/x05230/  new_dir: 64/x05230
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 05300  x_m: 05300
+                                
+                                dir_ni: 64/x05300/168/00226/  new_dir: 64/x05300/168/00230
+                                dir_nr: 64/x05300/168/  new_dir: 64/x05300/168
+                                dir_xm: 64/x05300/  new_dir: 64/x05300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 05800  x_m: 05800
+                                
+                                dir_ni: 64/x05800/168/00226/  new_dir: 64/x05800/168/00230
+                                dir_nr: 64/x05800/168/  new_dir: 64/x05800/168
+                                dir_xm: 64/x05800/  new_dir: 64/x05800
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 130  n_r: 130
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 64/x06400/130/00226/  new_dir: 64/x06400/130/00230
+                                dir_nr: 64/x06400/130/  new_dir: 64/x06400/130
+                                dir_xm: 64/x06400/  new_dir: 64/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 64/x06400/168/00226/  new_dir: 64/x06400/168/00230
+                                dir_nr: 64/x06400/168/  new_dir: 64/x06400/168
+                                dir_xm: 64/x06400/  new_dir: 64/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 06400  x_m: 06400
+                                
+                                dir_ni: 64/x06400/171/00450/  new_dir: 64/x06400/171/00450
+                                dir_nr: 64/x06400/171/  new_dir: 64/x06400/171
+                                dir_xm: 64/x06400/  new_dir: 64/x06400
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 07300  x_m: 07300
+                                
+                                dir_ni: 64/x07300/168/00226/  new_dir: 64/x07300/168/00230
+                                dir_nr: 64/x07300/168/  new_dir: 64/x07300/168
+                                dir_xm: 64/x07300/  new_dir: 64/x07300
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 64/x08320/168/00226/  new_dir: 64/x08320/168/00230
+                                dir_nr: 64/x08320/168/  new_dir: 64/x08320/168
+                                dir_xm: 64/x08320/  new_dir: 64/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00450  n_i: 00450
+                                nr_old: 171  n_r: 171
+                                xm_old: 08320  x_m: 08320
+                                
+                                dir_ni: 64/x08320/171/00450/  new_dir: 64/x08320/171/00450
+                                dir_nr: 64/x08320/171/  new_dir: 64/x08320/171
+                                dir_xm: 64/x08320/  new_dir: 64/x08320
+                            
+                            
+
+                            
+                            Sanity Check
+                                ni_old: 00226  n_i: 00230
+                                nr_old: 168  n_r: 168
+                                xm_old: 09600  x_m: 09600
+                                
+                                dir_ni: 64/x09600/168/00226/  new_dir: 64/x09600/168/00230
+                                dir_nr: 64/x09600/168/  new_dir: 64/x09600/168
+                                dir_xm: 64/x09600/  new_dir: 64/x09600
+                            
+                            
