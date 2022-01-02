@@ -3,9 +3,10 @@
 """
 Created on Wed Aug 28 16:21:13 2019
 
-@author: cihat
+@author: ennis
 """
 
+from pathlib import Path
 import numpy as np
 import pandas as pd
 #import time as tm
@@ -31,24 +32,25 @@ elif op_sys == 'Linux':
 
 os.chdir(dtdir)
 
-#%%
+# %%
 
 Blue = pd.read_pickle(disr_dt+'Blue.pkl')
 Red = pd.read_pickle(disr_dt+'Red.pkl')
 Hyg_Blue = pd.read_pickle(disr_dt+'Hyg_Blue.pkl')
 Hyg_Red = pd.read_pickle(disr_dt+'Hyg_Red.pkl')
 ssa = pd.read_pickle(disr_dt+'SSA.pkl')
-def ssa_comp (wl, pm_id):
+
+
+def ssa_comp(wl, pm_id):
 
     if wl == 'Blue':
-        lmd=0.4909
+        lmd = 0.4909
     elif wl == 'Red':
-        lmd=0.9348
+        lmd = 0.9348
     Hyg = pd.read_pickle(disr_dt+'Hyg_'+wl+'.pkl')
 
     par = f'{dtdir}final{_sl}new{pm_id}.dat'
     # Reading the model output
-
 
     q = gl.getline(par, 2)
     q = q.split()
@@ -59,12 +61,13 @@ def ssa_comp (wl, pm_id):
     try:
         csca = [float(q[3])]
     except ValueError:
-        print('csca value error',pm_id)
-    cabs =[float(q[4])]
+        print('csca value error', pm_id)
+    cabs = [float(q[4])]
     taus_out = [float(q[5])]
     taua_out = [float(q[6])]
 
-    eff = {'qa': qabs, 'qs': qsca, 'qe': qext, 'cs': csca, 'ca': cabs, 'taus': taus_out, 'taua': taua_out}
+    eff = {'qa': qabs, 'qs': qsca, 'qe': qext, 'cs': csca,
+           'ca': cabs, 'taus': taus_out, 'taua': taua_out}
 
     pm_eff = pd.DataFrame(eff)
 
@@ -73,18 +76,16 @@ def ssa_comp (wl, pm_id):
     for _alt in ['200', '80new']:
         w0alt = f'w0{_alt}'
 
-
         if wl == 'Blue':
-            w0 = ssa[ssa.lmd == 491 ][w0alt].values[0]
-            _lmd = 0.4909 # extra dec. just to be more accurate for monomer_size
+            w0 = ssa[ssa.lmd == 491][w0alt].values[0]
+            _lmd = 0.4909  # extra dec. just to be more accurate for monomer_size
         elif wl == 'Red':
-            w0 = ssa[ssa.lmd == 934 ][w0alt].values[0]
-            _lmd = 0.9348 # extra dec. just to be more accurate for monomer_size
+            w0 = ssa[ssa.lmd == 934][w0alt].values[0]
+            _lmd = 0.9348  # extra dec. just to be more accurate for monomer_size
 
-        rel_err = abs(w0 - w0mdl )/w0
+        rel_err = abs(w0 - w0mdl)/w0
 
         aw[f'{w0alt}_Rerr'] = rel_err
-
 
     return aw
 
@@ -105,26 +106,24 @@ if __name__ == '__main__':
 
 #    vars()[wl+'144'] = eval(wl)[eval(wl)['w0144_Rerr'] <= 0.05]
 #    vars()[wl+'80'] = eval(wl)[eval(wl)['w080_Rerr'] <= 0.05]
-#Blue.to_pickle(disr_dt+'Blue.pkl')
-#Red.to_pickle(disr_dt+'Red.pkl')
+# Blue.to_pickle(disr_dt+'Blue.pkl')
+# Red.to_pickle(disr_dt+'Red.pkl')
 
-            #%%
+            # %%
 
-def ssa_comp (wl, pm_id):
+
+def ssa_comp(wl, pm_id):
 
     if wl == 'Blue':
-        lmd=0.4909
+        lmd = 0.4909
     elif wl == 'Red':
-        lmd=0.9348
+        lmd = 0.9348
     Hyg = pd.read_pickle(disr_dt+'Hyg_'+wl+'.pkl')
-
 
     # Reading model output
 
-
     par = f'{dtdir}final{_sl}new{pm_id}.dat'
     # Reading the model output
-
 
     q = gl.getline(par, 2)
     q = q.split()
@@ -135,62 +134,62 @@ def ssa_comp (wl, pm_id):
     try:
         csca = [float(q[3])]
     except ValueError:
-        print('csca value error',pm_id)
-    cabs =[float(q[4])]
+        print('csca value error', pm_id)
+    cabs = [float(q[4])]
     taus_out = [float(q[5])]
     taua_out = [float(q[6])]
 
-    eff = {'qa': qabs, 'qs': qsca, 'qe': qext, 'cs': csca, 'ca': cabs, 'taus': taus_out, 'taua': taua_out}
+    eff = {'qa': qabs, 'qs': qsca, 'qe': qext, 'cs': csca,
+           'ca': cabs, 'taus': taus_out, 'taua': taua_out}
 
     pm_eff = pd.DataFrame(eff)
 
     w0mdl = pm_eff.qs[0]/pm_eff.qe[0]
     aw = {}
-    for _alt in ['200', '80','80new', '144']:
+    for _alt in ['200', '80', '80new', '144']:
         w0alt = f'w0{_alt}'
 
-
         if wl == 'Blue':
-            w0 = ssa[ssa.lmd == 491 ][w0alt].values
-            _lmd = 0.4909 # extra dec. just to be more accurate for monomer_size
+            w0 = ssa[ssa.lmd == 491][w0alt].values
+            _lmd = 0.4909  # extra dec. just to be more accurate for monomer_size
         elif wl == 'Red':
-            w0 = ssa[ssa.lmd == 934 ][w0alt].values
-            _lmd = 0.9348 # extra dec. just to be more accurate for monomer_size
+            w0 = ssa[ssa.lmd == 934][w0alt].values
+            _lmd = 0.9348  # extra dec. just to be more accurate for monomer_size
 
-        rel_err = abs(w0 - w0mdl )/w0
+        rel_err = abs(w0 - w0mdl)/w0
 
         print(f'{w0alt}_Rerr')
         aw[f'{w0alt}_Rerr'] = rel_err
     print(aw)
 
     return aw
+
+
 for wl in ['Blue', 'Red']:
     ssa_com(wl, )
 _dt = []
-#for wl in ['Blue', 'Red']:
+# for wl in ['Blue', 'Red']:
 #    for pm_id in eval(wl).Mdl:
 #        _dt.append(ssa_comp(wl, pm_id))
 
-#%%
+# %%
 Blue = pd.read_pickle(disr_dt+'Blue.pkl')
 Red = pd.read_pickle(disr_dt+'Red.pkl')
 Hyg_Blue = pd.read_pickle(disr_dt+'Hyg_Blue.pkl')
 Hyg_Red = pd.read_pickle(disr_dt+'Hyg_Red.pkl')
 ssa = pd.read_pickle(disr_dt+'SSA.pkl')
-s=0
-k=0
-from pathlib import Path
+s = 0
+k = 0
 dst = 'C:\\Users\\kurt_\\PARAM DATA\\final0\\'
 src = 'D:\\final\\'
 for wl in ['Blue', 'Red']:
-    for alt in [ '80new', '200']:
+    for alt in ['80new', '200']:
 
-#        vars()[wl+alt] = eval(wl)[eval(wl)[f'w0{alt}_Rerr'] <= 0.05]
-#        vars()[wl+alt] = eval(wl+alt)[eval(wl+alt)['Rel_err_b'] <= 0.155]
+        #        vars()[wl+alt] = eval(wl)[eval(wl)[f'w0{alt}_Rerr'] <= 0.05]
+        #        vars()[wl+alt] = eval(wl+alt)[eval(wl+alt)['Rel_err_b'] <= 0.155]
         if wl == 'Blue' and alt == '80new':
             vars()[wl+alt] = eval(wl)[eval(wl)[f'w0{alt}_Rerr'] <= 0.125]
             vars()[wl+alt] = eval(wl+alt)[eval(wl+alt)['Rel_err_b'] <= 0.15]
-
 
         elif wl == 'Blue' and alt != '80new':
             vars()[wl+alt] = eval(wl)[eval(wl)[f'w0{alt}_Rerr'] <= 0.05]
@@ -200,10 +199,10 @@ for wl in ['Blue', 'Red']:
             vars()[wl+alt] = eval(wl+alt)[eval(wl+alt)['Rel_err_b'] <= 0.1]
 
 
-
 #            vars()[wl+alt] = eval(wl+alt)[eval(wl+alt)['Rm'] > 0.035]
 
-        vars()[wl+alt]['filter'] = eval(wl+alt)['Rel_err_fw']*eval(wl+alt)['Rel_err_b']*eval(wl+alt)[f'w0{alt}_Rerr']
+        vars()[wl+alt]['filter'] = eval(wl+alt)['Rel_err_fw'] * \
+            eval(wl+alt)['Rel_err_b']*eval(wl+alt)[f'w0{alt}_Rerr']
         vars()[wl+alt]['Ragg'] = eval(wl+alt)['Rm']*eval(wl+alt)['N']**(1.0/3.)
         eval(wl+alt).reset_index(inplace=True)
         eval(wl+alt).drop('index', axis=1, inplace=True)
@@ -213,17 +212,17 @@ for wl in ['Blue', 'Red']:
             try:
                 copy2(f'{src}new{i}.dat', f'{dst}{i}.dat')
             except:
-                s+=1
+                s += 1
         for i in eval(wl+alt).Mdl:
 
             my_file = Path(f'{src}new{i}.dat')
             if my_file.is_file():
-                k+=1
+                k += 1
 print(f'Number of missing file is {s}')
 print(f'Number of file available is {k}')
 
 
-#%% NEW CONSTRAINTS - RAGG AND n INDEPENDENTLY CONSTRAINED
+# %% NEW CONSTRAINTS - RAGG AND n INDEPENDENTLY CONSTRAINED
 Blue = pd.read_pickle(disr_dt+'Blue.pkl')
 Red = pd.read_pickle(disr_dt+'Red.pkl')
 Hyg_Blue = pd.read_pickle(disr_dt+'Hyg_Blue.pkl')
@@ -232,7 +231,7 @@ ssa = pd.read_pickle(disr_dt+'SSA.pkl')
 
 for wl in ['Blue', 'Red']:
     if wl == 'Red':
-          # Blue constraints Rm not Red. Thus anything outside 0.35<Rm<0.55 removed
+        # Blue constraints Rm not Red. Thus anything outside 0.35<Rm<0.55 removed
 
         vars()[f'{wl}_flt'] = eval(wl)[eval(wl)['Rel_err_b'] < 0.11]
 #        vars()[f'{wl}_flt'] = eval(f'{wl}_flt')[eval(f'{wl}_flt').Rm >= 0.035]
@@ -240,23 +239,27 @@ for wl in ['Blue', 'Red']:
     else:
 
         vars()[f'{wl}_flt'] = eval(wl)[eval(wl)['Rel_err_b'] < 0.15]
-    vars()[f'{wl}_flt']['filter'] = eval(f'{wl}_flt')['Rel_err_fw']*eval(f'{wl}_flt')['Rel_err_b']
-    vars()[f'{wl}_flt']['Ragg'] = eval(f'{wl}_flt')['Rm']*eval(f'{wl}_flt')['N']**(1.0/3.)
+    vars()[f'{wl}_flt']['filter'] = eval(f'{wl}_flt')[
+        'Rel_err_fw']*eval(f'{wl}_flt')['Rel_err_b']
+    vars()[f'{wl}_flt']['Ragg'] = eval(f'{wl}_flt')[
+        'Rm']*eval(f'{wl}_flt')['N']**(1.0/3.)
     eval(f'{wl}_flt').reset_index(inplace=True)
     eval(f'{wl}_flt').drop('index', axis=1, inplace=True)
 #    vars()[wl]['Ragg'] = eval(wl)['Rm']*eval(wl)['N']**(1.0/3.)
 
 for wl in ['Blue', 'Red']:
-    for alt in [ '80new', '200']:
+    for alt in ['80new', '200']:
         vars()[wl+alt] = eval(wl)[eval(wl)[f'w0{alt}_Rerr'] <= 0.05]
 
         vars()[wl+alt]['Ragg'] = eval(wl+alt)['Rm']*eval(wl+alt)['N']**(1.0/3.)
-        vars()[wl+alt] = eval(wl+alt)[(eval(wl+alt).N <= np.max(eval(f'{wl}_flt').N)) & (eval(wl+alt).N >= np.min(eval(f'{wl}_flt').N))]
-        vars()[wl+alt]['filter'] = eval(wl+alt)['Rel_err_fw']*eval(wl+alt)['Rel_err_b']*eval(wl+alt)[f'w0{alt}_Rerr']
+        vars()[wl+alt] = eval(wl+alt)[(eval(wl+alt).N <=
+                                       np.max(eval(f'{wl}_flt').N)) & (eval(wl+alt).N >= np.min(eval(f'{wl}_flt').N))]
+        vars()[wl+alt]['filter'] = eval(wl+alt)['Rel_err_fw'] * \
+            eval(wl+alt)['Rel_err_b']*eval(wl+alt)[f'w0{alt}_Rerr']
         eval(wl+alt).reset_index(inplace=True)
         eval(wl+alt).drop('index', axis=1, inplace=True)
 
-#%%
+# %%
 
 for wl in ['Blue', 'Red']:
     for alt in ['144', '80', '80new', '200']:
