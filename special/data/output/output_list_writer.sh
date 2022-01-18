@@ -8,7 +8,7 @@ set -e
 # The third level is n_r which should be three digits
 # The Fourth level directories named as n_i with 5 digits
 touch output_list.csv
-echo "N, xm, nr, ni">>output_list.csv
+echo "N,xm,nr,ni">>output_list.csv
 # Recursively looping through the nested directories to read the output files
 for N in */; do
     N="${N/\//}"
@@ -88,7 +88,7 @@ for N in */; do
                             xm=$(python -c "print('{:.4f}'.format($xm))")
                             nr=$(python -c "print('{:.2f}'.format($nr))")
                             ni=$(python -c "print('{:.4f}'.format($ni))")
-                            echo "${N}, ${xm}, ${nr}, ${ni}">>output_list.csv
+                            echo "${N},${xm},${nr},${ni}">>output_list.csv
                             
                             # echo " All Done"
                         fi

@@ -13,7 +13,7 @@ import os
 import platform
 op_sys = platform.system()
 if op_sys == 'Windows':
-    dtdir = 'C:\\Users\\kurt_\\Dropbox\\Code\\special\\data\\'
+    dtdir = 'C:\\Users\\kurt_\\Google Drive\\dell_github\\T-Matrix-Titan\\special\\data\\output\\'
     _sl = '\\'
 elif op_sys == 'Linux':
     dtdir = '/home/cihat/Dropbox/code/special/data/'
@@ -37,9 +37,10 @@ os.chdir(dtdir)
 # so that do nothing just read when there is \ in the text
 # other option to read \ as is: using \\. For eg. C:\\Users\\kurt_
 
-#%%
+# %%
 
-old_tm_files = glob.glob('C:\\Users\\kurt_\\Google Drive\\Code\\special\\data\\old_tm_data\\*.dat')
+old_tm_files = glob.glob(
+    'C:\\Users\\kurt_\\Google Drive\\Code\\special\\data\\old_tm_data\\*.dat')
 
 # Lets create an array to record some log info which not need to be prompted
 # during the execution. These log info could be used for debugging but they
@@ -48,22 +49,24 @@ _log = []
 # Directories organised as, 1024/x3360/166/0002/mt_1_1024_x3360_166_0002.dat
 
 sphere_number = [64, 128, 256, 512, 1024]
-ref_ind_real = [130, 145, 166, 168, 171, 185, 200, 230]
-ref_ind_img = ['00226', '00900', '00450', '00020', '00010', '00060', '03000', '00044']
-#%%
-tm_all_mx=[]
-tm_all_eff=[]
-count=0
+sphere_number = [1024]
+# ref_ind_real = [130, 145, 166, 168, 171, 185, 200, 230]
+# ref_ind_img = ['00226', '00900', '00450', '00020', '00010', '00060', '03000', '00044']
+# %%
+tm_all_mx = []
+tm_all_eff = []
+count = 0
 for N in sphere_number:
-    size_param_dir = glob.glob(dtdir+'{}{}x*'.format(N,_sl))
+    size_param_dir = glob.glob(dtdir+'{}{}x*'.format(N, _sl))
+    print(size_param_dir)
     for size_param in size_param_dir:
-        xm = size_param[len(dtdir) + len(str(N)) + 2 : size_param.find('{}x'.format(_sl))+7]
+        xm = size_param[len(dtdir) + len(str(N)) +
+                        2: size_param.find('{}x'.format(_sl))+7]
         # this extract only this part '3360'
 
         real_ref_dir = glob.glob(size_param+'{}*'.format(_sl))
         for real_ref in real_ref_dir:
-            nr = real_ref[len(size_param)+1 : ]
-
+            nr = real_ref[len(size_param)+1:]
 
             # We need to skip the loop if there is no data for this nr.
             try:
@@ -82,7 +85,8 @@ for N in sphere_number:
 
                 # We need to skip the loop if there is no data for this ni.
                 try:
-                    qs = glob.glob(size_param+'{}{}{}'.format(_sl, nr, _sl) + ni)
+                    qs = glob.glob(
+                        size_param+'{}{}{}'.format(_sl, nr, _sl) + ni)
                     qs[0]
                     qs = qs[0]
                 except IndexError:
@@ -94,17 +98,17 @@ for N in sphere_number:
 
                 # Skipping runs if there are not atleast 10 outputs available.
 
-                if len(tmatrix_files) < 5 and len(tmatrix_files) > 0 :
+                if len(tmatrix_files) < 5 and len(tmatrix_files) > 0:
 
                     print('There are {} outputs for the run {}_{}_{}_'
-                      .format(len(tmatrix_files), N, xm, nr) + ni)
+                          .format(len(tmatrix_files), N, xm, nr) + ni)
                     print('For the sake of accuracy this run will not be included ')
                     continue
                 elif len(tmatrix_files) == 0:
                     print('There is NO outputs for the run {}_{}_{}_'
-                      .format( N, xm, nr) + ni)
+                          .format(N, xm, nr) + ni)
                     continue
-                #print('There are {} output files for the run {}_{}_{}_'
+                # print('There are {} output files for the run {}_{}_{}_'
                  #     .format(len(tmatrix_files), N, xm, nr) + ni)
                 i = 0
                 df_mx_concat = []
@@ -114,7 +118,6 @@ for N in sphere_number:
                     # Warning! here i, run number, may not be equal to run
                     # number which appear in the name of the file. Such as
                     # mt1024_x6398_13_009_1 may be referred with i different than 1.
-
 
                     ## Skip Incomplete output files ##
                     file_size = os.path.getsize(tmf)
@@ -128,8 +131,7 @@ for N in sphere_number:
                     # a pd.DataFrame
                     # Outside this loop, I will calculate the enemble average.
 
-                    #Let's first collect the efficiencies and asymmetry parm.
-
+                    # Let's first collect the efficiencies and asymmetry parm.
 
                     q = gl.getline(tmf, 51)
                     q = q.split()
@@ -144,14 +146,12 @@ for N in sphere_number:
                     # completely skip all these runs.
 
                     if (qsca[0] < 1e3 and qsca[0] > -1e3) and (qabs[0] < 1e3 and qabs[0] > -1e3)\
-                        and (g[0] >= 0 and g[0] <= 1 ):
-
+                            and (g[0] >= 0 and g[0] <= 1):
 
                         eff = {'qa': qabs, 'qs': qsca, 'qe': qext, 'g': g}
                         dt_eff = pd.DataFrame(eff)
                         dt_eff = dt_eff.apply(pd.to_numeric)
                         df_eff_concat.append(dt_eff)
-
 
                         data = []
                         for line in range(54, 235):
@@ -176,7 +176,6 @@ for N in sphere_number:
 
                         # Let's convert the string values to numeric all at once
                         dt_mx = dt_mx.apply(pd.to_numeric)
-
 
                         # Now lets collect all the dataframes to get an average at the end.
 
@@ -211,8 +210,7 @@ for N in sphere_number:
                 tm_all_eff.append(vars()[tm_run_eff])
 
 
-
-#%%
+# %%
 # Now Collecting The Old Data ( Dr. Lemmon's work )
 # All these runs already averaged. Importing them is thus similar to importing parameterization data.
 
@@ -220,7 +218,7 @@ for N in sphere_number:
 # file = old_tm_files; par = tm_old; param_run = tm_old_run
 
 # Let's store each parameters in an array. They will be added to parameters choosen in main script (plot.py)
-old_xm =[]
+old_xm = []
 old_nr = []
 old_ni = []
 
@@ -230,13 +228,16 @@ count_old = 0
 old_switch = "n"
 if old_switch == "y":
     for tm_old in old_tm_files:
-        tm_old_run = tm_old[tm_old.find('{}tm'.format(_sl))+1:tm_old.find('.dat')]  # grabbing the run id from the name of the file from tm to .dat not including the end
+        # grabbing the run id from the name of the file from tm to .dat not including the end
+        tm_old_run = tm_old[tm_old.find(
+            '{}tm'.format(_sl))+1:tm_old.find('.dat')]
         # Now tm_old_run = 'tm8_35000_175_02000' let's get the each parameter from this, and store
-        old_xm.append(tm_old_run[tm_old_run.find('_')+1:tm_old_run.find('_')+6]) # this exracts size param
-        old_nr.append(tm_old_run[tm_old_run.find('_')+7:tm_old_run.find('_')+10])
+        # this exracts size param
+        old_xm.append(tm_old_run[tm_old_run.find(
+            '_')+1:tm_old_run.find('_')+6])
+        old_nr.append(tm_old_run[tm_old_run.find(
+            '_')+7:tm_old_run.find('_')+10])
         old_ni.append(tm_old_run[tm_old_run.find('_')+11:])
-
-
 
         q = gl.getline(tm_old, 2)
         q = q.split()
@@ -282,6 +283,4 @@ if old_switch == "y":
     #    vars()[param_run]['g'] = g
 
 
-
-
-print( 'Please read _log to see missing data')
+print('Please read _log to see missing data')
