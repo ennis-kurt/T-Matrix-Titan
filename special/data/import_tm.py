@@ -48,7 +48,7 @@ old_tm_files = glob.glob(
 _log = []
 # Directories organised as, 1024/x3360/166/0002/mt_1_1024_x3360_166_0002.dat
 
-sphere_number = [64, 128, 256, 512, 1024]
+hyuh
 sphere_number = [1024]
 # ref_ind_real = [130, 145, 166, 168, 171, 185, 200, 230]
 # ref_ind_img = ['00226', '00900', '00450', '00020', '00010', '00060', '03000', '00044']
@@ -88,7 +88,6 @@ for N in sphere_number:
                     qs = glob.glob(
                         size_param+'{}{}{}'.format(_sl, nr, _sl) + ni)
                     qs[0]
-                    qs = qs[0]
                 except IndexError:
                     _log.append(['There is no data for this set:  {}_{}_{}_'
                                  .format(N, xm, nr) + ni])
@@ -129,7 +128,7 @@ for N in sphere_number:
 
                     # Let's read the mstm output files and save the data into
                     # a pd.DataFrame
-                    # Outside this loop, I will calculate the enemble average.
+                    # Outside this loop, I will calculate the ensemble average.
 
                     # Let's first collect the efficiencies and asymmetry parm.
 
@@ -139,7 +138,7 @@ for N in sphere_number:
                     qabs = [float(q[1])]
                     qsca = [float(q[2])]
                     g = [float(q[3])]
-                    count += 1
+                    
 
                     # A few runs seems like have wrong qe and/or qa values.
                     # I did not investigate the scattering matrix but I will
@@ -154,6 +153,7 @@ for N in sphere_number:
                         df_eff_concat.append(dt_eff)
 
                         data = []
+                        
                         for line in range(54, 235):
                             a = gl.getline(tmf, line)
                             columns = a.split()
@@ -208,6 +208,7 @@ for N in sphere_number:
                 tm_run_eff = 'tm{}_{}_{}_{}_eff'.format(N, xm, nr, ni)
                 vars()[tm_run_eff] = group_by_index_eff.mean()
                 tm_all_eff.append(vars()[tm_run_eff])
+                count+=1
 
 
 # %%
