@@ -190,7 +190,7 @@ for N in sphere_number:
 
                     # Let's convert the df_concat to a pandas dataframe
                     df_mx_concat = pd.concat(df_mx)
-                    df_eff_concat = pd.concat(df_eff_concat)
+                    df_eff = pd.concat(df_eff_concat)
 
                     # Let's take the average of all runs for each set
 
@@ -203,8 +203,8 @@ for N in sphere_number:
                     tm_all_mx.append(vars()[tm_run_mx])
 
                     # Averaging Efficiencies and asym. par.
-                    group_by_index_eff = df_eff_concat.groupby(
-                        df_eff_concat.index)
+                    group_by_index_eff = df_eff.groupby(
+                        df_eff.index)
                     tm_run_eff = 'tm{}_{}_{}_{}_eff'.format(N, xm, nr, ni)
                     vars()[tm_run_eff] = group_by_index_eff.mean()
                     tm_all_eff.append(vars()[tm_run_eff])
