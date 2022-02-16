@@ -48,8 +48,7 @@ old_tm_files = glob.glob(
 _log = []
 # Directories organised as, 1024/x3360/166/0002/mt_1_1024_x3360_166_0002.dat
 
-hyuh
-sphere_number = [1024]
+sphere_number = [64, 128, 256, 512, 1024]
 # ref_ind_real = [130, 145, 166, 168, 171, 185, 200, 230]
 # ref_ind_img = ['00226', '00900', '00450', '00020', '00010', '00060', '03000', '00044']
 # %%
@@ -93,7 +92,7 @@ for N in sphere_number:
                                  .format(N, xm, nr) + ni])
                     continue
 
-                tmatrix_files = glob.glob(qs+'{}mt*.dat'.format(_sl))
+                tmatrix_files = glob.glob(qs[0]+'{}mt*.dat'.format(_sl))
 
                 # Skipping runs if there are not atleast 10 outputs available.
 
@@ -110,7 +109,7 @@ for N in sphere_number:
                 # print('There are {} output files for the run {}_{}_{}_'
                  #     .format(len(tmatrix_files), N, xm, nr) + ni)
                 i = 0
-                df_mx_concat = []
+                df_mx = []
                 df_eff_concat = []
                 for tmf in tmatrix_files:
 
@@ -138,7 +137,6 @@ for N in sphere_number:
                     qabs = [float(q[1])]
                     qsca = [float(q[2])]
                     g = [float(q[3])]
-                    
 
                     # A few runs seems like have wrong qe and/or qa values.
                     # I did not investigate the scattering matrix but I will
@@ -153,7 +151,7 @@ for N in sphere_number:
                         df_eff_concat.append(dt_eff)
 
                         data = []
-                        
+
                         for line in range(54, 235):
                             a = gl.getline(tmf, line)
                             columns = a.split()
@@ -179,36 +177,38 @@ for N in sphere_number:
 
                         # Now lets collect all the dataframes to get an average at the end.
 
-                        df_mx_concat.append(dt_mx)
+                        df_mx.append(dt_mx)
                     else:
                         continue
 
-                # Now let's average the all runs for the same input parameters
-                # df_concat stack all the datframes vertically.
-                # indexes, 1 to 180, repeats for each output
-                # To calculate the mean we just need to group the
-                # df_concat by the index.
-                # then we can simply take the mean.
+                    # Now let's average the all runs for the same input parameters
+                    # df_concat stack all the datframes vertically.
+                    # indexes, 1 to 180, repeats for each output
+                    # To calculate the mean we just need to group the
+                    # df_concat by the index.
+                    # then we can simply take the mean.
 
-                # Let's convert the df_concat to a pandas dataframe
-                df_mx_concat = pd.concat(df_mx_concat)
-                df_eff_concat = pd.concat(df_eff_concat)
+                    # Let's convert the df_concat to a pandas dataframe
+                    df_mx_concat = pd.concat(df_mx)
+                    df_eff_concat = pd.concat(df_eff_concat)
 
-                # Let's take the average of all runs for each set
+                    # Let's take the average of all runs for each set
 
-                # Averaging Scattering matrices
-                group_by_index_mx = df_mx_concat.groupby(df_mx_concat.index)
-                tm_run_mx = 'tm{}_{}_{}_{}_mx'.format(N, xm, nr, ni)
-                vars()[tm_run_mx] = group_by_index_mx.mean()
-                # For eg. 1024_x6398_13_009_mx
-                tm_all_mx.append(vars()[tm_run_mx])
+                    # Averaging Scattering matrices
+                    group_by_index_mx = df_mx_concat.groupby(
+                        df_mx_concat.index)
+                    tm_run_mx = 'tm{}_{}_{}_{}_mx'.format(N, xm, nr, ni)
+                    vars()[tm_run_mx] = group_by_index_mx.mean()
+                    # For eg. 1024_x6398_13_009_mx
+                    tm_all_mx.append(vars()[tm_run_mx])
 
-                # Averaging Efficiencies and asym. par.
-                group_by_index_eff = df_eff_concat.groupby(df_eff_concat.index)
-                tm_run_eff = 'tm{}_{}_{}_{}_eff'.format(N, xm, nr, ni)
-                vars()[tm_run_eff] = group_by_index_eff.mean()
-                tm_all_eff.append(vars()[tm_run_eff])
-                count+=1
+                    # Averaging Efficiencies and asym. par.
+                    group_by_index_eff = df_eff_concat.groupby(
+                        df_eff_concat.index)
+                    tm_run_eff = 'tm{}_{}_{}_{}_eff'.format(N, xm, nr, ni)
+                    vars()[tm_run_eff] = group_by_index_eff.mean()
+                    tm_all_eff.append(vars()[tm_run_eff])
+                count += 1
 
 
 # %%
