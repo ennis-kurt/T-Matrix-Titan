@@ -215,7 +215,7 @@ for N in */; do
                 [ "$xm_old" != "$x_m" ] &&\
                     mv -vui "$dir_xm" "${N}/x${x_m}"
             # If the dir with correct name exist and the current directory name is 
-            # wrong then move all the current directory contains in to the one woth correct name
+            # wrong then move all the current directory contains in to the one with correct name
             elif [ -s "${N}/x${x_m}" ]; then 
                 [ "$xm_old" != "$x_m" ] &&\
                     mv -vui "$dir_xm"/* "${N}/x${x_m}"

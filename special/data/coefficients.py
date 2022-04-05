@@ -5,55 +5,57 @@ Created on Wed Mar 20 14:08:28 2019
 @author: kurt_
 """
 
+from numpy.polynomial import Legendre as L
+import matplotlib.pyplot as plt
+import pandas as pd
+from par_import import *
+from import_tm import *
+import glob
+import os
 import platform
 op_sys = platform.system()
 if op_sys == 'Windows':
-    dtdir = 'C:\\Users\\kurt_\\Dropbox\\code\\special\\data\\'
+    dtdir = 'C:\\Users\\kurt_\\Google Drive\\dell_github\\T-Matrix-Titan\\special\\data\\'
+
 elif op_sys == 'Linux':
     dtdir = '/home/cihat/Dropbox/code/special/data/'
-import os
 os.chdir(dtdir)
-import glob
-from import_tm import *
-from par_import import *
-from newpm_import import *
-import pandas as pd
-#%config InlineBackend.figure_format = 'svg'
-import matplotlib.pyplot as plt
+# from newpm_import import *
+# %config InlineBackend.figure_format = 'svg'
 
-#Re-write the functions.-
-#
-#add marker border to separate ni
+# go to output dir
+os.chdir(dtdir+"output\\")
 
-#%%
-## FUNCTIONS
-#export the errors then using the matlab fit with basic fit tool
+# %%
+# FUNCTIONS
+# export the errors then using the matlab fit with basic fit tool
 # List of all xm values
 
- ### NEEDS TO BE UPDATED ########
-mon_size_par =[ '01680', '02350', '03200', '03360', '04370', '04480',
-               '05040', '06398', '08319', '09598' ]
+### NEEDS TO BE UPDATED ########
+mon_size_par = ['01680', '02350', '03200', '03360', '04370', '04480',
+                '05040', '06398', '08319', '09598']
 
 # Functionst
+
 
 def mark_size(sphere_num):
     """ This func chooses a markszie based on sphere number """
     if sphere_num >= 1024:
         marker_size = 36
-    elif sphere_num ==512:
+    elif sphere_num == 512:
         marker_size = 24
-    elif sphere_num ==256:
+    elif sphere_num == 256:
         marker_size = 15
-    elif sphere_num ==128:
+    elif sphere_num == 128:
         marker_size = 8
     elif sphere_num <= 64:
         marker_size = 4
     return marker_size
 
+
 def mark_color(mon_size):
     """ This func chooses a marker color based on Monomer Size parameter """
     # Let's convert the mon_size to float by adding "." after the first "0"
-
 
 
 #    # We can choose a color using a color scheme module
@@ -79,21 +81,21 @@ def mark_color(mon_size):
 #    elif mon_size == '09598':
 #        marker_color = "C9"
 
-    if mon_size in ['01680', '02350','03200', '03360']:
+    if mon_size in ['01680', '02350', '03200', '03360']:
         marker_color = 'green'
     elif mon_size in ['04370', '04480', '05040']:
         marker_color = "purple"
-    elif mon_size  == '06398':
+    elif mon_size == '06398':
         marker_color = "blue"
-    elif mon_size  == '08319':
+    elif mon_size == '08319':
         marker_color = "red"
-    elif mon_size  == '09598':
+    elif mon_size == '09598':
         marker_color = "yellow"
     else:
         marker_color = "black"
 
-
     return marker_color
+
 
 def mark_style(n_real):
     """ This func chooses a marker style based on Real linearizeactive Index """
@@ -103,18 +105,19 @@ def mark_style(n_real):
     elif n_real == "171":
         marker_style = "D"  # Diamond
     elif n_real == "166" or n_real == "168":
-        marker_style = "*"# Star
+        marker_style = "*"  # Star
     elif n_real == "130":
         marker_style = "p"  # Pentagon
     else:
         marker_style = "+"
     return marker_style
 
-def mark_edge_color (n_img):
+
+def mark_edge_color(n_img):
     """ This func chooses a marker edge color based on Imaginary linearizeactive Index """
     # Let's convert the string type ni to float
 
-    n_img = float( ".".join(n_img[0:2]) + n_img[2:] )
+    n_img = float(".".join(n_img[0:2]) + n_img[2:])
     if n_img < 0.02:
         m_color2 = 'yellow'
     elif n_img == 0.023:
@@ -128,7 +131,7 @@ def mark_edge_color (n_img):
     return m_color2
 
 
-#def linearize(data, sec_lin = False):
+# def linearize(data, sec_lin = False):
 #    # This function linearize the m0. The linerization functions has to be modified each time.
 #
 #    for lp in [1, 2]:
@@ -146,27 +149,30 @@ def mark_edge_color (n_img):
 #            e = 2
 #            data['m0'] = (abs(((k1*data.nr + np.log10(k2*data.ni)*1j)**2 -1)/((l1*data.nr + np.log10(l2*data.ni)*1j)**2 + 2)))**e
 
-def linearize(data, sec_lin = False):
+def linearize(data, sec_lin=False):
     # This function linearize the m0. The linerization functions has to be modified each time.
     # For Forward Scattering Excluding GE256GE063 which uses defaults
-    k1 = 1; l1 = 0.6; k2 = 3.4; l2 = 1.78
+    k1 = 1
+    l1 = 0.6
+    k2 = 3.4
+    l2 = 1.78
     e = 1
-    data['Rf'] = np.log((abs(((k1*data.nr + np.log(k2*data.ni)*1j )**2 -1)/((l1*data.nr + np.log10(l2*data.ni)*1j)**2 + 2)))**e)
+    data['Rf'] = np.log((abs(((k1*data.nr + np.log(k2*data.ni)*1j)
+                              ** 2 - 1)/((l1*data.nr + np.log10(l2*data.ni)*1j)**2 + 2)))**e)
     # Defaults
 #    k1 = 1.20; l1 = 0.66; k2 = 4.3; l2 = 1
 #    e = 2 # Better Multiple Regression comparing to e = 1
 #    data['Rf'] = np.log((abs(((k1*data.nr + np.log10(k2*data.ni)*1j )**2 -1)/((l1*data.nr + np.log10(l2*data.ni)*1j)**2 + 2)))**e)
 
-
-
     if sec_lin:
         # this needs to be modified. It is the best fit of LPi against m0. fit function obtained from matlab. Needs to be modified for each LPi
         # Incase of LP4 both linear sinisoidal function and 1st degre pol. regression fit well. Thus 2nd linearization may not be necessary
-        data[m] = (-1.605e-09)*(np.sin(data.m0/2 -0.7*np.pi))+2.237e-09*((data.m0 + 1))
+        data[m] = (-1.605e-09)*(np.sin(data.m0/2 - 0.7*np.pi)) + \
+            2.237e-09*((data.m0 + 1))
     return data
 
 
-def old_run_pm ():
+def old_run_pm():
     # adding size parameters
     for item in old_xm:
         if item not in size_param:
@@ -182,17 +188,17 @@ def old_run_pm ():
             img_ref.append(item)
 
 
-
-
 sphere_number = [64, 128, 256, 512, 1024]
-size_param = ['01680', '02350','03200', '03360','04299', '04370', '04480','04795', '04799', '05040','05299', '05795', '06398', '07300', '08319', '09598']
-real_ref = ['130', '145', '166', '168', '171', '180', '200','230']
-img_ref = ['00226', '00900', '00450', '00020', '00010', '00060', '03000', '00044']
+size_param = ['01680', '02350', '03200', '03360', '04299', '04370', '04480',
+              '04795', '04799', '05040', '05299', '05795', '06398', '07300', '08319', '09598']
+real_ref = ['130', '145', '166', '168', '171', '180', '200', '230']
+img_ref = ['00226', '00900', '00450', '00020',
+           '00010', '00060', '03000', '00044']
 
-old_run_pm ()
+old_run_pm()
 
-def Leg_Pol (x,deg):
 
+def Leg_Pol(x, deg):
     """
     deg is the degree of legendre pol. 3 means Legendre polynomials include
     Po + P1 + P2 + P3
@@ -213,12 +219,14 @@ def Leg_Pol (x,deg):
 
         return lps
 
-                   #%% Error P22 25-65 theta recording coefficients
-sphere_number = [ 512, 1024]
+        # %% Error P22 25-65 theta recording coefficients
+sphere_number = [512, 1024]
 #sphere_number = [1024]
-size_param = ['01680', '02350','03200', '03360','04299', '04370', '04480','04795', '04799', '05040','05299', '05795', '06398', '07300', '08319', '09598']
-real_ref = ['130', '145', '166', '168', '171', '180', '200','230']
-img_ref = ['00226', '00900', '00450', '00020', '00010', '00060', '03000', '00044']
+size_param = ['01680', '02350', '03200', '03360', '04299', '04370', '04480',
+              '04795', '04799', '05040', '05299', '05795', '06398', '07300', '08319', '09598']
+real_ref = ['130', '145', '166', '168', '171', '180', '200', '230']
+img_ref = ['00226', '00900', '00450', '00020',
+           '00010', '00060', '03000', '00044']
 #old_run_pm ()
 
 # adding parameters from old runs
@@ -227,25 +235,25 @@ img_ref = ['00226', '00900', '00450', '00020', '00010', '00060', '03000', '00044
 #size_param = ['01680']
 #real_ref = ['130']
 #img_ref = ['00226']
-s=0
+s = 0
 alpha_value = 1.0
 _log = []
-theta=np.arange(0,181)
+theta = np.arange(0, 181)
 
 # Setting boundaries for angular fit
-b1=0
+b1 = 0
 b2 = 7
 b_end = 181
 
 # Setting the b2 to fit forward scattering (where b1=0)
-#if b1 == 0:
+# if b1 == 0:
 #    if N <= 256:
 #        b2 = 20
 #    elif N == 512:
 #        b2 = 13
 #    elif N == 1024:
 #        b2 = 6
-#else:
+# else:
 #    b2 = b2
 #b2 = 7
 
@@ -254,26 +262,25 @@ a1 = 0
 a2 = 181
 x1 = theta[a1:a2]
 
-dt=[] # to be used to write Legend. Pol. coefficients data
+dt = []  # to be used to write Legend. Pol. coefficients data
 
 
 # Set te degree of Legendre Polynomials
 dg = 2
 
 if dg == 3:
-    columns_to_keep = ['Ns','sp','nr','ni', 'm0','Rf','maxpol_tm','maxpol_pm','p1','p2','p3','p4']
+    columns_to_keep = ['Ns', 'sp', 'nr', 'ni', 'm0', 'Rf',
+                       'maxpol_tm', 'maxpol_pm', 'p1', 'p2', 'p3', 'p4']
 elif dg == 2:
-    columns_to_keep = ['Ns','sp','nr','ni', 'm0', 'Rf', 'maxpol_tm','maxpol_pm', 'p1','p2','p3']
+    columns_to_keep = ['Ns', 'sp', 'nr', 'ni', 'm0',
+                       'Rf', 'maxpol_tm', 'maxpol_pm', 'p1', 'p2', 'p3']
 
-from numpy.polynomial import Legendre as L
 for N in sphere_number:
 
-
-
-    #Setting b2 manually
-    #b2=13
-    b1=0
-    b2=180
+    # Setting b2 manually
+    # b2=13
+    b1 = 0
+    b2 = 180
     x = theta[b1:b2]
     for xm in size_param:
 
@@ -288,11 +295,12 @@ for N in sphere_number:
                     tm_eff = vars()['tm'+runid+'_eff']
                     missing = ' f-fasm'
                     pm_eff = vars()['newpm'+runid+'_eff']
-                    s+=1
+                    s += 1
 
                 except KeyError:
                     #print('missing run {} {}_{}_{}_{}_eff'.format(missing, N, xm, nr, ni))
-                    _log.append('missing run {} {}_{}_{}_{}_eff'.format(missing, N, xm, nr, ni))
+                    _log.append('missing run {} {}_{}_{}_{}_eff'.format(
+                        missing, N, xm, nr, ni))
                     continue
 
                 # Keeping ceofficients in a Dataframe
@@ -301,14 +309,15 @@ for N in sphere_number:
                 n_img = float(".".join(ni[0:2]) + ni[2:])
 
                 tm_eff['cs'] = tm_eff.qs[0]*np.pi*(sp*N**(1/3))**2
-                tm =  vars()['tm'+runid+'_mx']
+                tm = vars()['tm'+runid+'_mx']
                 pm = vars()['newpm'+runid+'_mx']
                 old_pm = vars()['param'+runid+'_mx']
                 new_p22_err = (tm.P22*tm.P11 - pm.P22)[b1:b2]
                 old_p22_err = (tm.P22*tm.P11 - old_pm.P22)[b1:b2]
 
                 maxpol_tm = tm.theta[-tm.P12 == max(-tm.P12)].values[0]
-                maxpol_pm = pm.theta[-pm.P12/pm.P11 == max(-pm.P12/pm.P11)].values[0]
+                maxpol_pm = pm.theta[-pm.P12/pm.P11 ==
+                                     max(-pm.P12/pm.P11)].values[0]
 
                 # Now the correction
                 # First fit the error function with a 3rd Degree Legendre Polynomial
@@ -317,37 +326,38 @@ for N in sphere_number:
                 #coeffs = np.polynomial.legendre.legfit(x, old_p22_err, deg=2)
 
                 ############
-                coeffs = L.fit(x, old_p22_err, deg=dg) # coeffs are mapped to [-1,1] window since L.P. are orthogonal in this domain
-                coeff = coeffs.convert() # this converts the coeffs in to the original domain. These are the coeffs that will be analyzed statistically and passed to New Parameterization model
+                # coeffs are mapped to [-1,1] window since L.P. are orthogonal in this domain
+                coeffs = L.fit(x, old_p22_err, deg=dg)
+                coeff = coeffs.convert()  # this converts the coeffs in to the original domain. These are the coeffs that will be analyzed statistically and passed to New Parameterization model
 
                 #coeffs_w = np.polynomial.legendre.legfit(xw, old_p22_err, deg=3)
                 #coeffs_w = L.fit(x, old_p22_err, deg=2)
 
                 plotting = True
                 if plotting:
-#                if mod(s,7) == 0:
+                    #                if mod(s,7) == 0:
                     # Now Let's Correct the parametrization and plot the new and old comparison with tmatrix
-#                    p22_corr = pd.Series(np.polynomial.legendre.legval(x, coeffs), index=x)
-#                    new_pm = pm.copy()
-#                    new_pm.P22 = pm.P22.add(p22_corr, fill_value=0)
+                    #                    p22_corr = pd.Series(np.polynomial.legendre.legval(x, coeffs), index=x)
+                    #                    new_pm = pm.copy()
+                    #                    new_pm.P22 = pm.P22.add(p22_corr, fill_value=0)
                     fig, ax = plt.subplots(ncols=2)
                     p22_err = (tm.P11 - old_pm.P11)[a1:a2]
-                    ax[0].plot(((-old_pm.P12/old_pm.P11)), '.', label = 'Old pm')
-                    ax[0].plot((-tm.P12)[a1:a2], '.', label = 'tm')
+                    ax[0].plot(((-old_pm.P12/old_pm.P11)), '.', label='Old pm')
+                    ax[0].plot((-tm.P12)[a1:a2], '.', label='tm')
                     ax[0].set_title('Old P22'+runid)
 #                    ax[0].set_yscale('log')
                     ax[0].legend()
 
                     # new fit
-                    ax[1].plot((-pm.P12/pm.P11), '.', label = 'new_pm')
-                    ax[1].plot((-tm.P12), '.', label = 'tm')
+                    ax[1].plot((-pm.P12/pm.P11), '.', label='new_pm')
+                    ax[1].plot((-tm.P12), '.', label='tm')
                     ax[1].legend()
                     ax[1].set_title('New P22'+runid)
 
                     # Error Function and the Fit
 #                    ax[2].plot(x, new_p22_err, '.', label = 'new_p22_err')
                     #ax[2].plot(x, old_p22_err,'.', label = 'old_p22_err' )
-                    #ax[2].legend()
+                    # ax[2].legend()
 #                    ax[2].set_title('p22 error & the fit')
 
                     # old and new p22
@@ -360,8 +370,8 @@ for N in sphere_number:
                     plt.show()
                     plt.close()
 
-                              # Calculating Param Csca from Qs
-                aprj=((np.pi * sp**2) * (N**(2/3)))
+                    # Calculating Param Csca from Qs
+                aprj = ((np.pi * sp**2) * (N**(2/3)))
                 c_sca_m_1 = 0.200
                 c_sca_m_2 = 0.164
                 c_sca_m_3 = 1.047
@@ -370,11 +380,11 @@ for N in sphere_number:
                 c_sca_x_2 = 0.757
                 m = complex(n_real, n_img)
                 m0 = abs((m**2-1)/(m**2+2))
-                corr_sca = 1. + c_sca_m_3 * (m0-c_sca_m_4)* np.sin(c_sca_x_1 * sp) * np.exp(-sp * c_sca_x_2)
+                corr_sca = 1. + c_sca_m_3 * \
+                    (m0-c_sca_m_4) * np.sin(c_sca_x_1 * sp) * \
+                    np.exp(-sp * c_sca_x_2)
 
-
-
-                sw={}
+                sw = {}
 
                 sw['N'] = N
                 sw['xm'] = sp
@@ -400,29 +410,29 @@ for N in sphere_number:
 #                    sw['p4'] = coeff.coef[3]
                 dt.append(sw)
 
-
                 # Should you need the plots, edit the "if" below
 
                 plotting = False
 
                 if plotting:
-                #if np.mod(s,7) == 0:
+                    # if np.mod(s,7) == 0:
                     # Now Let's Correct the parametrization and plot the new and old comparison with tmatrix
                     p22_corr = pd.Series(coeffs(x), index=x)
 
                     new_pm = old_pm.copy()
-                    new_pm.P22 = (old_pm.P22).add(p22_corr, fill_value=0) # P22_corr does not cover the whole domain, so fill_value is necessary
+                    # P22_corr does not cover the whole domain, so fill_value is necessary
+                    new_pm.P22 = (old_pm.P22).add(p22_corr, fill_value=0)
                     fig, ax = plt.subplots(ncols=3)
 
-                    ax[0].plot(((new_pm.P22))[a1:a2], label = 'new_pm python')
-                    ax[0].plot( ((tm.P22*tm.P11))[a1:a2] , '.', label = 'tm')
+                    ax[0].plot(((new_pm.P22))[a1:a2], label='new_pm python')
+                    ax[0].plot(((tm.P22*tm.P11))[a1:a2], '.', label='tm')
                     ax[0].set_title('New P22 Python Correction'+runid)
                     ax[0].legend()
                     plt.grid()
 
                     # Old fit
-                    ax[1].plot( ((old_pm.P22))[a1:a2], label = 'old_pm')
-                    ax[1].plot( ((tm.P22*tm.P11))[a1:a2], '.', label = 'tm')
+                    ax[1].plot(((old_pm.P22))[a1:a2], label='old_pm')
+                    ax[1].plot(((tm.P22*tm.P11))[a1:a2], '.', label='tm')
                     ax[1].legend()
                     ax[1].set_title('Old P22'+runid)
                     plt.grid()
@@ -435,15 +445,15 @@ for N in sphere_number:
 #                    plt.grid()
 #                    plt.tight_layout()
 #                    plt.show()
-                    ax[2].plot(x, old_p22_err , '.', label = 'p22_err')
-                    ax[2].plot(x, p22_corr,'.', label = 'p22_corr' )
+                    ax[2].plot(x, old_p22_err, '.', label='p22_err')
+                    ax[2].plot(x, p22_corr, '.', label='p22_corr')
                     ax[2].legend()
                     ax[2].set_title('P22 error & the fit')
                     plt.grid()
                     plt.tight_layout()
                     plt.show()
 
-lp=1
+lp = 1
 if lp == 1:
     p = "p1"
 elif lp == 2:
@@ -468,10 +478,10 @@ LP512_lt063 = LP_Coeff[(LP_Coeff.Ns <= 512) & (LP_Coeff.sp < 0.63)]
 LP512_gt063 = LP_Coeff[(LP_Coeff.Ns <= 512) & (LP_Coeff.sp >= 0.63)]
 LP1024_lt063 = LP_Coeff[(LP_Coeff.Ns >= 512) & (LP_Coeff.sp < 0.63)]
 LP1024_gt063 = LP_Coeff[(LP_Coeff.Ns >= 512) & (LP_Coeff.sp >= 0.63)]
-LP1024 = LP_Coeff[ LP_Coeff.Ns >= 512 ]
+LP1024 = LP_Coeff[LP_Coeff.Ns >= 512]
 LP_lt063 = LP_Coeff[LP_Coeff.sp < 0.63]
 LP_gt063 = LP_Coeff[LP_Coeff.sp >= 0.63]
-##%%
+# %%
 # Selecting m0 data
 # For p1 i cant decide if I should use the corrected m0 formula or not. They are both good, but wrong formula slightly better.
 # I will try the new corrected formula fordef all the others.
@@ -500,75 +510,89 @@ LP_gt063 = LP_Coeff[LP_Coeff.sp >= 0.63]
 # linear fit is far the best a*(sin(x/2 -0.7*pi))+b*((x + 1))+c*(1) with R^2 = 0.8686. Not only in terms of R^2 but also it is much more stable and makes sense above the range
 
 
-
-#columns_to_keep = ['Ns','sp','nr','ni', 'm0','p1','p2','p3','p4']#,'m0_p1']
-t = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.6398 )  &  (LP_Coeff.nr == 1.68 )  ]
+# columns_to_keep = ['Ns','sp','nr','ni', 'm0','p1','p2','p3','p4']#,'m0_p1']
+t = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.6398) & (LP_Coeff.nr == 1.68)]
 #t = linearize(t, lp)
 
-t2 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.6398 )  &  (LP_Coeff.nr == 1.45 )  ]
+t2 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.6398) & (LP_Coeff.nr == 1.45)]
 #t2 = linearize(t2, lp)
 
-t3 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.6398 )  &  (LP_Coeff.nr == 1.3 )  ]
+t3 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.6398) & (LP_Coeff.nr == 1.3)]
 #t3 = linearize(t3, lp)
 
-t4 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.6398 )  &  (LP_Coeff.nr == 1.8 )  ]
+t4 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.6398) & (LP_Coeff.nr == 1.8)]
 #t4 = linearize(t4, lp)
 
-t5 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.6398 )  &  (LP_Coeff.nr == 2.0 )  ]
+t5 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.6398) & (LP_Coeff.nr == 2.0)]
 #t5 = linearize(t5, lp)
 
-t6 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.6398 )  &  (LP_Coeff.nr == 2.3 )  ]
-#t6 = linearize(t6, lp)def
+t6 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.6398) & (LP_Coeff.nr == 2.3)]
+# t6 = linearize(t6, lp)def
 
-dt=[t[columns_to_keep],t2[columns_to_keep], t3[columns_to_keep], t4[columns_to_keep], t5[columns_to_keep], t6[columns_to_keep]]
-A064_ltd = pd.concat(dt).reset_index().drop(['index'], axis = 1)
+dt = [t[columns_to_keep], t2[columns_to_keep], t3[columns_to_keep],
+      t4[columns_to_keep], t5[columns_to_keep], t6[columns_to_keep]]
+A064_ltd = pd.concat(dt).reset_index().drop(['index'], axis=1)
 
 
-
-t = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.9598 )  &  (LP_Coeff.nr == 1.68 )  ]
+t = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.9598) & (LP_Coeff.nr == 1.68)]
 #t = linearize(t, lp)
 
-t2 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.9598 )  &  (LP_Coeff.nr == 1.45 )  ]
+t2 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.9598) & (LP_Coeff.nr == 1.45)]
 #t2 = linearize(t2, lp)
 
-t3 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.9598 )  &  (LP_Coeff.nr == 1.3 )  ]
+t3 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.9598) & (LP_Coeff.nr == 1.3)]
 #t3 = linearize(t3, lp)
 
-t4 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.9598 )  &  (LP_Coeff.nr == 1.8 )  ]
+t4 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.9598) & (LP_Coeff.nr == 1.8)]
 #t4 = linearize(t4, lp)
 
-t5 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.9598 )  &  (LP_Coeff.nr == 2.0 )  ]
+t5 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.9598) & (LP_Coeff.nr == 2.0)]
 #t5 = linearize(t5, lp)
-t6 = LP_Coeff[(LP_Coeff.Ns == 256) &  (LP_Coeff.sp== 0.9598 )  &  (LP_Coeff.nr == 2.3 )  ]
-#t6 = linearize(t6, lp)def
+t6 = LP_Coeff[(LP_Coeff.Ns == 256) & (
+    LP_Coeff.sp == 0.9598) & (LP_Coeff.nr == 2.3)]
+# t6 = linearize(t6, lp)def
 
 
-dt=[t[columns_to_keep],t2[columns_to_keep], t3[columns_to_keep], t4[columns_to_keep], t5[columns_to_keep], t6[columns_to_keep]]
-A096_ltd = pd.concat(dt).reset_index().drop(['index'], axis = 1)
+dt = [t[columns_to_keep], t2[columns_to_keep], t3[columns_to_keep],
+      t4[columns_to_keep], t5[columns_to_keep], t6[columns_to_keep]]
+A096_ltd = pd.concat(dt).reset_index().drop(['index'], axis=1)
 
 
-A064 = LP_Coeff[(LP_Coeff.Ns == 256) & (LP_Coeff.sp == 0.6398)].reset_index().drop(['index'], axis = 1)
+A064 = LP_Coeff[(LP_Coeff.Ns == 256) & (LP_Coeff.sp == 0.6398)
+                ].reset_index().drop(['index'], axis=1)
 A064 = A064[columns_to_keep]
 
-A096 = LP_Coeff[(LP_Coeff.Ns == 256) & (LP_Coeff.sp == 0.9598)].reset_index().drop(['index'], axis = 1)
+A096 = LP_Coeff[(LP_Coeff.Ns == 256) & (LP_Coeff.sp == 0.9598)
+                ].reset_index().drop(['index'], axis=1)
 A096 = A096[columns_to_keep]
 
 
-#lp=2
-#if lp == 1:
+# lp=2
+# if lp == 1:
 #    p = "p1"
-#elif lp == 2:
+# elif lp == 2:
 #    p = 'p2'
-#elif lp == 3:
+# elif lp == 3:
 #    p = 'p3'
-#elif lp == 4:
+# elif lp == 4:
 #    p = 'p4'
-#else:
+# else:
 #    print('wrong p values')
 #
-#if lp == 1:
+# if lp == 1:
 #    m = "m0_p1"
-#else:
+# else:
 #    m = "m0"
 
 m = "Rf"
@@ -577,24 +601,24 @@ if True:
 
     plt.figure(2)
     plt.subplot(2, 2, 1)
-    plt.plot(A096[m],A096[p],'bo');
+    plt.plot(A096[m], A096[p], 'bo')
     plt.title('A096')
     plt.grid(True)
 
     plt.subplot(2, 2, 2)
-    plt.plot(A096_ltd[m],A096_ltd[p],'bo');
+    plt.plot(A096_ltd[m], A096_ltd[p], 'bo')
     plt.title('A096ltd')
     plt.grid(True)
     plt.tight_layout()
 
     plt.subplot(223)
-    plt.plot(A064_ltd[m],A064_ltd[p],'bo');
+    plt.plot(A064_ltd[m], A064_ltd[p], 'bo')
 
     plt.title('A064 ltd ')
     plt.grid(True)
 
     plt.subplot(224)
-    plt.plot(A064[m],A064[p],'bo');
+    plt.plot(A064[m], A064[p], 'bo')
     plt.title('A064 ')
     plt.grid(True)
 
@@ -604,14 +628,15 @@ if True:
 # Now grouping is possible. Here is an example:
 # LP_Coeff[(LP_Coeff['sp'] ==0.64) & (LP_Coeff['nr'] == 2)]
 
-
-                   #%% Error P22 25-65 theta recording coefficients
+    # %% Error P22 25-65 theta recording coefficients
 sphere_number = [64, 128, 256, 512, 1024]
 #sphere_number = [1024]
-size_param = ['01680', '02350','03200', '03360','04299', '04370', '04480','04795', '04799', '05040','05299', '05795', '06398', '07300', '08319', '09598']
-real_ref = ['130', '145', '166', '168', '171', '180', '200','230']
-img_ref = ['00226', '00900', '00450', '00020', '00010', '00060', '03000', '00044']
-old_run_pm ()
+size_param = ['01680', '02350', '03200', '03360', '04299', '04370', '04480',
+              '04795', '04799', '05040', '05299', '05795', '06398', '07300', '08319', '09598']
+real_ref = ['130', '145', '166', '168', '171', '180', '200', '230']
+img_ref = ['00226', '00900', '00450', '00020',
+           '00010', '00060', '03000', '00044']
+old_run_pm()
 
 # adding parameters from old runs
 
@@ -619,13 +644,13 @@ old_run_pm ()
 #size_param = ['01680']
 #real_ref = ['130']
 #img_ref = ['00226']
-s=0
+s = 0
 alpha_value = 1.0
 _log = []
-theta=np.arange(0,181)
+theta = np.arange(0, 181)
 
 # Setting boundaries for angular fit
-b1=0
+b1 = 0
 b2 = 7
 b_end = 181
 
@@ -646,26 +671,24 @@ a1 = 0
 a2 = 181
 x1 = theta[a1:a2]
 
-dt=[] # to be used to write Legend. Pol. coefficients data
+dt = []  # to be used to write Legend. Pol. coefficients data
 
 
 # Set te degree of Legendre Polynomials
 dg = 1
 
 if dg == 3:
-    columns_to_keep = ['Ns','sp','nr','ni', 'm0','Rf','p1','p2','p3','p4']
+    columns_to_keep = ['Ns', 'sp', 'nr', 'ni',
+                       'm0', 'Rf', 'p1', 'p2', 'p3', 'p4']
 elif dg == 2:
-    columns_to_keep = ['Ns','sp','nr','ni', 'm0', 'Rf', 'p1','p2','p3']
+    columns_to_keep = ['Ns', 'sp', 'nr', 'ni', 'm0', 'Rf', 'p1', 'p2', 'p3']
 elif g == 1:
-    columns_to_keep = ['Ns','sp','nr','ni', 'm0', 'A', 'B']
+    columns_to_keep = ['Ns', 'sp', 'nr', 'ni', 'm0', 'A', 'B']
 
-from numpy.polynomial import Legendre as L
 for N in sphere_number:
 
-
-
-    #Setting b2 manually
-    #b2=13
+    # Setting b2 manually
+    # b2=13
     t0 = 133
     x = theta[t0:]
     for xm in size_param:
@@ -681,11 +704,12 @@ for N in sphere_number:
                     tm_eff = vars()['tm'+runid+'_eff']
                     missing = ' f-fasm'
                     pm_eff = vars()['newpm'+runid+'_eff']
-                    s+=1
+                    s += 1
 
                 except KeyError:
                     #print('missing run {} {}_{}_{}_{}_eff'.format(missing, N, xm, nr, ni))
-                    _log.append('missing run {} {}_{}_{}_{}_eff'.format(missing, N, xm, nr, ni))
+                    _log.append('missing run {} {}_{}_{}_{}_eff'.format(
+                        missing, N, xm, nr, ni))
                     continue
 
                 # Keeping ceofficients in a Dataframe
@@ -694,37 +718,33 @@ for N in sphere_number:
                 n_img = float(".".join(ni[0:2]) + ni[2:])
 
                 tm_eff['cs'] = tm_eff.qs[0]*np.pi*(sp*N**(1/3))**2
-                tm =  vars()['tm'+runid+'_mx']
+                tm = vars()['tm'+runid+'_mx']
                 pm = vars()['newpm'+runid+'_mx']
                 m = complex(n_real, n_img)
                 m0 = abs((m**2-1)/(m**2+2))
 
-                enh = tm.P11[t0:]/tm.P11[t0] -1
+                enh = tm.P11[t0:]/tm.P11[t0] - 1
 
                 # Fitting a straight line AX + B. After standartization we can remove B from model
                 # Since
 
                 _A = (enh[180] - enh[t0])/(180 - t0)
 
-
-
-
                 if True:
                     fig, ax = plt.subplots(ncols=2)
-                    ax[0].plot((tm.P11[t0:]/tm.P11[t0]), '.', label = 'tm')
+                    ax[0].plot((tm.P11[t0:]/tm.P11[t0]), '.', label='tm')
     #                ax.plot(pm.P11[t0:]/pm.P11[180], '.', label = 'pm')
                     ax[0].set_title(runid)
                     ax[0].legend()
 
-                    ax[1].plot(np.log10(tm.P11[0:]), '.', label = 'tm')
-                    ax[1].plot(np.log10(pm.P11[0:]), '.', label = 'pm' )
+                    ax[1].plot(np.log10(tm.P11[0:]), '.', label='tm')
+                    ax[1].plot(np.log10(pm.P11[0:]), '.', label='pm')
                     ax[1].set_title(runid)
                     ax[1].legend()
                     plt.show()
                     plt.close()
 
-
-                sw={}
+                sw = {}
 
                 sw['N'] = N
                 sw['sp'] = sp
@@ -747,29 +767,23 @@ for N in sphere_number:
 
                 dt.append(sw)
 
-
-
                 # Should you need the plots, edit the "if" below
 
                 plotting = False
 
                 if plotting:
                     fig, ax = plt.subplots(ncols=2)
-                    ax[0].plot((tm.P11[t0:]/tm.P11[t0]), '.', label = 'tm')
+                    ax[0].plot((tm.P11[t0:]/tm.P11[t0]), '.', label='tm')
     #                ax.plot(pm.P11[t0:]/pm.P11[180], '.', label = 'pm')
                     ax[0].set_title(runid)
                     ax[0].legend()
 
-                    ax[1].plot(np.log10(tm.P11[0:]), '.', label = 'tm')
-                    ax[1].plot(np.log10(pm.P11[0:]), '.', label = 'pm' )
+                    ax[1].plot(np.log10(tm.P11[0:]), '.', label='tm')
+                    ax[1].plot(np.log10(pm.P11[0:]), '.', label='pm')
                     ax[1].set_title(runid)
                     ax[1].legend()
                     plt.show()
                     plt.close()
-
-
-
-
 
 
 LP_Coeff = pd.DataFrame(dt)
@@ -784,6 +798,6 @@ LP512_lt063 = LP_Coeff[(LP_Coeff.N <= 512) & (LP_Coeff.sp < 0.63)]
 LP512_gt063 = LP_Coeff[(LP_Coeff.N <= 512) & (LP_Coeff.sp >= 0.63)]
 LP1024_lt063 = LP_Coeff[(LP_Coeff.N >= 512) & (LP_Coeff.sp < 0.63)]
 LP1024_gt063 = LP_Coeff[(LP_Coeff.N >= 512) & (LP_Coeff.sp >= 0.63)]
-LP1024 = LP_Coeff[ LP_Coeff.N >= 512 ]
+LP1024 = LP_Coeff[LP_Coeff.N >= 512]
 LP_lt063 = LP_Coeff[LP_Coeff.sp < 0.63]
 LP_gt063 = LP_Coeff[LP_Coeff.sp >= 0.63]

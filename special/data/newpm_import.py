@@ -14,18 +14,18 @@ import xarray as xr
 import platform
 op_sys = platform.system()
 if op_sys == 'Windows':
-    dtdir = 'C:\\Users\\kurt_\\Dropbox\\Code\\special\\data\\'
+    dtdir = 'C:\\Users\\kurt_\\Google Drive\\dell_github\\T-Matrix-Titan\\special\\data\\'
     _sl = '\\'
 elif op_sys == 'Linux':
     dtdir = '/home/cihat/Dropbox/code/special/data/'
     _sl = '/'
 os.chdir(dtdir)
 
-file=glob.glob(dtdir+'FAFAS{}newpm*.dat'.format(_sl))
+file = glob.glob(dtdir+'FAFAS{}newpm*.dat'.format(_sl))
 
 print(" Warning!!! Plot paramP34 vs tmP43 to see\n if these two are equal for \
 smaller particles.")
-#%%
+# %%
 for par in file:
     param_run = par[par.find('newpm'):par.find('.dat')]
     q = gl.getline(par, 2)
@@ -38,11 +38,12 @@ for par in file:
         csca = [float(q[3])]
     except ValueError:
         print(param_run)
-    cabs =[float(q[4])]
+    cabs = [float(q[4])]
     taus_out = [float(q[5])]
     taua_out = [float(q[6])]
 
-    eff = {'qa': qabs, 'qs': qsca, 'qe': qext, 'cs': csca, 'ca': cabs, 'taus': taus_out, 'taua': taua_out}
+    eff = {'qa': qabs, 'qs': qsca, 'qe': qext, 'cs': csca,
+           'ca': cabs, 'taus': taus_out, 'taua': taua_out}
     vars()[param_run+'_eff'] = pd.DataFrame(eff)
 
     # Now I will collect scattering matrix data in a data frame
@@ -78,7 +79,3 @@ for par in file:
 #    vars()[param_run]['qabs'] = qabs
 #    vars()[param_run]['qsca'] = qsca
 #    vars()[param_run]['g'] = g
-
-
-
-

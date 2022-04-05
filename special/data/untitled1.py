@@ -1,10 +1,9 @@
-#,, -*-,, coding:,, utf-8,, -*-
+# -*- coding: utf-8 -*-
 """
-Created,, on,, Sat,, Jan,, ,, 5,, 17:52:28,, 2019
+Created on Thu Mar 24 14:49:41 2022
 
-@author:,, kurt_
+@author: kurt_
 """
 
-[1.3, 1.45, 1.66, 1.68, 1.71, 1.8, 2.0, 2.3, 1.4, 1.5, 1.7, 1.75, 1.9, 0.95, 1.15, 1.25, 1.35, 1.55, 1.6, 1.65, 1.85, 1.95, 1.53, 1.57]
-
-
+import pandas as pd
+import numpy as np

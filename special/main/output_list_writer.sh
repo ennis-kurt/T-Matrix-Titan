@@ -8,7 +8,7 @@ set -e
 # The third level is n_r which should be three digits
 # The Fourth level directories named as n_i with 5 digits
 touch output_list.csv
-echo "N,xm,nr,ni">output_list.csv
+echo "N,xm,nr,ni">>output_list.csv
 # Recursively looping through the nested directories to read the output files
 for N in */; do
     N="${N/\//}"
@@ -78,16 +78,11 @@ for N in */; do
                             output=${files[0]} # select the largest file
                             #output=("$output")
                             # echo " output is $output"
-                            #reading the monomer number from an oputput file
-                            # IFS=" " read -r -a line <<< "$(head -n 18 "$output" | tail -n 1)"
-                            # IFS="
-                            # "
+                            #reading the monomer number from
+                            line=($(head -n 18 "$output" | tail -n 1)) # read line 18 into an array
                             # n=${line[0]} # The first element is the monomer number
-
                             # reading the length, ref. indx. scale factors:
-                            IFS=" " read -r -a line <<< "$(head -n 24 "$output" | tail -n 1)"
-                            IFS="
-                            "
+                            line=($(head -n 24 "$output" | tail -n 1))
                             xm=${line[0]}; nr=${line[1]}; ni=${line[2]}
                             # use python to convert the number to standard lengths
                             xm=$(python -c "print('{:.4f}'.format($xm))")

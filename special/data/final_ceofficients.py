@@ -19,14 +19,11 @@ import os
 import platform
 op_sys = platform.system()
 if op_sys == 'Windows':
-    dtdir = 'C:\\Users\\kurt_\\Google Drive\\dell_github\\T-Matrix-Titan\\special\\data\\'
+    path = 'C:\\Users\\kurt_\\Google Drive\\dell_github\\T-Matrix-Titan\\special\\data\\'
 
 elif op_sys == 'Linux':
-    dtdir = '/home/cihat/Dropbox/code/special/data/'
-os.chdir(dtdir)
-# go to output dir
-dtdir = 'C:\\Users\\kurt_\\Google Drive\\dell_github\\T-Matrix-Titan\\special\\data\\'
-os.chdir(dtdir)
+    path = '/home/cihat/Dropbox/code/special/data/'
+os.chdir(path)
 # from newpm_import import *
 # %config InlineBackend.figure_format = 'svg'
 dtdir = 'C:\\Users\\kurt_\\Google Drive\\dell_github\\T-Matrix-Titan\\special\\data\\output\\'
@@ -104,7 +101,7 @@ theta = np.arange(0, 181)
 
 # Setting boundaries for angular fit
 b1 = 0
-b2 = 7
+b2 = 4
 b_end = 181
 
 # Setting the b2 to fit forward scattering (where b1=0)
@@ -124,8 +121,8 @@ dg = 2
 
 # Setting angular boundaries for the plots
 theta = np.arange(0, 181)
-a1 = 0
-a2 = 181
+a1 = b1
+a2 = b2+7
 x1 = theta[a1:a2]
 
 dt = []  # to be used to write Legend. Pol. coefficients data
@@ -159,14 +156,11 @@ for i in variables.index:
     old_pm = vars()['param'+runid+'_mx']
 
     # Some parameters to use later
-    s = 0
     alpha_value = 1.0
     _log = []
     theta = np.arange(0, 181)
     # Setting b2 manually
     # b2=13
-    b1 = 0
-    b2 = 180
 
     x = theta[b1:b2]
 
@@ -184,40 +178,40 @@ for i in variables.index:
     coeff = coeffs.convert()  # this converts the coeffs in to the original domain. These are the coeffs that will be analyzed statistically and passed to New Parameterization model
     plotting = False
     if plotting:
-        #                if mod(s,7) == 0:
-        # Now Let's Correct the parametrization and plot the new and old comparison with tmatrix
-        #                    p22_corr = pd.Series(np.polynomial.legendre.legval(x, coeffs), index=x)
-        #                    new_pm = pm.copy()
-        #                    new_pm.P22 = pm.P22.add(p22_corr, fill_value=0)
-        fig, ax = plt.subplots(ncols=2)
-        p22_err = (tm.P11 - old_pm.P11)[a1:a2]
-        ax[0].plot(((-old_pm.P12/old_pm.P11)), '.', label='Old pm')
-        ax[0].plot((-tm.P12)[a1:a2], '.', label='tm')
-        ax[0].set_title('Old P22'+runid)
-#                    ax[0].set_yscale('log')
-        ax[0].legend()
+        if np.mod(s, 7) == 0:
+            # Now Let's Correct the parametrization and plot the new and old comparison with tmatrix
+            #                    p22_corr = pd.Series(np.polynomial.legendre.legval(x, coeffs), index=x)
+            #                    new_pm = pm.copy()
+            #                    new_pm.P22 = pm.P22.add(p22_corr, fill_value=0)
+            fig, ax = plt.subplots(ncols=2, figsize=(12, 6))
+            p22_err = (tm.P11 - old_pm.P11)[a1:a2]
+            ax[0].plot(((-old_pm.P12/old_pm.P11)), '.', label='Old pm')
+            ax[0].plot((-tm.P12)[a1:a2], '.', label='tm')
+            ax[0].set_title('Old P22'+runid)
+    #                    ax[0].set_yscale('log')
+            ax[0].legend()
 
-        # new fit
-        ax[1].plot((-pm.P12/pm.P11), '.', label='new_pm')
-        ax[1].plot((-tm.P12), '.', label='tm')
-        ax[1].legend()
-        ax[1].set_title('New P22'+runid)
+            # new fit
+            ax[1].plot((-pm.P12/pm.P11), '.', label='new_pm')
+            ax[1].plot((-tm.P12), '.', label='tm')
+            ax[1].legend()
+            ax[1].set_title('New P22'+runid)
 
-        # Error Function and the Fit
-#                    ax[2].plot(x, new_p22_err, '.', label = 'new_p22_err')
-        #ax[2].plot(x, old_p22_err,'.', label = 'old_p22_err' )
-        # ax[2].legend()
-#                    ax[2].set_title('p22 error & the fit')
+            # Error Function and the Fit
+    #                    ax[2].plot(x, new_p22_err, '.', label = 'new_p22_err')
+            #ax[2].plot(x, old_p22_err,'.', label = 'old_p22_err' )
+            # ax[2].legend()
+    #                    ax[2].set_title('p22 error & the fit')
 
-        # old and new p22
-#                    ax[3].plot((old_pm.P22), '.', label = 'old_pm')
-#                    ax[3].plot((pm.P22), '.', label = 'new_pm')
-#                    ax[3].set_title('Old & New P22'+runid)
-#                    ax[3].legend()
-        plt.grid()
-        plt.tight_layout()
-        plt.show()
-        plt.close()
+            # old and new p22
+    #                    ax[3].plot((old_pm.P22), '.', label = 'old_pm')
+    #                    ax[3].plot((pm.P22), '.', label = 'new_pm')
+    #                    ax[3].set_title('Old & New P22'+runid)
+    #                    ax[3].legend()
+
+            plt.tight_layout()
+            plt.show()
+            plt.close()
 
         # Calculating Param Csca from Qs
     aprj = ((np.pi * xm**2) * (N**(2/3)))
@@ -250,11 +244,11 @@ for i in variables.index:
     sw['m0'] = m0
 #                sw['maxpol_tm'] = maxpol_tm
 #                sw['maxpol_pm'] = maxpol_pm
-#                sw['p1'] = coeff.coef[0]
-#                sw['p2'] = coeff.coef[1]
-#                sw['p3'] = coeff.coef[2]
-#                if dg == 3:
-#                    sw['p4'] = coeff.coef[3]
+    sw['p1'] = coeff.coef[0]
+    sw['p2'] = coeff.coef[1]
+    sw['p3'] = coeff.coef[2]
+    if dg == 3:
+        sw['p4'] = coeff.coef[3]
     dt.append(sw)
 
 # Should you need the plots, edit the "if" below
@@ -262,43 +256,43 @@ for i in variables.index:
     plotting = False
 
     if plotting:
-        # if np.mod(s,7) == 0:
-        # Now Let's Correct the parametrization and plot the new and old comparison with tmatrix
-        p22_corr = pd.Series(coeffs(x), index=x)
+        if np.mod(s, 13) == 0:
+            # if np.mod(s,7) == 0:
+            # Now Let's Correct the parametrization and plot the new and old comparison with tmatrix
+            p22_corr = pd.Series(coeffs(x), index=x)
 
-        new_pm = old_pm.copy()
-        # P22_corr does not cover the whole domain, so fill_value is necessary
-        new_pm.P22 = (old_pm.P22).add(p22_corr, fill_value=0)
-        fig, ax = plt.subplots(ncols=3)
+            new_pm = old_pm.copy()
+            # P22_corr does not cover the whole domain, so fill_value is necessary
+            new_pm.P22 = (old_pm.P22).add(p22_corr, fill_value=0)
+            fig, ax = plt.subplots(ncols=3, figsize=(12, 6))
 
-        ax[0].plot(np.log10((new_pm.P22))[a1:a2], label='new_pm python')
-        ax[0].plot((np.log10(tm.P22*tm.P11))[a1:a2], '.', label='tm')
-        ax[0].set_title('New P22 Python Correction'+runid)
-        ax[0].legend()
-        plt.grid()
+            ax[0].plot(np.log10((new_pm.P22))[a1:a2], label='new_pm python')
+            ax[0].plot((np.log10(tm.P22*tm.P11))[a1:a2], '.', label='tm')
+            ax[0].set_title('New P22 Python Correction'+runid)
+            ax[0].legend()
+            plt.grid()
 
-        # Old fit
-        ax[1].plot((np.log10(old_pm.P22))[a1:a2], label='old_pm')
-        ax[1].plot((np.log10(tm.P22*tm.P11))[a1:a2], '.', label='tm')
-        ax[1].legend()
-        ax[1].set_title('Old P22'+runid)
-        plt.grid()
+            # Old fit
+            ax[1].plot((np.log10(old_pm.P22))[a1:a2], label='old_pm')
+            ax[1].plot((np.log10(tm.P22*tm.P11))[a1:a2], '.', label='tm')
+            ax[1].legend()
+            ax[1].set_title('Old P22'+runid)
 
-        # Error Function and the Fit
-#                    ax[2].plot(x, old_p22_err , '.', label = 'p22_err')
-#                    ax[2].plot(x, p22_corr,'.', label = 'p22_corr' )
-#                    ax[2].legend()
-#                    ax[2].set_title('p22 error & the fit')
-#                    plt.grid()
-#                    plt.tight_layout()
-#                    plt.show()
-        ax[2].plot(x, old_p22_err, '.', label='p22_err')
-        ax[2].plot(x, p22_corr, '.', label='p22_corr')
-        ax[2].legend()
-        ax[2].set_title('P22 error & the fit')
-        plt.grid()
-        plt.tight_layout()
-        plt.show()
+            # Error Function and the Fit
+    #                    ax[2].plot(x, old_p22_err , '.', label = 'p22_err')
+    #                    ax[2].plot(x, p22_corr,'.', label = 'p22_corr' )
+    #                    ax[2].legend()
+    #                    ax[2].set_title('p22 error & the fit')
+    #                    plt.grid()
+    #                    plt.tight_layout()
+    #                    plt.show()
+            ax[2].plot(x, old_p22_err, '.', label='p22_err')
+            ax[2].plot(x, p22_corr, '.', label='p22_corr')
+            ax[2].legend()
+            ax[2].set_title('P22 error & the fit')
+            plt.grid()
+            plt.tight_layout()
+            plt.show()
 
 lp = 1
 if lp == 1:

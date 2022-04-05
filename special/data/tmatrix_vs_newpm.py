@@ -23,7 +23,7 @@ os.chdir(dtdir)
 import glob
 from import_tm import *
 from par_import import *
-from newpm_import import *
+      
 import pandas as pd
 #%config InlineBackend.figure_format = 'svg'
 import matplotlib.pyplot as plt
