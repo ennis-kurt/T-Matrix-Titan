@@ -20,6 +20,9 @@ if op_sys == 'Windows':
 elif op_sys == 'Linux':
     dt_directory = '/home/cihat/programs/gdl/'
     _sl = '/'
+elif op_sys == 'Darwin':
+    dt_directory = '/Users/cihatkurt/Documents/GitHub/T-Matrix-Titan/special/data/'
+    _sl = '/'
 
 os.chdir(dt_directory)
 

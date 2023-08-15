@@ -1,0 +1,595 @@
+%%
+%% Copyright 2007, 2008, 2009 Elsevier Ltd
+%%
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%%
+
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+%%
+%%
+%%
+%% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
+%%
+%%
+%\documentclass[preprint,12pt,3p]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% if you use PostScript figures in your article
+%% use the graphics package for simple commands
+%% \usepackage{graphics}
+%% or use the graphicx package for more complicated commands
+%% \usepackage{graphicx}
+%% or use the epsfig package if you prefer to use the old commands
+%% \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+\usepackage{graphicx}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{tabulary}
+\usepackage{booktabs,array,multirow}
+\usepackage{amsfonts,amsmath,amssymb}
+\providecommand\citet{\cite}
+\providecommand\citep{\cite}
+\providecommand\citealt{\cite}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false,pdfborder={0 0 0}}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+}%
+\makeatother
+% You can conditionalize code for latexml or normal latex using this.
+\newif\iflatexml\latexmlfalse
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}%
+
+\AtBeginDocument{\DeclareGraphicsExtensions{.pdf,.PDF,.eps,.EPS,.png,.PNG,.tif,.TIF,.jpg,.JPG,.jpeg,.JPEG}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+
+% Authorea add-on: we want to allow long links in a two-column style, we'll need to patch some floats.
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+}%
+% Authorea add-on: ensure doi defined
+\makeatletter
+\providecommand{\doi}[1]{%
+  \begingroup
+    \let\bibinfo\@secondoftwo
+    \urlstyle{rm}%
+    \href{http://dx.doi.org/#1}{%
+      doi:\discretionary{}{}{}%
+      \nolinkurl{#1}%
+    }%
+  \endgroup
+}
+
+\def\ps@pprintTitle{%
+ \let\@oddhead\@empty
+ \let\@evenhead\@empty
+ \def\@oddfoot{\selectlanguage{english}\footnotesize\itshape
+       Preprint submitted to \ifx\@journal\@empty Elsevier
+       \else\@journal\fi\hfill\today}%
+ \let\@evenfoot\@oddfoot}
+
+\makeatother
+
+\journal{Elsevier Journal}
+
+\begin{document}
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+%% Patch date to be in main language
+\title{Titan Haze Paper}%
+
+
+\author[add1]{cihat kurt}%
+\address[add1]{Texas A\&M University}%
+
+
+
+
+
+%\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+%\end{keyword}
+\end{frontmatter}
+\linenumbers
+
+\section*{The Final Report}
+
+{\label{the-final-report}}
+
+I searched for the best-fitting phase functions among
+nearly\(5\times 10^{5}\)model runs using an automated algorithm. The
+algorithm determines different constraints for each altitude and finds
+two parameter ranges for each wavelength channel (one for each
+altitude).~It obtains the constraints from the maximum polarization, the
+phase function at the forward scattering angles and the single
+scattering albedo (SSA or \(\omega_{0}\)) by comparing the model
+aggregates to the observations. Then based on the mean square error
+(MSE) the algorithm decides whether a model aggregate fits to the
+observations. As for the values of the phase functions at backscattering
+angles (\(\nu\geq 75\ \)), the code checks the MSE and makes two
+sample Anderson-Darling (AD) test to compare the curves of phase
+functions at these angles. Then based on the MSE and the p-values of the
+AD test the model aggregates are either decided to match the DISR phase
+function or not. AD test provides a quantitative \textbf{measure} for
+how much the shapes of the phase functions being compared resemble each
+other as well as how close the individual points on the curves in
+average.
+
+\textbf{Even though I adopted a single phase function throughout the
+atmosphere for each channel, SSA observations provide constraints on the
+refractive index at two altitudes} . Therefore, for each layer, a unique
+parameter ranges can be found by simply selecting the model aggregates
+which agree with all three observations (SSA, phase function, linear
+polarization). Besides, the phase function also constraints the
+refractive index.\selectlanguage{english}
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{figures/image1/image1}
+\caption{{Couldn't find a caption, edit here to supply one.
+{\label{div-331178}}%
+}}
+\end{center}
+\end{figure*}
+
+As shown in \textbf{Figure x} , \textbf{Figure} \textbf{y and Figure
+z}while \(n_{r}\) is mostly constrained by the phase function,
+\(n_{i}\)is constrained mostly by SSA except that the phase
+function in the blue channel also strongly correlated with
+\(n_{i}\), suggesting strong absorption.\selectlanguage{english}
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{figures/image2/image2}
+\caption{{Couldn't find a caption, edit here to supply one.
+{\label{div-734570}}%
+}}
+\end{center}
+\end{figure*}
+
+The constraints on the refractive index from the phase functions agree
+with the constraints from SSA except that blue-phase function suggests
+larger \(n_{i}\) than the SSA measurement does in the blue
+channel 80 km altitude. The algorithm finds almost no model that passes
+all the filters at 80 km in the Blue channel without allowing at least
+10\% error in SSA or more than 20\% error in the phase function at the
+backscattering angles. This could be due to the error in SSA observation
+or the blue phase function at this level given in the DISR model. In the
+DISR model, both in the original (Tomasko et al., 2008)~and revised
+version (Doose et al., 2016), blue phase function is constant throughout
+the atmosphere while the SSA is changing. It has been suggested
+by~Tomasko et al. (2008)~and Doose et al. (2016) that some condensation
+at the aerosol surface occurs in the lower atmosphere resulting in a
+decrease in absorption while keeping the phase function relatively
+constant.
+
+On the other hand, the fact that our model does not produce any aerosol
+matching all the constraints within 5\% accuracy might suggest that
+constant phase functions throughout the atmosphere might not be an
+accurate representation of reality. Likewise, the SSA measurements at 80
+km strongly suggest that the \(n_{i}\) values are considerably
+smaller (\textbf{Figure xx)} than what the phase function suggests in
+the blue channel (\textbf{Figure 1} ). Perhaps, the condensing particles
+on the aggregate's surface not only change the \(w_{0}\) but
+also the phase function of the haze particles. (\textbf{Give an example
+from brown and black carbon, freshly produced and aged one).} However,
+It is still possible that the new parameterization might also be the
+source of this apparent disagreement, \textbf{or the SSA measurement may
+not be accurate at 80 km in the blue channel.}\selectlanguage{english}
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{figures/image3/image3}
+\caption{{Couldn't find a caption, edit here to supply one.
+{\label{div-485060}}%
+}}
+\end{center}
+\end{figure*}
+
+Due to this \textbf{disagreement between the constraints from the phase
+function and the SSA measurements in the blue channel, at 80 Km
+altitude,} I applied a slightly different method to determine the
+constraints for this particular case. In this method, the algorithm
+first finds the monomer number and the size ranges from the DISR phase
+functions and the maximum polarization without yet comparing
+the\(w_{0}\) values. Next, inside the aggregate size range
+(\(\text{N\ and\ }R_{m}\)) it determines the range of refractive index from
+the \(\omega_{0}\ \)measurements within the 5\% error limit. As a
+result, the constraints from \(\omega_{0}\) is semi-independent from
+the backscattering values of the phase function but not from the values
+of the forward angles of the phase function and the maximum
+polarization, which are still set to fit within 5\% limit as they are
+the only direct measurements apart from \(\omega_{0}\).
+
+Table 1 and figure 2 \& 3 summarizes the parameters of the haze
+particles. Constraints from the same channel provide the same parameter
+range at each altitude except for the imaginary part of the refractive
+index. This is consistent with the observation as the SSA measurements
+imply that more absorbing particles are found at higher altitudes while
+the size of the aggregates is somewhat constant.
+
+Monomer size ranges found from each channel are consistent and about the
+same at each altitude. On the other hand, at a given altitude, the
+ranges of monomer number (\(N\)) differ depending on which
+channel they are calculated from. As seen in \textbf{Figure x and Figure
+y} , the range of monomer numbers in aggregates that fits the
+observations is shifted upward in the Red channel comparing to those
+obtained in the blue channel. The similar inconsistency between each
+channel also appears in the overall size of the haze model particles
+(\(R_{\text{agg}}),\) especially for the 80 km altitude.\selectlanguage{english}
+\begin{longtable}[]{@{}lllllll@{}}
+\toprule
+\textbf{Altitude} & \textbf{Channel} & \(\mathbf{N}\) &
+\(\mathbf{R}_{\mathbf{m}}\) & \(\mathbf{R}_{\mathbf{\text{agg}}}\) & \(\mathbf{n}_{\mathbf{r}}^{\mathbf{*}}\) &
+\(\mathbf{n}_{\mathbf{i}}^{\mathbf{*}}\)\tabularnewline
+\midrule
+\endhead
+\textbf{200 km} & \textbf{Red} & \(2950-4700\) & \(0.036-0.045\)
+& \(0.61-0.65\) & \(1.62-1.83\) &
+\(0.004-0.022\)\tabularnewline
+& \textbf{Blue} & \(2200-3450\) & \(0.038-0.049\) &
+\(0.56-0.65\) & \(1.77-2.0\) &
+\(0.096-0.126\)\tabularnewline
+\textbf{80} & \textbf{Red} & \(2950-4700\) & \(0.036-0.045\) &
+\(0.61-0.65\) & \(1.62-1.83\) &
+\(0.0005-0.008\)\tabularnewline
+& \textbf{Blue} & \(2200-3450\) & \(0.036-0.048\) &
+\(0.55-0.62\) & \(1.79-2.0\) &
+\(0.01-0.066\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+Table 1 shows the results from all the constraints at each layer and
+each channel. These results obtained by finding the model-aerosols
+within 5\% accuracy to all the observations (Phase function, maximum
+polarization, SSA) except at the backscattering an
+
+Ghfh\selectlanguage{english}
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{figures/image4/image4}
+\caption{{Couldn't find a caption, edit here to supply one.
+{\label{div-576244}}%
+}}
+\end{center}
+\end{figure*}
+
+Figure 4\selectlanguage{english}
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{figures/image5/image5}
+\caption{{Couldn't find a caption, edit here to supply one.
+{\label{div-262578}}%
+}}
+\end{center}
+\end{figure*}
+
+Figure 5
+
+\textbf{Table 2} shows the parameters of the haze particle obtained by
+combining the constraints from both channels except for the refractive
+index. Two different parameter ranges are calculated for each altitude.
+One from combining only the intersection of the parameter ranges of the
+blue and red channel and another is the union of two sets from each
+channel, labeled as \emph{Inner} and \emph{Outer,} respectively,
+in\textbf{Table 2} .
+
+Therefore, if we neglect the model aggregates which do not agree with
+the constraints from both channels (\emph{Inner combination),} then we
+find that the haze particles have about \(3200\pm 250\ \)monomers each
+have a radius of \(R_{m}=0.042\pm 0.004\). Otherwise accounting all the model
+aggregates which agree with the constraints from at least one channel
+(outer combination) suggest that the haze particles have
+about\(N=3400\pm 1300\) monomers with monomer radius\(R_{m}=0.042\pm 0.007\).\selectlanguage{english}
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+Combination & Altitude & N & \(\mathbf{R}_{\mathbf{m}}\) &
+\(\mathbf{R}_{\mathbf{\text{agg}}}\)\tabularnewline
+\midrule
+\endhead
+Inner & 200 km & \(2950\leq N\leq\ 3450\) & \(0.038\leq R_{m}\leq\ 0.045\) &
+\(0.61\leq R_{\text{agg}}\leq 0.65\)\tabularnewline
+& 80 km & \(2950\leq N\leq\ 3450\) & \(0.036\leq R_{m}\leq\ 0.045\) &
+\(0.61\leq R_{\text{agg}}\leq 0.62\)\tabularnewline
+Outer & 200 km & \(2200\leq N\leq\ 4700\) & \(0.036\leq R_{m}\leq\ 0.049\) &
+\(0.56\leq R_{\text{agg}}\leq 0.65\)\tabularnewline
+& 80 km & \(2200\leq N\leq\ 4700\) & \(0.036\leq R_{m}\leq\ 0.048\) &
+\(0.55\leq R_{\text{agg}}\leq 0.65\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+Table 2 Parameter of Haze related to its size from the combination of
+constraints in the SA channels. Inner means the parameter ranges
+combined by the intersection of each channel's parameter ranges. The
+outer refers to the combination by the outer edges.
+
+Figure 5 shows the collection of all the fitting phase functions of the
+model aggregates within the parameter range given in table 1. All the
+phase functions that make up the table 2 aggregates have an excellent
+agreement with the DISR model at all scattering angles for the Red phase
+function except near the backscattering peak. As for the blue phase
+functions, there is an apparent bias in the intermediate angles. Perhaps
+the new parameterization does not extrapolate well at these angles and,
+therefore, cause such a bias. On the other hand, considering that the
+DISR phase functions were obtained from the old parameterization model
+(Tomasko et al., 2008), It is also possible that DISR blue phase
+function may not be accurate at the intermediate angles, albeit they
+were also constrained by radiative transfer model to fit the
+observations. Regardless, the algorithm did not use these intermediate
+angles in the search for best-fitting parameters.\selectlanguage{english}
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{figures/image6/image6}
+\caption{{Couldn't find a caption, edit here to supply one.
+{\label{div-800293}}%
+}}
+\end{center}
+\end{figure*}
+
+Among the model runs shown in table 1 and \textbf{fig 3} the best
+aggregate which fits the DISR phase functions, maximum polarization and
+SSA measurements (above 80km) within \%5 error limit
+has\(\sim 3.3\times 10^{3}\) monomers with \(R_{m}\sim\ 0.04\). As shown in
+\textbf{fig below,} such an aggregate fits the DISR phase functions very
+well in both channels.\selectlanguage{english}
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{figures/image7/image7}
+\caption{{Couldn't find a caption, edit here to supply one.
+{\label{div-630384}}%
+}}
+\end{center}
+\end{figure*}
+
+Similarly, When the model aggregates are compared to DISR phase
+functions at each wavelength independently, the best-fitting phase
+function at each wavelength agrees better with the DISR phase function
+at the corresponding channel. However, there is a somewhat 20\%
+difference in the size of the aggregates constrained by each
+channel.\textbf{Figure 9} shows the phase functions of these model
+aggregates in comparison to the DISR model.\selectlanguage{english}
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{figures/image8/image8}
+\caption{{Couldn't find a caption, edit here to supply one.
+{\label{div-637372}}%
+}}
+\end{center}
+\end{figure*}
+
+\textbf{Table 3} compares the parameters
+
+nge between 1500 -- 6000.\selectlanguage{english}
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+N\strut
+\end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+\(\mathbf{R}_{\mathbf{m}}\ (\mu m)\)\strut
+\end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+\(\mathbf{R}_{\mathbf{\text{agg}}}\ (\mu m)\)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+This Work\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\[\ \mathbf{\ 3300}\ \] \[2200\leq N\leq\ 4700\ \]\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\[\mathbf{0.04}\mathbf{1}\] \[\ 0.038\leq R_{m}\leq\ 0.045\]\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\[\mathbf{0.6}\mathbf{3}\] \[\ 0.61\leq R_{\text{agg}}\leq 0.65\]\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+Tomasko et al. (2008)\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\[\ \mathbf{3000\ }\] \[1500\leq N\leq\ 6000\]\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\[\mathbf{0.05\ }\] \[0.03\leq R_{m}\leq 0.07\]\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\[\ \mathbf{0.72}\]\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+Tomasko et al. (2009)\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\[\ \mathbf{4300}\ \] \[3000\leq N\leq 7000\]\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\[\mathbf{0.04}\] \[0.03\leq R_{m}\leq 0.05\]\strut
+\end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\[\ \mathbf{0.65}\] \(0.57\leq R_{\text{agg}}\leq 0.72\) *\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+Other\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Table 3 Comparison of the Titan's haze parameters estimated by different
+studies. The best estimate given in each work is shown as bold text. The
+range of the parameter estimates is given if available. * Aggregate size
+is not given explicitly in the reference text but calculated based on
+given monomer size uncertainty and the corresponding monomer numbers
+estimate.
+
+( From Tomasko 2009: ``Different authors have found the monomer size of
+Titan's haze aerosols to be due to different effects. Cabane et al.
+(1992) and Ran- nou et al. (2000) found that the monomer size depended
+most on the altitude of formation of the aggregate particles. In their
+models, larger monomers could be supported at lower altitudes, and this
+determined the monomer size of the aggregate aerosols. In a new study,
+Rodin et al. (2009) used a different way of estimating the electrical
+charge on the aerosol particles. They find that monomers smaller than
+about 0.05 lm'')
+
+Because of the possibility of some condensation on the surface of the
+haze particles below 80 km, which in turn reduces \(n_{i}\),
+here I only compare the refractive index constrained by the measurements
+at 200-km altitude to the laboratory studies. The ranges of refractive
+index at 491 nm and 935 nm wavelength obtained in this work are closer
+to the ones obtained by Khare et al. (1984) than the other laboratory
+studies shown in \textbf{Figure 7} . At 491 nm \(n_{r}\) is
+found to be in between 1.77 -- 2.0 and \(n_{i}\) is in between
+0.-096 -- 0.126 while Khare et al. (1984) found that \(n_{r}\)=
+\textbf{XXX} and \(n_{i}\)=\textbf{YYY} . At 935 nm in this
+work \(n_{r}\ \)is between 1.62 -- 1.83 and\(\ n_{i}\)
+ranges from 0.004 to 0.022 whereas Khare et al. (1984) found that
+\(n_{r}=xx\) and \(n_{i}=yy\).\selectlanguage{english}
+\begin{figure*}[h!]
+\begin{center}
+\includegraphics[width=0.98\columnwidth]{figures/image9/image9}
+\caption{{Couldn't find a caption, edit here to supply one.
+{\label{div-628811}}%
+}}
+\end{center}
+\end{figure*}
+
+\subsection*{Conclusion}
+
+{\label{conclusion}}
+
+DISR model for Titan's haze was published in (Tomasko et al., 2008). The
+model includes phase functions for several wavelengths, but the ones for
+491 nm and 935 nm are the focus of this work because these are the peak
+wavelengths that were detected by the Solar Aureole camera, which
+directly measured the forward scattering of solar radiation. Doose et
+al. (2016) revised the phase functions and the single scattering albedo
+measurements based on more detailed analyses of measurements inside and
+outside of the Titan's atmosphere. As opposed to the original DISR model
+(Tomasko et al., 2008), they used a single phase function throughout the
+atmosphere for each wavelength. I adopted the DISR model phase functions
+and SSA from Doose et al. (2016). As for the linear polarization,
+Tomasko et al., (2009) analyzed the polarization data in more detail
+than Tomasko et al., 2008 did. I, therefore, utilize the polarization
+data given by Tomasko et al., (2009) in this work.
+
+Since the DISR measurements are analyzed in blue and red channels, for
+each altitude, two sets of constraints on the parameters of haze are
+obtained. While the constraints on the refractive index are unique to
+each wavelength, the monomer number and monomer size are supposed to be
+the same no matter which channel's data is used to constraint them.
+Unfortunately, there is some discrepancy between the ranges of N
+obtained from each channel (see \textbf{table 1 figure 2 and figure 3}
+). For this reason, the combination of the constraints from both
+channels results in more extensive parameter ranges than the ones
+obtained by each channel, unless only the intersections of the parameter
+ranges are considered to match the measurements (see \textbf{Table 2} ).
+\textbf{In any case} , the parameter ranges are in line with, but
+narrower than, the ones obtained by earlier works (\textbf{see Table 3)}
+
+Based on all the constraints from DISR measurements, the best fitting
+aggregates contain 2900-3500 monomers with monomer size,
+\(R_{m}\) is between 0.038 -- 0.045. The aggregates with larger
+N have usually smaller \(R_{m}\) or vice versa. Hence, the
+range of the overall size of the aggregates which fits the observations
+is narrower:\(0.61\leq R_{\text{agg}}\leq 0.63\), where \(R_{\text{agg}}\) is the radius
+of an equivalent volume sphere. Comparing to (Tomasko et al., 2008) all
+the parameter ranges found in this work are narrower. Even without
+combining the constraints from Blue and Red channels but selecting a
+range with a minimum and maximum of both channels gives a narrower
+monomer number range (see Figure 3) than 1500 - 6000 which was the
+estimate by Tomasko et al. (2008). In this case, the smallest aggregate
+has 2200 (from Blue Channel), the largest aggregate has 4700 (Red
+channel) monomers (see table 2) with monomer size range between 0.038
+(Red and Blue channel minimum) and 0.048 (Red channel maximum).
+
+The refractive index ranges are shown in table 2.
+
+\selectlanguage{english}
+\FloatBarrier
+\end{document}
+

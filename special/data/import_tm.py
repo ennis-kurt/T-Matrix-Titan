@@ -18,6 +18,9 @@ if op_sys == 'Windows':
 elif op_sys == 'Linux':
     dtdir = '/home/cihat/Dropbox/code/special/data/'
     _sl = '/'
+elif op_sys == 'Darwin':
+    dtdir = '/Users/cihatkurt/Documents/GitHub/T-Matrix-Titan/special/data/'
+    _sl = '/'
 os.chdir(dtdir)
 
 ###### The structure of this code is summarized here  #######
