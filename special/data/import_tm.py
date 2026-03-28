@@ -42,8 +42,8 @@ os.chdir(dtdir)
 
 # %%
 
-old_tm_files = glob.glob(
-    'C:\\Users\\kurt_\\Google Drive\\Code\\special\\data\\old_tm_data\\*.dat')
+# old_tm_files = glob.glob(
+    # 'C:\\Users\\kurt_\\Google Drive\\Code\\special\\data\\old_tm_data\\*.dat')
 
 # Lets create an array to record some log info which not need to be prompted
 # during the execution. These log info could be used for debugging but they
